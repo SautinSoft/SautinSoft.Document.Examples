@@ -6,7 +6,7 @@ Manipulate with Sections, Paragraphs, Tables, Lists, Text, Forms and Fields, Sha
 Requires only .NET Framework or .NET Core.</br>
 Absolutely standalone, 100% managed C# assembly.</br>
 
-Top Features
+<b>Top Features</b>
 
 Create a document in PDF, DOCX, RTF, HTML formats.</br>
 
