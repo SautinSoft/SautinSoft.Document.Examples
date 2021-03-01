@@ -69,7 +69,7 @@ Directory | Description
 ## Resources
 
 + **Website:** [www.sautinsoft.com](http://www.sautinsoft.com)
-+ **Product Home:** [Document .Net](https://sautinsoft.com/products/document/
++ **Product Home:** [Document .Net](https://sautinsoft.com/products/document/)
 + **Download:** [Download Document .Net](https://sautinsoft.com/products/document/download.php)
 + **Documentation:** [Document .Net Documentation API](https://sautinsoft.com/products/document/help/net/api-reference/html/R_Project_Document__Net_-_API_Reference.htm)
 + **Support:** [You are always welcome at SautinSoft company with your feedback and questions, it helps us to work more effective!](https://sautinsoft.com/support.php)
