@@ -1,0 +1,55 @@
+Copyright (C) SautinSoftTM
+
+1. License
+
+SautinSoft grants you a non-exclusive license to install and use a copy of the software on a single server or more servers (depends of license type). You shall not reverse engineer, disassemble or decompile all or part of the Program. The sale and sub-licensing of the software are forbidden.
+
+2. Evaluation License
+
+The standard software version is free of charge. It may be freely distributed on the sole condition that it is not altered in any way. PDF Metamorphosis .Net evaluation version can't be used in commercial applications.
+
+3. Commercial Licenses
+
+Royalty free runtimes
+
+All developer products have royalty free runtimes. This means that you may freely distribute the component with your desktop applications. 
+
+The Server License allows you to deploy Internet applications using our component. There are no limits of number development and testing servers. We count only production servers.
+
+Free updates
+
+First of all, your license will never expires, you may use the product as long as you want. You can get free major and minor updates during 12 month after purchasing the product.
+
+Verifying the license 
+
+SautinSoft has a right to validate your license automatically. For example, the “1 Developer License” is valid only for a single developer to develop applications. 
+
+1 Developer License
+This license allows a single developer to develop and deploy desktop (non-Internet) and Internet applications using our component. This license is valid to redistribute the component with unlimited number of desktop (non-Internet) applications and not valid to deploy the component with your Internet applications. To deploy the component with Internet apps use “1 Server License” x N or “Unlimited Servers License”.
+
+Site License
+This license allows all developers within the purchasing organization and located at the same business address to develop and deploy desktop (non-Internet) and Internet applications using our component. This license is valid to redistribute the component with unlimited number of desktop (non-Internet) applications and not valid to deploy the component with your Internet applications. To deploy the component with Internet apps use “1 Server License” x N or “Unlimited Servers License”.
+
+1 Server License
+This license is not valid for development. This license is valid to deploy the component at 1 production server.
+
+Unlimited Servers License
+This license is valid to deploy the component at unlimited number of production servers.
+
+Source Code License 
+This license is option to get source code in C# for the component. The Source Code is not for distribution, it can be used only for development: including into your applications instead of dll file, bug fixing, own improvement of component.
+
+4. Warranty disclaimer
+THE SOFTWARE IS SUPPLIED "AS IS" WITHOUT WARRANTY OF ANY KIND. SAUTINSOFT, ITS LICENSORS AND THEIR EMPLOYEES: (1) DISCLAIM ANY WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES OR MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE OR NON-INFRINGEMENT, (2) DO NOT ASSUME ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY, COMPLETENESS, OR USEFULNESS OF THE SOFTWARE, (3) DO NOT REPRESENT THAT USE OF THE SOFTWARE WOULD NOT INFRINGE PRIVATELY OWNED RIGHTS, (4) DO NOT WARRANT THAT THE SOFTWARE WILL FUNCTION UNINTERRUPTED, THAT IT IS ERROR-FREE OR THAT ANY ERRORS WILL BE CORRECTED. 
+5. Limitation of liability
+IN NO EVENT WILL LICENSEE, SAUTINSOFT OR ITS LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL OR PUNITIVE DAMAGES OF ANY KIND OR NATURE, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS OR LOSS OF DATA, FOR ANY REASON WHATSOEVER, WHETHER SUCH LIABILITY IS ASSERTED ON THE BASIS OF CONTRACT, TORT (INCLUDING NEGLIGENCE OR STRICT LIABILITY), OR OTHERWISE, EVEN IF SAUTINSOFT HAS BEEN WARNED OF THE POSSIBILIITY OF SUCH LOSS OR DAMAGES. IN NO EVENT SHALL SAUTINSOFT 'S LIABILITY FOR DAMAGES ARISING FROM OR IN CONNECTION WITH THIS AGREEMENT EXCEED THE AMOUNT PAID BY YOU FOR THE SOFTWARE. 
+ 
+6. Term and termination
+The license granted to the Licensee under this Agreement will continue perpetually unless terminated by SautinSoft in accordance with this Agreement. If the Licensee breaches any term of this Agreement, and fails to cure such breach within thirty (30) days of the date of written notice, this Agreement shall immediately terminate. Upon such termination, the Licensee shall immediately cease using the Software, return to SautinSoft, or destroy, all copies of the Software, and provide SautinSoft with written certification of your compliance with the foregoing. Termination shall not relieve the Licensee from its obligations arising prior to such termination. Notwithstanding any provision of this Agreement to the contrary, Sections 2 through 8 shall survive termination of this Agreement. 
+7. Export controls
+The Licensee shall observe all applicable laws and regulations (if any) with respect to the export, re-export, diversion or transfer of the Software, related technical data and direct products thereof, including, without limitation, the International Traffic in Arms Regulations (ITAR) and the Export Administration Regulations. 
+
+8. Applicable law - jurisdiction
+
+This license contract is governed exclusively by the laws of the State of New York.
+
