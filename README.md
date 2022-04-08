@@ -11,49 +11,28 @@ Manipulate with Sections, Paragraphs, Tables, Lists, Text, Forms and Fields, Sha
 
 ## Top Features
 
-Create a document in PDF, DOCX, RTF, HTML formats.</br>
-
-Load a document in PDF, DOCX, RTF, HTML formats.</br>
-
-Save a document as PDF, DOCX, RTF, HTML Flowing and Fixed, Text.</br>
-
-Convert and Merge documents.</br>
-
-Protect and encrypt documents.</br>
-
-Digitally sign documents.</br>
-
-Make PDF/A compliance.</br>
-
-Perform Mail Merge process.</br>
-
-Obvious Document Object Model.</br>
-
-Rasterize a document or specific pages to Image.</br>
-
-Get and set a Header / Footer, Page Setup.</br>
-
-Add Page Numbering, Text Columns.</br>
-
-Perform Pagination and get document pages.</br>
-
-Find and Replace content.</br>
-
-Manipulate with Tables, Paragraphs and Text.</br>
-
-Add and Extract Pictures.</br>
-
-Work with Shapes, Shape groups and Geometry.</br>
-
-Get and set Formatting and Styles.</br>
-
-Work with ordered and unordered Lists.</br>
-
-Insert and Update TOC - table of contents.</br>
-
-Work with Forms and Fields.</br>
-
-Change Document Properties: Author, Title, Creator, etc.</br>
++ [Create a document in PDF, DOCX, RTF, HTML formats.](https://sautinsoft.com/products/document/help/net/developer-guide/create-document.php)</br>
++ [Load a document in PDF, DOCX, RTF, HTML formats.](https://sautinsoft.com/products/document/help/net/developer-guide/load-document.php)</br>
++ [Save a document as PDF, DOCX, RTF, HTML Flowing and Fixed, Text.](https://sautinsoft.com/products/document/help/net/developer-guide/save-document.php)</br>
++ [Convert and Merge documents.](https://sautinsoft.com/products/document/help/net/developer-guide/convert-document.php)</br>
++ [Protect and encrypt documents.](https://sautinsoft.com/products/document/help/net/developer-guide/security-options-net-csharp-vb.php)</br>
++ [Digitally sign documents.](https://sautinsoft.com/products/document/help/net/developer-guide/digital-signature-net-csharp-vb.php)</br>
++ [Make PDF/A compliance.](https://sautinsoft.com/products/document/help/net/developer-guide/create-and-save-document-in-pdf-a-format-net-csharp-vb.php)</br>
++ [Perform Mail Merge process.](https://sautinsoft.com/products/document/help/net/developer-guide/mail-merge-simple-report-winforms-net-csharp-vb.php)</br>
++ [Obvious Document Object Model.](https://sautinsoft.com/products/document/help/net/getting-started/document-object-model.php)</br>
++ [Rasterize a document or specific pages to Image.](https://sautinsoft.com/products/document/help/net/developer-guide/rasterize-save-document-pages-as-picture-net-csharp-vb.php)</br>
++ [Get and set a Header / Footer, Page Setup.](https://sautinsoft.com/products/document/help/net/developer-guide/headersfooters.php)</br>
++ [Add Page Numbering, Text Columns.](https://sautinsoft.com/products/document/help/net/developer-guide/page-numbering.php)</br>
++ [Perform Pagination and get document pages.](https://sautinsoft.com/products/document/help/net/developer-guide/pagination.php)</br>
++ [Find and Replace content.](https://sautinsoft.com/products/document/help/net/developer-guide/insert-text-in-specific-page-after-specific-text-net-csharp-vb.php)</br>
++ [Manipulate with Tables, Paragraphs and Text.](https://sautinsoft.com/products/document/help/net/developer-guide/contentrange-manipulation.php)</br>
++ [Add and Extract Pictures.](https://sautinsoft.com/products/document/help/net/developer-guide/add-pictures.php)</br>
++ [Work with Shapes, Shape groups and Geometry.](https://sautinsoft.com/products/document/help/net/developer-guide/geometry.php)</br>
++ [Get and set Formatting and Styles.](https://sautinsoft.com/products/document/help/net/developer-guide/formatting-and-styles.php)</br>
++ [Work with ordered and unordered Lists.](https://sautinsoft.com/products/document/help/net/developer-guide/create-multilevel-list-in-docx-document-net-csharp-vb.php)</br>
++ [Insert and Update TOC - table of contents.](https://sautinsoft.com/products/document/help/net/developer-guide/update-table-of-contents-in-word-document-net-csharp-vb.php)</br>
++ [Work with Forms and Fields.](https://sautinsoft.com/products/document/help/net/developer-guide/forms-and-fields.php)</br>
++ [Change Document Properties: Author, Title, Creator, etc.](https://sautinsoft.com/products/document/help/net/developer-guide/document-properties-net-csharp-vb.php)</br>
 
 ## System Requirement
 
@@ -66,6 +45,8 @@ Change Document Properties: Author, Title, Creator, etc.</br>
 
 + **Website:** [www.sautinsoft.com](http://www.sautinsoft.com)
 + **Product Home:** [Document .Net](https://sautinsoft.com/products/document/)
-+ [Download Document .Net](https://sautinsoft.com/products/document/download.php)
++ [Download SautinSoft.Document](https://sautinsoft.com/products/document/download.php)
++ [Developer Guide](https://sautinsoft.com/products/document/help/net/developer-guide/create-document.php)
 + [API Reference](https://sautinsoft.com/products/document/help/net/api-reference/html/R_Project_Document__Net_-_API_Reference.htm)
-+ **Support:** [You are always welcome at SautinSoft company with your feedback and questions, it helps us to work more effective!](https://sautinsoft.com/support.php)
++ [Document Object Model](https://sautinsoft.com/products/document/help/net/getting-started/document-object-model.php)
++ [Support Team](https://sautinsoft.com/support.php)
