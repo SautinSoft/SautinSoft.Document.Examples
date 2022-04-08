@@ -50,4 +50,4 @@ Manipulate with Sections, Paragraphs, Tables, Lists, Text, Forms and Fields, Sha
 + [API Reference](https://sautinsoft.com/products/document/help/net/api-reference/html/R_Project_Document__Net_-_API_Reference.htm)
 + [Document Object Model](https://sautinsoft.com/products/document/help/net/getting-started/document-object-model.php)
 + [Support Team](https://sautinsoft.com/support.php)
-+ [SautinSoft.Document license 📝](https://sautinsoft.com/products/document/help/net/getting-started/agreement.php)
++ [SautinSoft.Document License 📝](https://sautinsoft.com/products/document/help/net/getting-started/agreement.php)
