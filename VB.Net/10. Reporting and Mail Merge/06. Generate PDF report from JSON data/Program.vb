@@ -1,184 +1,239 @@
-Imports System
+﻿Imports System
 Imports System.IO
-Imports System.Linq
 Imports System.Collections.Generic
 Imports SautinSoft.Document
 Imports SautinSoft.Document.Drawing
+Imports SautinSoft.Document.MailMerging
+Imports Newtonsoft.Json
 
-Module Sample
-    Sub Main()
-        PieChart()
-    End Sub
+''' <summary>
+''' Generates a report in PDF format (PDF/A) based on JSON data and .docx template.
+''' </summary>
+''' <remarks>
+''' See details at: https://www.sautinsoft.com/products/document/help/net/developer-guide/mail-merge-generate-pdf-report-from-json-data-net-csharp-vb.php
+''' </remarks>
+Namespace CatBreedReportApp
+    Friend Class CatBreed
+        Public Property Title() As String
+        Public Property Description() As String
+        Public Property PictUrl() As String
+        Public Property WeightMin() As Integer
+        Public Property WeightMax() As Integer
 
-    ''' <summary>
-    ''' Creates a simple Pie Chart in a document.
-    ''' </summary>
-    ''' <remarks>
-    ''' See details at: https://sautinsoft.com/products/document/help/net/developer-guide/reporting-create-simple-pie-chart-in-pdf-net-csharp-vb.php
-    ''' </remarks>
-    Public Sub PieChart()
-        Dim dc As New DocumentCore()
+    End Class
 
-        Dim fl As New FloatingLayout(New HorizontalPosition(20.0F, LengthUnit.Millimeter, HorizontalPositionAnchor.LeftMargin), New VerticalPosition(15.0F, LengthUnit.Millimeter, VerticalPositionAnchor.TopMargin), New Size(200, 200))
+    Friend Class Program
+        Shared Sub Main(ByVal args() As String)
+            ' 1. Get json data
+            Dim json As String = CreateJsonObject()
 
-        Dim chartData As New Dictionary(Of String, Double) From {
-                {"Potato", 25},
-                {"Carrot", 16},
-                {"Salad", 10},
-                {"Cucumber", 10},
-                {"Tomato", 4},
-                {"Rice", 30},
-                {"Onion", 5}
+            ' 2. Show json to Console.
+            Console.WriteLine(json)
+
+            ' 3. Generate report based on .docx template and json.
+            GeneratePdfReport(json)
+        End Sub
+        Public Shared Sub GeneratePdfReport(ByVal json As String)
+            ' Get data from json.            
+            Dim cats = JsonConvert.DeserializeObject(Of List(Of CatBreed))(json)
+
+            ' Load the template document.
+            Dim templatePath As String = "..\..\..\cats-template.docx"
+
+            Dim dc As DocumentCore = DocumentCore.Load(templatePath)
+
+            ' To be able to mail merge from your own data source, it must be wrapped into an object that implements the IMailMergeDataSource interface.
+            Dim customDataSource As New CustomMailMergeDataSource(cats)
+
+            ' Decorate each cat beed by by appropriate picture.
+            ' Set picture width to 80 mm, height to Auto.
+            AddHandler dc.MailMerge.FieldMerging, Sub(senderFM, eFM)
+                                                      ' Insert an icon before the product name
+                                                      If eFM.RangeName = "CatBreed" AndAlso eFM.FieldName = "PictUrl" Then
+                                                          eFM.Inlines.Clear()
+                                                          Dim pictPath As String = eFM.Value.ToString()
+                                                          Dim pict As New Picture(dc, pictPath)
+                                                          Dim kWH As Double = 1.0F
+                                                          Dim desiredWidthMm As Double = 80
+
+                                                          If pict.Layout.Size.Width > 0 AndAlso pict.Layout.Size.Height > 0 Then
+                                                              kWH = pict.Layout.Size.Width \ pict.Layout.Size.Height
+                                                          End If
+
+                                                          pict.Layout = New InlineLayout(New Size(desiredWidthMm, desiredWidthMm / kWH, LengthUnit.Millimeter))
+
+                                                          eFM.Inlines.Add(pict)
+                                                          eFM.Cancel = False
+                                                      End If
+                                                  End Sub
+
+            ' Execute the mail merge.
+            dc.MailMerge.Execute(customDataSource)
+
+            Dim resultPath As String = "CatBreeds.pdf"
+
+            ' Save the output to file
+            Dim so As New PdfSaveOptions() With {.Compliance = PdfCompliance.PDF_A1a}
+
+            dc.Save(resultPath, so)
+
+            ' Open the result for demonstration purposes.
+            System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(resultPath) With {.UseShellExecute = True})
+        End Sub
+        Public Shared Function CreateJsonObject() As String
+            Dim json As String = String.Empty
+            Dim cats As New List(Of CatBreed) From {
+                New CatBreed() With {
+                    .Title = "Australian Mist",
+                    .Description = "The Australian Mist (formerly known as the Spotted Mist) is a breed of cat developed in Australia.",
+                    .PictUrl = "australian-mist.jpg",
+                    .WeightMin = 8,
+                    .WeightMax = 15
+                },
+                New CatBreed() With {
+                    .Title = "Maine Coon",
+                    .Description = "The Maine Coon is a large domesticated cat breed. It has a distinctive physical appearance and valuable hunting skills.",
+                    .PictUrl = "maine-coon.png",
+                    .WeightMin = 13,
+                    .WeightMax = 18
+                },
+                New CatBreed() With {
+                    .Title = "Scottish Fold",
+                    .Description = "The original Scottish Fold was a white barn cat named Susie, who was found at a farm near Coupar Angus in Perthshire, Scotland, in 1961.",
+                    .PictUrl = "scottish-fold.jpg",
+                    .WeightMin = 9,
+                    .WeightMax = 13
+                },
+                New CatBreed() With {
+                    .Title = "Oriental Shorthair",
+                    .Description = "The Oriental Shorthair is a breed of domestic cat that is developed from and closely related to the Siamese cat.",
+                    .PictUrl = "oriental-shorthair.jpg",
+                    .WeightMin = 8,
+                    .WeightMax = 12
+                },
+                New CatBreed() With {
+                    .Title = "Bengal cat",
+                    .Description = "The earliest mention of an Asian leopard cat × domestic cross was in 1889, when Harrison Weir wrote of them in Our Cats and ...",
+                    .PictUrl = "bengal-cat.jpg",
+                    .WeightMin = 10,
+                    .WeightMax = 15
+                },
+                New CatBreed() With {
+                    .Title = "Russian Blue",
+                    .Description = "The Russian Blue is a naturally occurring breed that may have originated in the port of Arkhangelsk in Russia.",
+                    .PictUrl = "russian-blue.jpg",
+                    .WeightMin = 8,
+                    .WeightMax = 15
+                },
+                New CatBreed() With {
+                    .Title = "Mongrel cat",
+                    .Description = "A mongrel, mutt or mixed-breed cat is a cat that does not belong to one officially recognized breed, but he's cool and gentle!",
+                    .PictUrl = "mongrel-cat.jpg",
+                    .WeightMin = 8,
+                    .WeightMax = 16
+                }
             }
 
-        AddPieChart(dc, fl, chartData, True, "%", True)
+            ' Generate full path for the cat's pictures.
+            Dim pictDirectory As String = Path.GetFullPath("..\..\..\picts\")
+            For Each cb In cats
+                cb.PictUrl = Path.Combine(pictDirectory, cb.PictUrl)
+            Next cb
 
+            ' Make serialization to JSON format.            
+            json = JsonConvert.SerializeObject(cats)
+            Return json
+        End Function
+        ''' <summary>
+        ''' A custom mail merge data source that allows SautinSoft.Document to retrieve data from CatBeeds objects.
+        ''' </summary>
+        Public Class CustomMailMergeDataSource
+            Implements IMailMergeDataSource
 
-        ' Let's save the document into PDF format (you may choose another).
-        Dim filePath As String = "Pie Chart.pdf"
-        dc.Save(filePath)
+            Private ReadOnly _cats As List(Of CatBreed)
+            Private _recordIndex As Integer
 
-        ' Open the result for demonstration purposes.
-        System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(filePath) With {.UseShellExecute = True})
-    End Sub
-    ''' <summary>
-    ''' This method creates a pie chart.
-    ''' </summary>
-    ''' <param name="dc">Document</param>
-    ''' <param name="chartLayout">Chart layout</param>
-    ''' <param name="data">Chart data</param>
-    ''' <param name="addLabels">Add labels or not</param>
-    ''' <param name="labelSign">Label sign</param>
-    ''' <param name="addLegend">Add legend</param>
-    ''' <remarks>
-    ''' This method is made specially with open source code. You may change anything you want:<br />
-    ''' Chart colors, size, position, font name and font size, position of labels (inside or outside the chart), legend position.<br />
-    ''' If you need any assistance, feel free to email us: support@sautinsoft.com.<br />
-    ''' </remarks>
-    Public Sub AddPieChart(ByVal dc As DocumentCore, ByVal chartLayout As FloatingLayout, ByVal data As Dictionary(Of String, Double), Optional ByVal addLabels As Boolean = True, Optional ByVal labelSign As String = Nothing, Optional ByVal addLegend As Boolean = True)
-        ' Assume that our chart can have 10 pies maximally.
-        ' And we'll use these colors order by order.
-        ' You may change the colors and their quantity.
-        Dim colors As New List(Of String)() From {"#70AD47", "#4472C4", "#FFC000", "#A5A5A5", "#ED7D31", "#5B9BD5", "#44546A", "#C00000", "#00B050", "#9933FF"}
-        ' 1. To create a circle chart, assume that the sum of all values are 100%
-        ' and calculate the percent for the each value.
-        ' Translate all data to perce
-        Dim amount As Double = data.Values.Sum()
-        Dim percentages As New List(Of Double)()
+            ''' <summary>
+            ''' The name of the data source. 
+            ''' </summary>
+            Public ReadOnly Property Name() As String
+                Get
+                    Return "CatBreed"
+                End Get
+            End Property
 
-        For Each v As Double In data.Values
-            percentages.Add(v * 100 / amount)
-        Next v
+            Private ReadOnly Property IMailMergeDataSource_Name As String Implements IMailMergeDataSource.Name
+                Get
+                    Return "CatBreed"
+                End Get
+            End Property
 
-        ' 2. Translate the percentage value of the each pie into degrees.
-        ' The whole circle is 360 degrees.
-        Dim pies As Integer = data.Values.Count
-        Dim pieDegrees As New List(Of Double)()
-        For Each p As Double In percentages
-            pieDegrees.Add(p * 360 / 100)
-        Next p
+            ''' <summary>
+            ''' SautinSoft.Document calls this method to get a value for every data field.
+            ''' </summary>
+            Public Function TryGetValue(ByVal valueName As String, <System.Runtime.InteropServices.Out()> ByRef value As Object) As Boolean
+                Select Case valueName
+                    Case "Title"
+                        value = _cats(_recordIndex).Title
+                        Return True
+                    Case "Description"
+                        value = _cats(_recordIndex).Description
+                        Return True
+                    Case "PictUrl"
+                        value = _cats(_recordIndex).PictUrl
+                        Return True
+                    Case "WeightFrom"
+                        value = _cats(_recordIndex).WeightMin
+                        Return True
+                    Case "WeightTo"
+                        value = _cats(_recordIndex).WeightMax
+                        Return True
+                    Case Else
+                        ' A field with this name was not found
+                        value = Nothing
+                        Return False
+                End Select
+            End Function
 
-        ' 3. Translate degrees to the "Pie" measurement.
-        Dim pieMeasure As New List(Of Double)()
-        ' Add the start position.
-        pieMeasure.Add(0)
-        Dim currentAngle As Double = 0
-        For Each pd As Double In pieDegrees
-            currentAngle += pd
-            pieMeasure.Add(480 * currentAngle / 360)
-        Next pd
+            Public Sub New(ByVal cats As List(Of CatBreed))
+                _cats = cats
+                ' When the data source is initialized, it must be positioned before the first record.
+                _recordIndex = -1
+            End Sub
 
-        ' 4. Create the pies.
-        Dim originalShape As New Shape(dc, chartLayout)
+            Private Function IMailMergeDataSource_MoveNext() As Boolean Implements IMailMergeDataSource.MoveNext
+                _recordIndex += 1
+                Return (_recordIndex < _cats.Count)
+            End Function
 
-        For i As Integer = 0 To pies - 1
-            Dim shpPie As Shape = originalShape.Clone(True)
-            shpPie.Outline.Fill.SetSolid(Color.White)
-            shpPie.Outline.Width = 0.5
-            shpPie.Fill.SetSolid(New Color(colors(i)))
+            Private Function IMailMergeDataSource_TryGetValue(valueName As String, ByRef value As Object) As Boolean Implements IMailMergeDataSource.TryGetValue
+                Select Case valueName
+                    Case "Title"
+                        value = _cats(_recordIndex).Title
+                        Return True
+                    Case "Description"
+                        value = _cats(_recordIndex).Description
+                        Return True
+                    Case "PictUrl"
+                        value = _cats(_recordIndex).PictUrl
+                        Return True
+                    Case "WeightFrom"
+                        value = _cats(_recordIndex).WeightMin
+                        Return True
+                    Case "WeightTo"
+                        value = _cats(_recordIndex).WeightMax
+                        Return True
+                    Case Else
+                        ' A field with this name was not found
+                        value = Nothing
+                        Return False
+                End Select
+            End Function
 
-            shpPie.Geometry.SetPreset(Figure.Pie)
-            shpPie.Geometry.AdjustValues("adj1") = 45000 * pieMeasure(i)
-            shpPie.Geometry.AdjustValues("adj2") = 45000 * pieMeasure(i + 1)
+            Private Function IMailMergeDataSource_GetChildDataSource(sourceName As String) As IMailMergeDataSource Implements IMailMergeDataSource.GetChildDataSource
+                Return Nothing
+            End Function
+        End Class
 
-            dc.Content.End.Insert(shpPie.Content)
-        Next i
-
-        ' 5. Add labels
-        If addLabels Then
-            ' 0.5 ... 1.2 (inside/outside the circle).
-            Dim multiplier As Double = 0.8
-            Dim radius As Double = chartLayout.Size.Width / 2 * multiplier
-            currentAngle = 0
-            Dim labelW As Double = 35
-            Dim labelH As Double = 20
-
-            For i As Integer = 0 To pieDegrees.Count - 1
-                currentAngle += pieDegrees(i)
-                Dim middleAngleDegrees As Double = 360 - (currentAngle - pieDegrees(i) / 2)
-                Dim middleAngleRad As Double = middleAngleDegrees * (Math.PI / 180)
-
-                ' Calculate the (x, y) on the circle.
-                Dim x As Double = radius * Math.Cos(middleAngleRad)
-                Dim y As Double = radius * Math.Sin(middleAngleRad)
-
-                ' Correct the position depending of the label size;
-                x -= labelW / 2
-                y += labelH / 2
-
-                Dim centerH As New HorizontalPosition(chartLayout.HorizontalPosition.Value + chartLayout.Size.Width \ 2, LengthUnit.Point, HorizontalPositionAnchor.LeftMargin)
-                Dim centerV As New VerticalPosition(chartLayout.VerticalPosition.Value + chartLayout.Size.Height \ 2, LengthUnit.Point, VerticalPositionAnchor.TopMargin)
-
-                Dim labelX As New HorizontalPosition(centerH.Value + x, LengthUnit.Point, HorizontalPositionAnchor.LeftMargin)
-                Dim labelY As New VerticalPosition(centerV.Value - y, LengthUnit.Point, VerticalPositionAnchor.TopMargin)
-
-                Dim labelLayout As New FloatingLayout(labelX, labelY, New Size(labelW, labelH))
-                Dim shpLabel As New Shape(dc, labelLayout)
-                shpLabel.Outline.Fill.SetEmpty()
-                shpLabel.Text.Blocks.Content.Start.Insert($"{data.Values.ElementAt(i)}{labelSign}", New CharacterFormat() With {
-                        .FontName = "Arial",
-                        .Size = 10,
-                        .FontColor = New Color("#FFFFFF")
-                    })
-                TryCast(shpLabel.Text.Blocks(0), Paragraph).ParagraphFormat.Alignment = HorizontalAlignment.Center
-                dc.Content.End.Insert(shpLabel.Content)
-            Next i
-
-            ' 6. Add Legend
-            If addLegend Then
-                Dim legendTopMargin As Double = LengthUnitConverter.Convert(5, LengthUnit.Millimeter, LengthUnit.Point)
-                Dim legendLeftMargin As Double = LengthUnitConverter.Convert(-10, LengthUnit.Millimeter, LengthUnit.Point)
-                Dim legendX As New HorizontalPosition(chartLayout.HorizontalPosition.Value + legendLeftMargin, LengthUnit.Point, HorizontalPositionAnchor.LeftMargin)
-                Dim legendY As New VerticalPosition(chartLayout.VerticalPosition.Value + chartLayout.Size.Height + legendTopMargin, LengthUnit.Point, VerticalPositionAnchor.TopMargin)
-                Dim legendW As Double = chartLayout.Size.Width * 2
-                Dim legendH As Double = 20
-
-                Dim legendLayout As New FloatingLayout(legendX, legendY, New Size(legendW, legendH))
-                Dim shpLegend As New Shape(dc, legendLayout)
-                shpLegend.Outline.Fill.SetEmpty()
-
-                Dim pLegend As New Paragraph(dc)
-                pLegend.ParagraphFormat.Alignment = HorizontalAlignment.Left
-
-                For i As Integer = 0 To data.Count - 1
-                    Dim legendItem As String = data.Keys.ElementAt(i)
-
-                    ' 183 - circle, "Symbol"
-                    ' 167 - square, "Wingdings"
-
-                    Dim marker As Run = New Run(dc, ChrW(167), New CharacterFormat() With {
-                            .FontColor = New Color(colors(i)),
-                            .FontName = "Wingdings"
-                        })
-                    pLegend.Content.End.Insert(marker.Content)
-                    pLegend.Content.End.Insert($" {legendItem}   ", New CharacterFormat())
-                Next i
-
-
-                shpLegend.Text.Blocks.Add(pLegend)
-                dc.Content.End.Insert(shpLegend.Content)
-            End If
-        End If
-    End Sub
-
-End Module
+    End Class
+End Namespace
