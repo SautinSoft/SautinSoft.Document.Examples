@@ -1,4 +1,4 @@
-#SautinSoft.Document
+# SautinSoft.Document
 
 [![Nuget version](https://img.shields.io/nuget/v/SautinSoft.Document?style=for-the-badge)](https://www.nuget.org/packages/sautinsoft.document/)[![Nuget downloads](https://img.shields.io/nuget/dt/SautinSoft.Document?style=for-the-badge)](https://www.nuget.org/packages/sautinsoft.document/)
 
@@ -6,13 +6,10 @@
 
 [SautinSoft.Document](https://sautinsoft.com/products/document/) is .NET assembly (SDK) which gives API to Create, Read, Write, Edit, View, Convert, Merge, Sign Digitally, Find and Replace, Do Reporting with PDF, DOC, DOCX, HTML, RTF and Text documents, Rasterize to Image.
 
-Allows to Create, Load, Edit, Merge, Sign digitally, Convert and a lot of actions with a document.</br>
-Single DOM (Document Object Model) for all formats.</br>
-Manipulate with Sections, Paragraphs, Tables, Lists, Text, Forms and Fields, Shapes, Pictures, Formatting, Document Properties, etc.</br>
-Requires only .NET Framework or .NET Core.</br>
-Absolutely standalone, 100% managed C# assembly.</br>
+Represents you unified DOM ([Document Object Model](https://sautinsoft.com/products/document/help/net/getting-started/document-object-model.php)) to operate with for all formats.</br>
+Manipulate with Sections, Paragraphs, Tables, Lists, Text, Forms and Fields, Shapes and Graphics, Pictures, Formatting, Document Properties, etc.</br>
 
-<b>Top Features</b>
+## Top Features
 
 Create a document in PDF, DOCX, RTF, HTML formats.</br>
 
