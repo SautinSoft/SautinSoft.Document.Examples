@@ -6,7 +6,7 @@
 
 [SautinSoft.Document](https://sautinsoft.com/products/document/) is .NET assembly (SDK) which gives API to Create, Read, Write, Edit, View, Convert, Merge, Sign Digitally, Find and Replace, Do Reporting with PDF, DOC, DOCX, HTML, RTF and Text documents, Rasterize to Image.
 
-Represents you unified DOM ([Document Object Model](https://sautinsoft.com/products/document/help/net/getting-started/document-object-model.php)) to operate with for all formats.</br>
+Represents you unified DOM ([Document Object Model](https://sautinsoft.com/products/document/help/net/getting-started/document-object-model.php)) to operate with for all (PDF, PDF/A, DOCX, DOC, HTML, RTF, Text) formats.</br>
 Manipulate with Sections, Paragraphs, Tables, Lists, Text, Forms and Fields, Shapes and Graphics, Pictures, Formatting, Document Properties, etc.</br>
 
 ## Top Features
