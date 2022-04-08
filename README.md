@@ -55,24 +55,17 @@ Work with Forms and Fields.</br>
 
 Change Document Properties: Author, Title, Creator, etc.</br>
 
-This repository contains [Examples for Document .Net](https://sautinsoft.com/products/document/help/net/) to help you learn and write your own applications.
+## System Requirement
 
-<p align="center">
-
-  <a title="Download complete Document .Net" href="https://sautinsoft.com/thankyou.php?download=document_net.zip">
-	<img src="https://sautinsoft.com/images/zip_file_download.png" />
-  </a>
-</p>
-
-Directory | Description
---------- | -----------
-[Examples for Document .Net](https://sautinsoft.com/products/document/help/net/developer-guide/documentbuilder-overview.php) | A collection of C#, VB.NET, php examples that help you learn and explore the API features
-
+* .NET Framework 4.0 - 4.8
+* .NET Core 2.0 - 3.1, .NET 5, 6, 7
+* .NET Standard 2.0
+* Windows, Linux, macOS, Android, iOS.
 
 ## Resources
 
 + **Website:** [www.sautinsoft.com](http://www.sautinsoft.com)
 + **Product Home:** [Document .Net](https://sautinsoft.com/products/document/)
-+ **Download:** [Download Document .Net](https://sautinsoft.com/products/document/download.php)
-+ **Documentation:** [Document .Net Documentation API](https://sautinsoft.com/products/document/help/net/api-reference/html/R_Project_Document__Net_-_API_Reference.htm)
++ [Download Document .Net](https://sautinsoft.com/products/document/download.php)
++ [API Reference](https://sautinsoft.com/products/document/help/net/api-reference/html/R_Project_Document__Net_-_API_Reference.htm)
 + **Support:** [You are always welcome at SautinSoft company with your feedback and questions, it helps us to work more effective!](https://sautinsoft.com/support.php)
