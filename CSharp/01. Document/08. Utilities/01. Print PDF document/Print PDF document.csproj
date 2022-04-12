@@ -1,10 +1,30 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFrameworks>net48;</TargetFrameworks>
-  </PropertyGroup>
-  <ItemGroup>
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+  <OutputType>Exe</OutputType>
+  <TargetFrameworks>net48;netcoreapp3.1</TargetFrameworks>
+ </PropertyGroup>
+ <Choose>
+  <When Condition="Exists('..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.Document.dll')">
+   <ItemGroup>
+    <Reference Include="SautinSoft.Document">
+     <HintPath>..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.Document.dll</HintPath>
+    </Reference>
+   </ItemGroup>
+  </When>
+  <When Condition="Exists('..\..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.Document.dll')">
+   <ItemGroup>
+    <Reference Include="SautinSoft.Document">
+     <HintPath>..\..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.Document.dll</HintPath>
+    </Reference>
+   </ItemGroup>
+  </When>
+  <When Condition="'Nuget'=='Nuget'">
+   <ItemGroup>
     <PackageReference Include="SautinSoft.Document" Version="*" />
-  </ItemGroup>
+   </ItemGroup>
+  </When>
+ </Choose>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+	</ItemGroup>
 </Project>

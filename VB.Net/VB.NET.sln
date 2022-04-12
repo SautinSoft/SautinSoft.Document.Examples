@@ -21,7 +21,7 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Inserting a Bookmark", "01.
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Inserting a Field", "01. Document\01. Document Builder\07. Inserting a Field\Inserting a Field.vbproj", "{F609BD80-3663-48B0-8620-EE58C35463F1}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Inserting a HTML", "01. Document\01. Document Builder\08. Inserting a HTML\Inserting a HTML.vbproj", "{8B2EE637-8716-4EFA-85A6-B8BE0566654C}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Inserting an HTML", "01. Document\01. Document Builder\08. Inserting an HTML\Inserting an HTML.vbproj", "{8B2EE637-8716-4EFA-85A6-B8BE0566654C}"
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Inserting a Hyperlink", "01. Document\01. Document Builder\09. Inserting a Hyperlink\Inserting a Hyperlink.vbproj", "{35D6F212-8208-4F79-9FA2-CBFE01A030DC}"
 EndProject
@@ -315,7 +315,7 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Add Picture in DOCX in memo
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Insert Picture to custom pages", "06. Pictures and Shapes\03. Insert Picture to custom pages\Insert Picture to custom pages.vbproj", "{4FDF4E90-696C-4C9A-959B-79D2BFD78A27}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Insert Picture to custom page after specific text", "06. Pictures and Shapes\04. Insert Picture to custom page after specific text\Insert Picture to custom page after specific text.vbproj", "{99402930-FECF-40E0-95FE-D7196897FB40}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Insert Picture after specific text", "06. Pictures and Shapes\04. Insert Picture to custom page after specific text\Insert Picture after specific text.vbproj", "{99402930-FECF-40E0-95FE-D7196897FB40}"
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Extract Pictures", "06. Pictures and Shapes\05. Extract Pictures\Extract Pictures.vbproj", "{DC93C4C9-5468-4461-90EC-1AF204077260}"
 EndProject
@@ -459,7 +459,7 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Insert images on each docum
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Converting all files to single XLS", "13. From Customers\004. Converting all files to single XLS\Converting all files to single XLS.vbproj", "{902CE0F9-073C-460C-AE93-2D011DE1AB8B}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Insert a table in DOCX after a specific bookmark", "13. From Customers\005. Insert a table in DOCX after a specific bookmark\Insert a table in DOCX after a specific bookmark.vbproj", "{921A12B1-DA19-46A2-8813-A4061006E131}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Insert a table in DOCX after bookmark", "13. From Customers\005. Insert a table in DOCX after a specific bookmark\Insert a table in DOCX after bookmark.vbproj", "{921A12B1-DA19-46A2-8813-A4061006E131}"
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Find all long livers from a table", "13. From Customers\006. Find all long-livers from a table\Find all long livers from a table.vbproj", "{D05BB65E-12D2-409C-B4C5-7BCBDB56D78C}"
 EndProject

@@ -21,8 +21,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inserting a Bookmark", "01.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inserting a Field", "01. Document\01. Document Builder\07. Inserting a Field\Inserting a Field.csproj", "{58197168-202E-4A62-A1BC-F9D8473CE713}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inserting a HTML", "01. Document\01. Document Builder\08. Inserting a HTML\Inserting a HTML.csproj", "{DB220E25-BE29-4F2A-A166-E27C45928D95}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inserting a Hyperlink", "01. Document\01. Document Builder\09. Inserting a Hyperlink\Inserting a Hyperlink.csproj", "{C2B7578C-41BA-4581-A374-0B97A5030B9B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inserting a TOC", "01. Document\01. Document Builder\10. Inserting a TOC\Inserting a TOC.csproj", "{E56BEADC-726E-4D30-B6AC-13EDA91E612E}"
@@ -251,223 +249,225 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cell Formatting", "03. Tabl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Paragraph", "04. Paragraph", "{7E845EAA-5A31-4572-B40C-EA998D682EA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paragraph", "04. Paragraph\01. Paragraph\Paragraph.csproj", "{633F934F-F951-4E40-9BA6-890C38013144}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paragraph", "04. Paragraph\01. Paragraph\Paragraph.csproj", "{633F934F-F951-4E40-9BA6-890C38013144}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Get paragraph", "04. Paragraph\02. Get paragraph\Get paragraph.csproj", "{9BE16521-D4DF-412E-A9A2-76E976883650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Get paragraph", "04. Paragraph\02. Get paragraph\Get paragraph.csproj", "{9BE16521-D4DF-412E-A9A2-76E976883650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insert paragraph", "04. Paragraph\03. Insert paragraph\Insert paragraph.csproj", "{9FD2EBB3-F16A-4E2C-A9F6-E11BD47328A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert paragraph", "04. Paragraph\03. Insert paragraph\Insert paragraph.csproj", "{9FD2EBB3-F16A-4E2C-A9F6-E11BD47328A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find paragraph", "04. Paragraph\04. Find paragraph\Find paragraph.csproj", "{8812A10A-0E8B-4B2E-A5DC-D35AEFA8680E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Find paragraph", "04. Paragraph\04. Find paragraph\Find paragraph.csproj", "{8812A10A-0E8B-4B2E-A5DC-D35AEFA8680E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merge paragraph", "04. Paragraph\05. Merge paragraph\Merge paragraph.csproj", "{54F83C59-E404-435C-894F-2623A5C34C05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Merge paragraph", "04. Paragraph\05. Merge paragraph\Merge paragraph.csproj", "{54F83C59-E404-435C-894F-2623A5C34C05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delete paragraph", "04. Paragraph\06. Delete paragraph\Delete paragraph.csproj", "{9A1BCF7C-F184-4D5A-8EA5-7B59CB97686A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delete paragraph", "04. Paragraph\06. Delete paragraph\Delete paragraph.csproj", "{9A1BCF7C-F184-4D5A-8EA5-7B59CB97686A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Replace text in paragraph", "04. Paragraph\07. Replace text in paragraph\Replace text in paragraph.csproj", "{69155DB7-FAEF-4324-8BFB-3EED5025C995}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Replace text in paragraph", "04. Paragraph\07. Replace text in paragraph\Replace text in paragraph.csproj", "{69155DB7-FAEF-4324-8BFB-3EED5025C995}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paragraph Formatting", "04. Paragraph\08. Paragraph Formatting\Paragraph Formatting.csproj", "{ED04290A-7D35-443A-9633-345F8248F758}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paragraph Formatting", "04. Paragraph\08. Paragraph Formatting\Paragraph Formatting.csproj", "{ED04290A-7D35-443A-9633-345F8248F758}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Text", "05. Text", "{F47716F1-E3ED-4232-8FA7-75ED85417D41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Add Text", "05. Text\01. Add Text\Add Text.csproj", "{1296E994-7B30-4DC0-BF23-7BAF05679D54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Add Text", "05. Text\01. Add Text\Add Text.csproj", "{1296E994-7B30-4DC0-BF23-7BAF05679D54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Get text", "05. Text\02. Get text\Get text.csproj", "{83AA6794-2063-4332-92C4-44E25A6EDC5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Get text", "05. Text\02. Get text\Get text.csproj", "{83AA6794-2063-4332-92C4-44E25A6EDC5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insert Text in Specific Page after Specific Text", "05. Text\03. Insert Text in Specific Page after Specific Text\Insert Text in Specific Page after Specific Text.csproj", "{6FE7C7CD-1EAB-427D-A340-0BCD9FD436BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert Text in Specific Page after Specific Text", "05. Text\03. Insert Text in Specific Page after Specific Text\Insert Text in Specific Page after Specific Text.csproj", "{6FE7C7CD-1EAB-427D-A340-0BCD9FD436BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insert text in specific x,y position", "05. Text\04. Insert text in specific x,y position\Insert text in specific x,y position.csproj", "{34159D61-0E05-46AD-9B33-EA46FD11EC19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert text in specific x,y position", "05. Text\04. Insert text in specific x,y position\Insert text in specific x,y position.csproj", "{34159D61-0E05-46AD-9B33-EA46FD11EC19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insert text as Watermark", "05. Text\05. Insert text as Watermark\Insert text as Watermark.csproj", "{B43D01A6-92D5-4175-85A3-BB9271D88B93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert text as Watermark", "05. Text\05. Insert text as Watermark\Insert text as Watermark.csproj", "{B43D01A6-92D5-4175-85A3-BB9271D88B93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find text", "05. Text\06. Find text\Find text.csproj", "{5B330CFB-52EF-4D0B-B041-CDD87D7E9320}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Find text", "05. Text\06. Find text\Find text.csproj", "{5B330CFB-52EF-4D0B-B041-CDD87D7E9320}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delete text", "05. Text\07. Delete text\Delete text.csproj", "{A6BEF2B7-3F20-47FE-8436-6E64E9813EDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delete text", "05. Text\07. Delete text\Delete text.csproj", "{A6BEF2B7-3F20-47FE-8436-6E64E9813EDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find and Replace text", "05. Text\08. Find and Replace text\Find and Replace text.csproj", "{5D9EDEDF-44C7-4E1B-B32B-FEC9745AB950}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Find and Replace text", "05. Text\08. Find and Replace text\Find and Replace text.csproj", "{5D9EDEDF-44C7-4E1B-B32B-FEC9745AB950}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find and Replace text in specific page", "05. Text\09. Find and Replace text in specific page\Find and Replace text in specific page.csproj", "{32C3BB34-4752-41B1-B0E6-22E11910745A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Find and Replace text in specific page", "05. Text\09. Find and Replace text in specific page\Find and Replace text in specific page.csproj", "{32C3BB34-4752-41B1-B0E6-22E11910745A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Full Text Searching", "05. Text\10. Full Text Searching\Full Text Searching.csproj", "{64F49F88-10A3-49EE-A93F-D89DCAB387EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Full Text Searching", "05. Text\10. Full Text Searching\Full Text Searching.csproj", "{64F49F88-10A3-49EE-A93F-D89DCAB387EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Run element", "05. Text\11. Run element\Run element.csproj", "{EFDACBD0-B11F-459A-9EFE-7CAA6FE88376}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Run element", "05. Text\11. Run element\Run element.csproj", "{EFDACBD0-B11F-459A-9EFE-7CAA6FE88376}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialCharacter element", "05. Text\12. SpecialCharacter element\SpecialCharacter element.csproj", "{3EDA4A68-805A-4611-83AD-9B1493E6509E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecialCharacter element", "05. Text\12. SpecialCharacter element\SpecialCharacter element.csproj", "{3EDA4A68-805A-4611-83AD-9B1493E6509E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Add Hyperlinks", "05. Text\13. Hyperlinks\01. Add Hyperlinks\Add Hyperlinks.csproj", "{07F32F78-F544-4CAF-BD76-AA19EFC5018B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Add Hyperlinks", "05. Text\13. Hyperlinks\01. Add Hyperlinks\Add Hyperlinks.csproj", "{07F32F78-F544-4CAF-BD76-AA19EFC5018B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Replace Hyperlinks", "05. Text\13. Hyperlinks\02. Replace Hyperlinks\Replace Hyperlinks.csproj", "{C7D0E70F-ED31-4FD3-BD12-2D6E10810C9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Replace Hyperlinks", "05. Text\13. Hyperlinks\02. Replace Hyperlinks\Replace Hyperlinks.csproj", "{C7D0E70F-ED31-4FD3-BD12-2D6E10810C9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delete Hyperlinks", "05. Text\13. Hyperlinks\03. Delete Hyperlinks\Delete Hyperlinks.csproj", "{521E5654-9F04-4AD9-B180-15AAB02FF73E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delete Hyperlinks", "05. Text\13. Hyperlinks\03. Delete Hyperlinks\Delete Hyperlinks.csproj", "{521E5654-9F04-4AD9-B180-15AAB02FF73E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarks", "05. Text\14. Bookmarks\Bookmarks.csproj", "{30A753CF-6FDE-4E49-A764-82BE63C5CA20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookmarks", "05. Text\14. Bookmarks\Bookmarks.csproj", "{30A753CF-6FDE-4E49-A764-82BE63C5CA20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Footnotes and Endnotes", "05. Text\15. Footnotes and Endnotes\Footnotes and Endnotes.csproj", "{7F5F0784-E32D-40FD-B722-D45B942BA4F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Footnotes and Endnotes", "05. Text\15. Footnotes and Endnotes\Footnotes and Endnotes.csproj", "{7F5F0784-E32D-40FD-B722-D45B942BA4F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Character Formatting", "05. Text\16. Character Formatting\Character Formatting.csproj", "{B8F798EA-3F00-4F52-A7D5-DF721B24AFE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Character Formatting", "05. Text\16. Character Formatting\Character Formatting.csproj", "{B8F798EA-3F00-4F52-A7D5-DF721B24AFE1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06. Pictures and Shapes", "06. Pictures and Shapes", "{711BA110-282E-40C6-979D-DF3584A56C59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pictures and Shapes", "06. Pictures and Shapes\01. Pictures and Shapes\Pictures and Shapes.csproj", "{16244072-A161-4EBC-B85C-8403525EB305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pictures and Shapes", "06. Pictures and Shapes\01. Pictures and Shapes\Pictures and Shapes.csproj", "{16244072-A161-4EBC-B85C-8403525EB305}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Add Pictures from files", "06. Pictures and Shapes\02. Add Pictures\01. Add Pictures from files\Add Pictures from files.csproj", "{AFDD1848-6E9C-4F15-A962-2EBB6793827C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Add Pictures from files", "06. Pictures and Shapes\02. Add Pictures\01. Add Pictures from files\Add Pictures from files.csproj", "{AFDD1848-6E9C-4F15-A962-2EBB6793827C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Add Picture in DOCX in memory", "06. Pictures and Shapes\02. Add Pictures\02. Add Picture in DOCX in memory\Add Picture in DOCX in memory.csproj", "{7795088B-CCE1-4EA8-B198-2A2CA58A0367}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Add Picture in DOCX in memory", "06. Pictures and Shapes\02. Add Pictures\02. Add Picture in DOCX in memory\Add Picture in DOCX in memory.csproj", "{7795088B-CCE1-4EA8-B198-2A2CA58A0367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insert Picture to custom pages", "06. Pictures and Shapes\03. Insert Picture to custom pages\Insert Picture to custom pages.csproj", "{B988F8BA-88AA-4A75-81F8-C3C6CF93833F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert Picture to custom pages", "06. Pictures and Shapes\03. Insert Picture to custom pages\Insert Picture to custom pages.csproj", "{B988F8BA-88AA-4A75-81F8-C3C6CF93833F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insert Picture to custom page after specific text", "06. Pictures and Shapes\04. Insert Picture to custom page after specific text\Insert Picture to custom page after specific text.csproj", "{6D831EC1-DFC9-4C79-89E0-7458FF3CC983}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert Picture to custom page after specific text", "06. Pictures and Shapes\04. Insert Picture to custom page after specific text\Insert Picture to custom page after specific text.csproj", "{6D831EC1-DFC9-4C79-89E0-7458FF3CC983}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extract Pictures", "06. Pictures and Shapes\05. Extract Pictures\Extract Pictures.csproj", "{28715BCB-170E-48EF-990E-3C3D10A63B2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extract Pictures", "06. Pictures and Shapes\05. Extract Pictures\Extract Pictures.csproj", "{28715BCB-170E-48EF-990E-3C3D10A63B2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Get and Change Picture Size", "06. Pictures and Shapes\06. Get and Change Picture Size\Get and Change Picture Size.csproj", "{3678C47E-C48A-48BE-9A81-05D76BC0D9BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Get and Change Picture Size", "06. Pictures and Shapes\06. Get and Change Picture Size\Get and Change Picture Size.csproj", "{3678C47E-C48A-48BE-9A81-05D76BC0D9BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "06. Pictures and Shapes\07. Shapes\Shapes.csproj", "{C89143AA-B289-4244-8504-FA4591E750EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shapes", "06. Pictures and Shapes\07. Shapes\Shapes.csproj", "{C89143AA-B289-4244-8504-FA4591E750EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shape Groups", "06. Pictures and Shapes\08. Shape Groups\Shape Groups.csproj", "{8C99A3AD-1ED4-44CA-A4C9-7061E84241A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shape Groups", "06. Pictures and Shapes\08. Shape Groups\Shape Groups.csproj", "{8C99A3AD-1ED4-44CA-A4C9-7061E84241A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry", "06. Pictures and Shapes\09. Geometry\Geometry.csproj", "{9B2430AF-4382-4399-B0E1-C80D43F698CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geometry", "06. Pictures and Shapes\09. Geometry\Geometry.csproj", "{9B2430AF-4382-4399-B0E1-C80D43F698CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07. Formatting and Styles", "07. Formatting and Styles", "{C5ABABFD-9818-4972-A6F0-89D4E712AE52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formatting and Styles", "07. Formatting and Styles\01. Formatting and Styles\Formatting and Styles.csproj", "{00BB6A96-E963-427E-BF01-1F951FBB914B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Formatting and Styles", "07. Formatting and Styles\01. Formatting and Styles\Formatting and Styles.csproj", "{00BB6A96-E963-427E-BF01-1F951FBB914B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paragraph Formatting", "07. Formatting and Styles\02. Paragraph Formatting\Paragraph Formatting.csproj", "{4683C35D-7A9C-418A-B3AD-3D81CD6550A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paragraph Formatting", "07. Formatting and Styles\02. Paragraph Formatting\Paragraph Formatting.csproj", "{4683C35D-7A9C-418A-B3AD-3D81CD6550A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lists", "07. Formatting and Styles\03. Lists\Lists.csproj", "{E70D5BF4-6F03-45B9-A171-7580779FF7D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lists", "07. Formatting and Styles\03. Lists\Lists.csproj", "{E70D5BF4-6F03-45B9-A171-7580779FF7D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List simple", "07. Formatting and Styles\04. Lists - Add simple List\List simple.csproj", "{713F21FA-5550-4878-8347-4BA64176640E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "List simple", "07. Formatting and Styles\04. Lists - Add simple List\List simple.csproj", "{713F21FA-5550-4878-8347-4BA64176640E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List multilevel", "07. Formatting and Styles\05. Lists - Add multilevel List\List multilevel.csproj", "{BFA5605D-B036-45CC-A574-C41BEF6A9DF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "List multilevel", "07. Formatting and Styles\05. Lists - Add multilevel List\List multilevel.csproj", "{BFA5605D-B036-45CC-A574-C41BEF6A9DF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List customized", "07. Formatting and Styles\06. Lists - Add customized List\List customized.csproj", "{1DC87FE2-C30B-452B-B594-5FD9D43326C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "List customized", "07. Formatting and Styles\06. Lists - Add customized List\List customized.csproj", "{1DC87FE2-C30B-452B-B594-5FD9D43326C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Character Formatting", "07. Formatting and Styles\07. Character Formatting\Character Formatting.csproj", "{BD0EDFCD-4138-4A76-8727-30AD1D154326}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Character Formatting", "07. Formatting and Styles\07. Character Formatting\Character Formatting.csproj", "{BD0EDFCD-4138-4A76-8727-30AD1D154326}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table Formatting", "07. Formatting and Styles\08. Table Formatting\Table Formatting.csproj", "{0B2206CB-F8EB-4DCB-B9E1-CD0A415D4377}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Table Formatting", "07. Formatting and Styles\08. Table Formatting\Table Formatting.csproj", "{0B2206CB-F8EB-4DCB-B9E1-CD0A415D4377}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Row Formatting", "07. Formatting and Styles\09. Row Formatting\Row Formatting.csproj", "{5B478862-5C41-4640-BEED-365C3FC0B230}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Row Formatting", "07. Formatting and Styles\09. Row Formatting\Row Formatting.csproj", "{5B478862-5C41-4640-BEED-365C3FC0B230}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cell Formatting", "07. Formatting and Styles\10. Cell Formatting\Cell Formatting.csproj", "{1B2A602D-327E-43A5-B7B7-DA3F1AFFFC17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cell Formatting", "07. Formatting and Styles\10. Cell Formatting\Cell Formatting.csproj", "{1B2A602D-327E-43A5-B7B7-DA3F1AFFFC17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles", "07. Formatting and Styles\11. Styles\Styles.csproj", "{F2E86D5E-52E2-4C04-BBF7-7D22E7D1BEE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Styles", "07. Formatting and Styles\11. Styles\Styles.csproj", "{F2E86D5E-52E2-4C04-BBF7-7D22E7D1BEE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Style Inheritance", "07. Formatting and Styles\12. Styles - Inheritance\Style Inheritance.csproj", "{E59067FA-9D06-415A-9E5B-04E1ADD9994D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Style Inheritance", "07. Formatting and Styles\12. Styles - Inheritance\Style Inheritance.csproj", "{E59067FA-9D06-415A-9E5B-04E1ADD9994D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Style Create", "07. Formatting and Styles\13. Styles - Create\Style Create.csproj", "{ED006012-FDC0-4CE5-BD51-B1A773864300}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Style Create", "07. Formatting and Styles\13. Styles - Create\Style Create.csproj", "{ED006012-FDC0-4CE5-BD51-B1A773864300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Style Import", "07. Formatting and Styles\14. Styles - Import\Style Import.csproj", "{59F0B337-A46D-49CD-B73B-D5CC4339A8FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Style Import", "07. Formatting and Styles\14. Styles - Import\Style Import.csproj", "{59F0B337-A46D-49CD-B73B-D5CC4339A8FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08. Manipulation", "08. Manipulation", "{6CB6E4C1-0F41-4CEC-811F-60B0F251953B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manipulation", "08. Manipulation\01. Manipulation\Manipulation.csproj", "{F8600046-F946-41BB-9D9E-1728957E4040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Manipulation", "08. Manipulation\01. Manipulation\Manipulation.csproj", "{F8600046-F946-41BB-9D9E-1728957E4040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manipulation with Content", "08. Manipulation\02. Manipulation with Content\Manipulation with Content.csproj", "{034A5429-928A-4519-8DF8-018905CF7EF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Manipulation with Content", "08. Manipulation\02. Manipulation with Content\Manipulation with Content.csproj", "{034A5429-928A-4519-8DF8-018905CF7EF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content. Get", "08. Manipulation\03. Content - Get\Content. Get.csproj", "{88976231-CB92-4F80-AE1F-3B5FDC46C049}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content. Get", "08. Manipulation\03. Content - Get\Content. Get.csproj", "{88976231-CB92-4F80-AE1F-3B5FDC46C049}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content. Insert", "08. Manipulation\04. Content - Insert\Content. Insert.csproj", "{FA4142C1-26EA-4E0A-AF55-5DF39A78ED3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content. Insert", "08. Manipulation\04. Content - Insert\Content. Insert.csproj", "{FA4142C1-26EA-4E0A-AF55-5DF39A78ED3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content. Find and Replace", "08. Manipulation\05. Content - Find and Replace\Content. Find and Replace.csproj", "{BE55BD8D-3B86-4DCF-8220-90D5E7A9AA41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content. Find and Replace", "08. Manipulation\05. Content - Find and Replace\Content. Find and Replace.csproj", "{BE55BD8D-3B86-4DCF-8220-90D5E7A9AA41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content. Find and Replace with Image", "08. Manipulation\05. Content - Find and Replace with Image\Content. Find and Replace with Image.csproj", "{22707F97-0296-47C7-9B4F-6D4B7921F68F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content. Find and Replace with Image", "08. Manipulation\05. Content - Find and Replace with Image\Content. Find and Replace with Image.csproj", "{22707F97-0296-47C7-9B4F-6D4B7921F68F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content. Delete", "08. Manipulation\06. Content - Delete\Content. Delete.csproj", "{F3DDA410-B614-40B3-8CCC-EC3E088C9A4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content. Delete", "08. Manipulation\06. Content - Delete\Content. Delete.csproj", "{F3DDA410-B614-40B3-8CCC-EC3E088C9A4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manipulation with Element", "08. Manipulation\07. Manipulation with Element\Manipulation with Element.csproj", "{3A912284-B475-41C7-91FB-4B8B2090152B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Manipulation with Element", "08. Manipulation\07. Manipulation with Element\Manipulation with Element.csproj", "{3A912284-B475-41C7-91FB-4B8B2090152B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Element. Cloning", "08. Manipulation\08. Element - Cloning\Element. Cloning.csproj", "{D58D7932-22EA-4D9F-8F4E-1B1A9F4CB853}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Element. Cloning", "08. Manipulation\08. Element - Cloning\Element. Cloning.csproj", "{D58D7932-22EA-4D9F-8F4E-1B1A9F4CB853}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Element. Import", "08. Manipulation\09. Element - Import\Element. Import.csproj", "{C706F2C4-7977-454B-A09B-2E26BC11A756}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Element. Import", "08. Manipulation\09. Element - Import\Element. Import.csproj", "{C706F2C4-7977-454B-A09B-2E26BC11A756}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Element. Import with UseDestinationStyles", "08. Manipulation\10. Element - Import with UseDestinationStyles\Element. Import with UseDestinationStyles.csproj", "{DA3BC368-8A56-4D52-BD5C-0B23D1E18BA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Element. Import with UseDestinationStyles", "08. Manipulation\10. Element - Import with UseDestinationStyles\Element. Import with UseDestinationStyles.csproj", "{DA3BC368-8A56-4D52-BD5C-0B23D1E18BA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Element. Import with KeepDifferentStyles", "08. Manipulation\11. Element - Import with KeepDifferentStyles\Element. Import with KeepDifferentStyles.csproj", "{B68EDD47-2FF3-4FA1-A743-2D6B2EA4B31D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Element. Import with KeepDifferentStyles", "08. Manipulation\11. Element - Import with KeepDifferentStyles\Element. Import with KeepDifferentStyles.csproj", "{B68EDD47-2FF3-4FA1-A743-2D6B2EA4B31D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Element. Import with KeepSourceFormatting", "08. Manipulation\12. Element - Import with KeepSourceFormatting\Element. Import with KeepSourceFormatting.csproj", "{027F678F-2C78-4A39-8A38-837F07898D6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Element. Import with KeepSourceFormatting", "08. Manipulation\12. Element - Import with KeepSourceFormatting\Element. Import with KeepSourceFormatting.csproj", "{027F678F-2C78-4A39-8A38-837F07898D6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Element. Iteration", "08. Manipulation\13. Element - Iteration\Element. Iteration.csproj", "{77DB6F61-7694-454B-B3C1-033DC6979D1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Element. Iteration", "08. Manipulation\13. Element - Iteration\Element. Iteration.csproj", "{77DB6F61-7694-454B-B3C1-033DC6979D1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manipulation with ElementCollection", "08. Manipulation\14. Manipulation with ElementCollection\Manipulation with ElementCollection.csproj", "{07165D8C-D7F7-4D4B-9288-24CF4FBF6185}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Manipulation with ElementCollection", "08. Manipulation\14. Manipulation with ElementCollection\Manipulation with ElementCollection.csproj", "{07165D8C-D7F7-4D4B-9288-24CF4FBF6185}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementCollection. Add and Delete", "08. Manipulation\15. ElementCollection - Add and Delete\ElementCollection. Add and Delete.csproj", "{E75FFCFF-7E2F-44F9-B692-EB564A4B01A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElementCollection. Add and Delete", "08. Manipulation\15. ElementCollection - Add and Delete\ElementCollection. Add and Delete.csproj", "{E75FFCFF-7E2F-44F9-B692-EB564A4B01A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementCollection. Insert", "08. Manipulation\16. ElementCollection - Insert\ElementCollection. Insert.csproj", "{462BF702-A5A3-4B5F-BA0A-2AB55E78D3A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElementCollection. Insert", "08. Manipulation\16. ElementCollection - Insert\ElementCollection. Insert.csproj", "{462BF702-A5A3-4B5F-BA0A-2AB55E78D3A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementCollection. Iteration", "08. Manipulation\17. ElementCollection - Iteration\ElementCollection. Iteration.csproj", "{F08B682D-7BD0-41F6-AF3C-C93CD1D60B54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElementCollection. Iteration", "08. Manipulation\17. ElementCollection - Iteration\ElementCollection. Iteration.csproj", "{F08B682D-7BD0-41F6-AF3C-C93CD1D60B54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementCollection. Find and Replace", "08. Manipulation\18. ElementCollection - Find and Replace\ElementCollection. Find and Replace.csproj", "{80975842-EAB3-41F2-ACB6-8B30208FD0CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElementCollection. Find and Replace", "08. Manipulation\18. ElementCollection - Find and Replace\ElementCollection. Find and Replace.csproj", "{80975842-EAB3-41F2-ACB6-8B30208FD0CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementCollection. LINQ", "08. Manipulation\19. ElementCollection - LINQ\ElementCollection. LINQ.csproj", "{81A8ED27-7B25-422B-89D2-2838CC4C8B87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElementCollection. LINQ", "08. Manipulation\19. ElementCollection - LINQ\ElementCollection. LINQ.csproj", "{81A8ED27-7B25-422B-89D2-2838CC4C8B87}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09. Advanced", "09. Advanced", "{705E336D-EAF6-4187-A006-82B2D9138406}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced", "09. Advanced\01. Advanced\Advanced.csproj", "{213B12E9-DAB5-43B2-A9F3-84D36F6C243B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Advanced", "09. Advanced\01. Advanced\Advanced.csproj", "{213B12E9-DAB5-43B2-A9F3-84D36F6C243B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table of Contents. Simple", "09. Advanced\02. Table of Contents - Simple TOC\Table of Contents. Simple.csproj", "{66D6E65A-AB1F-40EF-83D4-61DCF2BF909D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Table of Contents. Simple", "09. Advanced\02. Table of Contents - Simple TOC\Table of Contents. Simple.csproj", "{66D6E65A-AB1F-40EF-83D4-61DCF2BF909D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table of Contents. Extended", "09. Advanced\03. Table of Contents - Extended TOC\Table of Contents. Extended.csproj", "{3527EE71-70A9-47B5-A09B-0AA6B3CB9F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Table of Contents. Extended", "09. Advanced\03. Table of Contents - Extended TOC\Table of Contents. Extended.csproj", "{3527EE71-70A9-47B5-A09B-0AA6B3CB9F0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table of Contents. Update", "09. Advanced\04. Table of Contents - Update TOC\Table of Contents. Update.csproj", "{AF08C72E-0A7C-4676-8B5D-547A83786BE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Table of Contents. Update", "09. Advanced\04. Table of Contents - Update TOC\Table of Contents. Update.csproj", "{AF08C72E-0A7C-4676-8B5D-547A83786BE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms and Fields", "09. Advanced\05. Forms and Fields\Forms and Fields.csproj", "{BF8582C5-2809-4973-B886-5A0F7690D31E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forms and Fields", "09. Advanced\05. Forms and Fields\Forms and Fields.csproj", "{BF8582C5-2809-4973-B886-5A0F7690D31E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content controls. Text", "09. Advanced\06. Content controls\01. Insert a plain text\Content controls. Text.csproj", "{C5442FD8-707B-4CCA-A19A-F91629BF5241}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content controls. Text", "09. Advanced\06. Content controls\01. Insert a plain text\Content controls. Text.csproj", "{C5442FD8-707B-4CCA-A19A-F91629BF5241}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content controls. RichText", "09. Advanced\06. Content controls\02. Insert a rich text\Content controls. RichText.csproj", "{55154E77-64EC-477B-95CD-E23378A433EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content controls. RichText", "09. Advanced\06. Content controls\02. Insert a rich text\Content controls. RichText.csproj", "{55154E77-64EC-477B-95CD-E23378A433EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content controls. Picture", "09. Advanced\06. Content controls\03. Insert a picture\Content controls. Picture.csproj", "{BEA93399-5B00-4F23-B18B-8AF803493B81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content controls. Picture", "09. Advanced\06. Content controls\03. Insert a picture\Content controls. Picture.csproj", "{BEA93399-5B00-4F23-B18B-8AF803493B81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content controls. Checkbox", "09. Advanced\06. Content controls\04. Insert a checkbox\Content controls. Checkbox.csproj", "{4F6199E6-2D0E-41D8-8D0E-D34899947833}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content controls. Checkbox", "09. Advanced\06. Content controls\04. Insert a checkbox\Content controls. Checkbox.csproj", "{4F6199E6-2D0E-41D8-8D0E-D34899947833}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content controls. Combobox", "09. Advanced\06. Content controls\05. Insert a combobox\Content controls. Combobox.csproj", "{819C9003-369E-4FBF-9A2B-7ACA1AB54DF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content controls. Combobox", "09. Advanced\06. Content controls\05. Insert a combobox\Content controls. Combobox.csproj", "{819C9003-369E-4FBF-9A2B-7ACA1AB54DF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit Conversion", "09. Advanced\07. Unit Conversion\Unit Conversion.csproj", "{A5131F0B-E809-4EFF-834B-5657CE448738}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unit Conversion", "09. Advanced\07. Unit Conversion\Unit Conversion.csproj", "{A5131F0B-E809-4EFF-834B-5657CE448738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revisions. Track Changes", "09. Advanced\08. Revision - Track Changes\Revisions. Track Changes.csproj", "{1DC7E325-DE9B-4D68-92D3-1597F04B3290}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Revisions. Track Changes", "09. Advanced\08. Revision - Track Changes\Revisions. Track Changes.csproj", "{1DC7E325-DE9B-4D68-92D3-1597F04B3290}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. Reporting and Mail Merge", "10. Reporting and Mail Merge", "{F24AB1F4-BC9B-4A09-88C1-C05D08B4E2B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Report", "10. Reporting and Mail Merge\01. Simple Report\Simple Report.csproj", "{4C8824CA-B56B-4E6B-B321-86BBB1B98B19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple Report", "10. Reporting and Mail Merge\01. Simple Report\Simple Report.csproj", "{4C8824CA-B56B-4E6B-B321-86BBB1B98B19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mail Merge. Clear Options", "10. Reporting and Mail Merge\02. Mail Merge Clear Options\Mail Merge. Clear Options.csproj", "{F7BCE46C-110F-49AD-B731-874F1E0A6FDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mail Merge. Clear Options", "10. Reporting and Mail Merge\02. Mail Merge Clear Options\Mail Merge. Clear Options.csproj", "{F7BCE46C-110F-49AD-B731-874F1E0A6FDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table Report with Regions", "10. Reporting and Mail Merge\03. Table Report with Regions\Table Report with Regions.csproj", "{DF03EE80-70FA-47AD-82B7-598E0A12F523}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Table Report with Regions", "10. Reporting and Mail Merge\03. Table Report with Regions\Table Report with Regions.csproj", "{DF03EE80-70FA-47AD-82B7-598E0A12F523}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom Data Source", "10. Reporting and Mail Merge\04. Custom Data Source\Custom Data Source.csproj", "{BB85FCAD-EDC7-4A1F-B2A5-52385F0CDCF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Custom Data Source", "10. Reporting and Mail Merge\04. Custom Data Source\Custom Data Source.csproj", "{BB85FCAD-EDC7-4A1F-B2A5-52385F0CDCF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Pie Chart", "10. Reporting and Mail Merge\05. Simple Pie Chart\Simple Pie Chart.csproj", "{A70C5D44-5A3D-4849-8079-5ADDFEC69E42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple Pie Chart", "10. Reporting and Mail Merge\05. Simple Pie Chart\Simple Pie Chart.csproj", "{A70C5D44-5A3D-4849-8079-5ADDFEC69E42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generate PDF report from JSON data", "10. Reporting and Mail Merge\06. Generate PDF report from JSON data\Generate PDF report from JSON data.csproj", "{F8207309-26F8-413B-A754-A86A8BD11387}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generate PDF report from JSON data", "10. Reporting and Mail Merge\06. Generate PDF report from JSON data\Generate PDF report from JSON data.csproj", "{F8207309-26F8-413B-A754-A86A8BD11387}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11. OCR", "11. OCR", "{800E0BF3-6AD5-4AC1-8360-0F9D9F8C4BC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image to DOCX", "11. OCR\01. Recognize an image using Tesseract OCR\Image to DOCX.csproj", "{8136711F-722F-4832-8C51-83956138584A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Image to DOCX", "11. OCR\01. Recognize an image using Tesseract OCR\Image to DOCX.csproj", "{8136711F-722F-4832-8C51-83956138584A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanned PDF to DOCX", "11. OCR\02. Perform OCR under scanned PDF document using Tesseract\Scanned PDF to DOCX.csproj", "{507C1A41-F5D5-483E-BA64-6AF2E64B51FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scanned PDF to DOCX", "11. OCR\02. Perform OCR under scanned PDF document using Tesseract\Scanned PDF to DOCX.csproj", "{507C1A41-F5D5-483E-BA64-6AF2E64B51FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "12. Product Installation", "12. Product Installation", "{8D160E8A-4ABE-4D48-8E79-F43B0507841A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product Activation", "12. Product Installation\01. Product Activation\Product Activation.csproj", "{8697A5E1-2EEC-4BB5-84C7-C1EC312A36B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product Activation", "12. Product Installation\01. Product Activation\Product Activation.csproj", "{8697A5E1-2EEC-4BB5-84C7-C1EC312A36B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "13. From Customers", "13. From Customers", "{462A39CE-7433-4768-BC6B-18FBA1391E67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanned PDF with hidden text to DOCX", "13. From Customers\001. Scanned PDF to Word\Scanned PDF with hidden text to DOCX.csproj", "{50DA3F04-3A8C-4FC4-BB66-CB757EAB7B7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scanned PDF with hidden text to DOCX", "13. From Customers\001. Scanned PDF to Word\Scanned PDF with hidden text to DOCX.csproj", "{50DA3F04-3A8C-4FC4-BB66-CB757EAB7B7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Set custom Font and Size", "13. From Customers\002. Set custom Font and Size\Set custom Font and Size.csproj", "{2D208C16-10DF-412A-ABB4-74D688F5C92E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Set custom Font and Size", "13. From Customers\002. Set custom Font and Size\Set custom Font and Size.csproj", "{2D208C16-10DF-412A-ABB4-74D688F5C92E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insert images on each document page", "13. From Customers\003. Insert images on each document page\Insert images on each document page.csproj", "{D4BA4A9F-7714-4284-9D89-C798B8DE559C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert images on each document page", "13. From Customers\003. Insert images on each document page\Insert images on each document page.csproj", "{D4BA4A9F-7714-4284-9D89-C798B8DE559C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Converting all files to single XLS", "13. From Customers\004. Converting all files to single XLS\Converting all files to single XLS.csproj", "{559739A0-8DEC-464E-8707-AD44784435BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Converting all files to single XLS", "13. From Customers\004. Converting all files to single XLS\Converting all files to single XLS.csproj", "{559739A0-8DEC-464E-8707-AD44784435BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insert a table in DOCX after a specific bookmark", "13. From Customers\005. Insert a table in DOCX after a specific bookmark\Insert a table in DOCX after a specific bookmark.csproj", "{454CD094-46DE-4ADF-867D-192B93A9B76B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert a table in DOCX after bookmark", "13. From Customers\005. Insert a table in DOCX after a specific bookmark\Insert a table in DOCX after bookmark.csproj", "{454CD094-46DE-4ADF-867D-192B93A9B76B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find all long-livers from a table", "13. From Customers\006. Find all long-livers from a table\Find all long-livers from a table.csproj", "{3FAACD38-52AB-4E43-A8A6-81881A80E170}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Find all long-livers from a table", "13. From Customers\006. Find all long-livers from a table\Find all long-livers from a table.csproj", "{3FAACD38-52AB-4E43-A8A6-81881A80E170}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Replace Images in PDF", "13. From Customers\007. Replace Images in PDF\Replace Images in PDF.csproj", "{D226F885-766B-463A-A6BD-20A50B8BC3B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Replace Images in PDF", "13. From Customers\007. Replace Images in PDF\Replace Images in PDF.csproj", "{D226F885-766B-463A-A6BD-20A50B8BC3B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Create document with various table borders", "13. From Customers\008. Create document with various table borders\Create document with various table borders.csproj", "{4B42580A-3FCB-40DE-9863-C3BA9C863E6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Create document with various table borders", "13. From Customers\008. Create document with various table borders\Create document with various table borders.csproj", "{4B42580A-3FCB-40DE-9863-C3BA9C863E6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Detect borders in table", "13. From Customers\009. Detect borders in table\Detect borders in table.csproj", "{FDCD4EBC-C45F-4730-BE1B-7D47682F31F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detect borders in table", "13. From Customers\009. Detect borders in table\Detect borders in table.csproj", "{FDCD4EBC-C45F-4730-BE1B-7D47682F31F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inserting an HTML", "01. Document\01. Document Builder\08. Inserting an HTML\Inserting an HTML.csproj", "{9A6C1AE6-767F-4418-93DE-A7539D700ECD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -503,10 +503,6 @@ Global
 		{58197168-202E-4A62-A1BC-F9D8473CE713}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58197168-202E-4A62-A1BC-F9D8473CE713}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58197168-202E-4A62-A1BC-F9D8473CE713}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB220E25-BE29-4F2A-A166-E27C45928D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB220E25-BE29-4F2A-A166-E27C45928D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB220E25-BE29-4F2A-A166-E27C45928D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB220E25-BE29-4F2A-A166-E27C45928D95}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2B7578C-41BA-4581-A374-0B97A5030B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2B7578C-41BA-4581-A374-0B97A5030B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2B7578C-41BA-4581-A374-0B97A5030B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1295,6 +1291,10 @@ Global
 		{FDCD4EBC-C45F-4730-BE1B-7D47682F31F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDCD4EBC-C45F-4730-BE1B-7D47682F31F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDCD4EBC-C45F-4730-BE1B-7D47682F31F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A6C1AE6-767F-4418-93DE-A7539D700ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6C1AE6-767F-4418-93DE-A7539D700ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6C1AE6-767F-4418-93DE-A7539D700ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6C1AE6-767F-4418-93DE-A7539D700ECD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1308,7 +1308,6 @@ Global
 		{9C9397E8-EDCE-4136-ADF0-D96FE33D8556} = {4088CF80-7A1B-4C60-8813-3711251450A3}
 		{1DC58091-E18F-42C1-BA7A-D44FBCE7662C} = {4088CF80-7A1B-4C60-8813-3711251450A3}
 		{58197168-202E-4A62-A1BC-F9D8473CE713} = {4088CF80-7A1B-4C60-8813-3711251450A3}
-		{DB220E25-BE29-4F2A-A166-E27C45928D95} = {4088CF80-7A1B-4C60-8813-3711251450A3}
 		{C2B7578C-41BA-4581-A374-0B97A5030B9B} = {4088CF80-7A1B-4C60-8813-3711251450A3}
 		{E56BEADC-726E-4D30-B6AC-13EDA91E612E} = {4088CF80-7A1B-4C60-8813-3711251450A3}
 		{FE9F1860-53C7-4F24-B6AB-F51472ED149E} = {4088CF80-7A1B-4C60-8813-3711251450A3}
@@ -1520,6 +1519,7 @@ Global
 		{D226F885-766B-463A-A6BD-20A50B8BC3B0} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
 		{4B42580A-3FCB-40DE-9863-C3BA9C863E6D} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
 		{FDCD4EBC-C45F-4730-BE1B-7D47682F31F6} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
+		{9A6C1AE6-767F-4418-93DE-A7539D700ECD} = {4088CF80-7A1B-4C60-8813-3711251450A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A6976BE-5CE6-4969-87E8-32E2F2EDCE32}
