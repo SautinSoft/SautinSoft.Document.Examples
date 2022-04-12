@@ -313,7 +313,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Add Picture in DOCX in memo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert Picture to custom pages", "06. Pictures and Shapes\03. Insert Picture to custom pages\Insert Picture to custom pages.csproj", "{B988F8BA-88AA-4A75-81F8-C3C6CF93833F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert Picture to custom page after specific text", "06. Pictures and Shapes\04. Insert Picture to custom page after specific text\Insert Picture to custom page after specific text.csproj", "{6D831EC1-DFC9-4C79-89E0-7458FF3CC983}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insert Picture after specific text", "06. Pictures and Shapes\04. Insert Picture to custom page after specific text\Insert Picture after specific text.csproj", "{6D831EC1-DFC9-4C79-89E0-7458FF3CC983}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extract Pictures", "06. Pictures and Shapes\05. Extract Pictures\Extract Pictures.csproj", "{28715BCB-170E-48EF-990E-3C3D10A63B2F}"
 EndProject
