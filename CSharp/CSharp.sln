@@ -469,6 +469,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detect borders in table", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inserting an HTML", "01. Document\01. Document Builder\08. Inserting an HTML\Inserting an HTML.csproj", "{9A6C1AE6-767F-4418-93DE-A7539D700ECD}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Save a document as XML", "01. Document\04. Save as\08. Save a document as XML\Save a document as XML.csproj", "{FF37443F-13AF-4599-BECF-1B57DFEBEDB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1295,6 +1297,10 @@ Global
 		{9A6C1AE6-767F-4418-93DE-A7539D700ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A6C1AE6-767F-4418-93DE-A7539D700ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A6C1AE6-767F-4418-93DE-A7539D700ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF37443F-13AF-4599-BECF-1B57DFEBEDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF37443F-13AF-4599-BECF-1B57DFEBEDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF37443F-13AF-4599-BECF-1B57DFEBEDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF37443F-13AF-4599-BECF-1B57DFEBEDB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1520,6 +1526,7 @@ Global
 		{4B42580A-3FCB-40DE-9863-C3BA9C863E6D} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
 		{FDCD4EBC-C45F-4730-BE1B-7D47682F31F6} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
 		{9A6C1AE6-767F-4418-93DE-A7539D700ECD} = {4088CF80-7A1B-4C60-8813-3711251450A3}
+		{FF37443F-13AF-4599-BECF-1B57DFEBEDB6} = {20A9450D-6A45-4D5B-BEB1-4DA328073A3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A6976BE-5CE6-4969-87E8-32E2F2EDCE32}
