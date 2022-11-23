@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+  <OutputType>Exe</OutputType>
+  <TargetFrameworks>net48;netcoreapp3.1</TargetFrameworks>
+ </PropertyGroup>
+ <Choose>
+  <When Condition="Exists('..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.Document.dll')">
+   <ItemGroup>
+    <Reference Include="SautinSoft.Document">
+     <HintPath>..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.Document.dll</HintPath>
+    </Reference>
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="System.IO.Packaging" Version="4.4.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
+    <PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
+   </ItemGroup>
+  </When>
+  <When Condition="Exists('..\..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.Document.dll')">
+   <ItemGroup>
+    <Reference Include="SautinSoft.Document">
+     <HintPath>..\..\..\..\..\Bin\.NET Framework 4.8\SautinSoft.Document.dll</HintPath>
+    </Reference>
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="System.IO.Packaging" Version="4.4.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
+    <PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
+   </ItemGroup>
+  </When>
+  <When Condition="'Nuget'=='Nuget'">
+   <ItemGroup>
+    <PackageReference Include="SautinSoft.Document" Version="*" />
+   </ItemGroup>
+  </When>
+ </Choose>
+</Project>
