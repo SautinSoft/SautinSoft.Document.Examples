@@ -475,6 +475,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Write Protection", "01. Doc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Convert Text to XML format", "01. Document\05. Convert\30. Convert Text to XML format\Convert Text to XML format.csproj", "{010216AD-CDD2-4E00-9E6C-C36F4CB91EBF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Convert RTF bytes to PDF file with formatting", "13. From Customers\010. Convert RTF bytes to PDF file with formatting\Convert RTF bytes to PDF file with formatting.csproj", "{D57D4E9C-1D03-4EA2-B2C9-94001B3CBB3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Find pages with specified text", "13. From Customers\011. Find pages with specified text\Find pages with specified text.csproj", "{444ACECC-AA3B-4E2F-AC1A-7CF11656B7D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1313,6 +1317,14 @@ Global
 		{010216AD-CDD2-4E00-9E6C-C36F4CB91EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{010216AD-CDD2-4E00-9E6C-C36F4CB91EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{010216AD-CDD2-4E00-9E6C-C36F4CB91EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57D4E9C-1D03-4EA2-B2C9-94001B3CBB3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57D4E9C-1D03-4EA2-B2C9-94001B3CBB3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57D4E9C-1D03-4EA2-B2C9-94001B3CBB3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57D4E9C-1D03-4EA2-B2C9-94001B3CBB3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{444ACECC-AA3B-4E2F-AC1A-7CF11656B7D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444ACECC-AA3B-4E2F-AC1A-7CF11656B7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444ACECC-AA3B-4E2F-AC1A-7CF11656B7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{444ACECC-AA3B-4E2F-AC1A-7CF11656B7D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1541,6 +1553,8 @@ Global
 		{FF37443F-13AF-4599-BECF-1B57DFEBEDB6} = {20A9450D-6A45-4D5B-BEB1-4DA328073A3C}
 		{06350F7A-D66B-4194-B7B1-4281552DCBC9} = {9BAA7CBD-07FB-426E-8FC2-351E123BCEC5}
 		{010216AD-CDD2-4E00-9E6C-C36F4CB91EBF} = {4B60BC0D-33BB-4BD5-A7C0-21994245514B}
+		{D57D4E9C-1D03-4EA2-B2C9-94001B3CBB3B} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
+		{444ACECC-AA3B-4E2F-AC1A-7CF11656B7D4} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A6976BE-5CE6-4969-87E8-32E2F2EDCE32}
