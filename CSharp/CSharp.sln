@@ -481,6 +481,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Find pages with specified t
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delete specified page in document", "13. From Customers\012. Delete specified page in document\Delete specified page in document.csproj", "{829EA155-2832-436B-B043-6A6FCD05A5DC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Merge files into single pdf with page numbering", "13. From Customers\013. Merge files into single pdf with page numbering\Merge files into single pdf with page numbering.csproj", "{F8641C8B-EDFB-4A6E-90A9-11C77A486EEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1331,6 +1333,10 @@ Global
 		{829EA155-2832-436B-B043-6A6FCD05A5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{829EA155-2832-436B-B043-6A6FCD05A5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{829EA155-2832-436B-B043-6A6FCD05A5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8641C8B-EDFB-4A6E-90A9-11C77A486EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8641C8B-EDFB-4A6E-90A9-11C77A486EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8641C8B-EDFB-4A6E-90A9-11C77A486EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8641C8B-EDFB-4A6E-90A9-11C77A486EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1562,6 +1568,7 @@ Global
 		{D57D4E9C-1D03-4EA2-B2C9-94001B3CBB3B} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
 		{444ACECC-AA3B-4E2F-AC1A-7CF11656B7D4} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
 		{829EA155-2832-436B-B043-6A6FCD05A5DC} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
+		{F8641C8B-EDFB-4A6E-90A9-11C77A486EEF} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A6976BE-5CE6-4969-87E8-32E2F2EDCE32}
