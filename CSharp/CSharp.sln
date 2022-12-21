@@ -485,6 +485,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Merge files into single pdf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Creating custom table with formatting", "13. From Customers\014. Creating a custom table with formatting-cs\Creating custom table with formatting.csproj", "{21627608-08C4-474D-8E67-988B44891A53}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Create structured table", "03. Tables\09. Create a structured table-cs\Create structured table.csproj", "{80967477-19D7-4D50-9796-56B81266A056}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1343,6 +1345,10 @@ Global
 		{21627608-08C4-474D-8E67-988B44891A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21627608-08C4-474D-8E67-988B44891A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21627608-08C4-474D-8E67-988B44891A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80967477-19D7-4D50-9796-56B81266A056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80967477-19D7-4D50-9796-56B81266A056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80967477-19D7-4D50-9796-56B81266A056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80967477-19D7-4D50-9796-56B81266A056}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1576,6 +1582,7 @@ Global
 		{829EA155-2832-436B-B043-6A6FCD05A5DC} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
 		{F8641C8B-EDFB-4A6E-90A9-11C77A486EEF} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
 		{21627608-08C4-474D-8E67-988B44891A53} = {462A39CE-7433-4768-BC6B-18FBA1391E67}
+		{80967477-19D7-4D50-9796-56B81266A056} = {192545BB-848D-4496-A287-A0D66CAAE00B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A6976BE-5CE6-4969-87E8-32E2F2EDCE32}
