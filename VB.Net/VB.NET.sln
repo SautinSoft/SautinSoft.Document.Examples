@@ -483,9 +483,11 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Delete specified page in do
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Merge files into single pdf with page numbering", "13. From Customers\013. Merge files into single pdf with page numbering\Merge files into single pdf with page numbering.vbproj", "{A86AB0D5-CAA5-4B46-B1FB-11B325F193C0}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Creating custom table with formatting", "13. From Customers\014. Creating a custom table with formatting-vb\Creating custom table with formatting.vbproj", "{91949996-04F0-4F7E-8CD3-5F978498BF68}"
-EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Create structured table", "03. Tables\09. Create a structured table-vb\Create structured table.vbproj", "{C2CF5525-B029-4E96-A58D-495143CC7875}"
+EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Creating custom table with formatting", "13. From Customers\014. Creating a custom table with formatting\Creating custom table with formatting.vbproj", "{47DE69F8-55DB-49B9-82BF-767B6FF0EDFB}"
+EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Insert text from file into header and footer", "13. From Customers\015. Insert text from file into header and footer\Insert text from file into header and footer.vbproj", "{B3C033AC-530B-4DB6-A915-D682C5DF2998}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1341,14 +1343,18 @@ Global
 		{A86AB0D5-CAA5-4B46-B1FB-11B325F193C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A86AB0D5-CAA5-4B46-B1FB-11B325F193C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A86AB0D5-CAA5-4B46-B1FB-11B325F193C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91949996-04F0-4F7E-8CD3-5F978498BF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91949996-04F0-4F7E-8CD3-5F978498BF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91949996-04F0-4F7E-8CD3-5F978498BF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{91949996-04F0-4F7E-8CD3-5F978498BF68}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2CF5525-B029-4E96-A58D-495143CC7875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2CF5525-B029-4E96-A58D-495143CC7875}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2CF5525-B029-4E96-A58D-495143CC7875}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2CF5525-B029-4E96-A58D-495143CC7875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47DE69F8-55DB-49B9-82BF-767B6FF0EDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47DE69F8-55DB-49B9-82BF-767B6FF0EDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47DE69F8-55DB-49B9-82BF-767B6FF0EDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47DE69F8-55DB-49B9-82BF-767B6FF0EDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3C033AC-530B-4DB6-A915-D682C5DF2998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C033AC-530B-4DB6-A915-D682C5DF2998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C033AC-530B-4DB6-A915-D682C5DF2998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C033AC-530B-4DB6-A915-D682C5DF2998}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1581,8 +1587,9 @@ Global
 		{0136497D-7642-4D59-AA5C-AE766072133E} = {827CF001-9FF1-496B-A42F-384F17307B9B}
 		{AF4A3297-F6BD-4BF8-940B-D3D87A58270F} = {827CF001-9FF1-496B-A42F-384F17307B9B}
 		{A86AB0D5-CAA5-4B46-B1FB-11B325F193C0} = {827CF001-9FF1-496B-A42F-384F17307B9B}
-		{91949996-04F0-4F7E-8CD3-5F978498BF68} = {827CF001-9FF1-496B-A42F-384F17307B9B}
 		{C2CF5525-B029-4E96-A58D-495143CC7875} = {FD9D360F-2B82-4214-82AE-E269A6400C63}
+		{47DE69F8-55DB-49B9-82BF-767B6FF0EDFB} = {827CF001-9FF1-496B-A42F-384F17307B9B}
+		{B3C033AC-530B-4DB6-A915-D682C5DF2998} = {827CF001-9FF1-496B-A42F-384F17307B9B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C877D80B-B8F0-42DB-A2FA-125CD3B411FE}
