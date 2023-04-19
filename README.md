@@ -2,7 +2,7 @@
 
 [![Nuget version](https://img.shields.io/nuget/v/SautinSoft.Document?style=for-the-badge)](https://www.nuget.org/packages/sautinsoft.document/)[![Nuget downloads](https://img.shields.io/nuget/dt/SautinSoft.Document?style=for-the-badge)](https://www.nuget.org/packages/sautinsoft.document/)
 
-<img src="https://www.sautinsoft.com/images/components/d.svg" alt="SautinSoft.Document logo" align="left" />
+<img src="https://www.sautinsoft.com/media/github/d.png" alt="SautinSoft.Document logo" align="left" />
 
 [SautinSoft.Document](https://sautinsoft.com/products/document/) is .NET assembly (SDK) which gives API to Create, Read, Write, Edit, View, Convert, Merge, Sign Digitally, Find and Replace, Do Reporting with PDF, DOC, DOCX, HTML, RTF and Text documents, Rasterize to Image.
 
