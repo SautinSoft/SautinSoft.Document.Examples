@@ -6,7 +6,7 @@
 
   <ItemGroup>
    
-    <PackageReference Include="sautinsoft.document" Version="5.5.4.14" />
+        <PackageReference Include="sautinsoft.document" Version="*"/>
     <FrameworkReference Include="Microsoft.WindowsDesktop.App.Wpf" />
   </ItemGroup>
 

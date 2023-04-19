@@ -22,7 +22,7 @@ Module Sample
         Dim serial As String = "1234567890"
 
         ' NOTICE: Place this line firstly, before creating of the DocumentCore object.
-        DocumentCore.Serial = serial
+        DocumentCore.SetLicense(serial)
 
         ' Let's create a new document by activated version.
         Dim dc As New DocumentCore()
