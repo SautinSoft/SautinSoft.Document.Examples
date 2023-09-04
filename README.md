@@ -36,14 +36,14 @@ Manipulate with Sections, Paragraphs, Tables, Lists, Text, Forms and Fields, Sha
 
 ## System Requirement
 
-* .NET Framework 4.0 - 4.8
-* .NET Core 2.0 - 3.1, .NET 5, 6, 7
+* .NET Framework 4.6.1 - 4.8
+* .NET Core 2.0 - 3.1, .NET 5, 6, 7, 8
 * .NET Standard 2.0
 * Windows, Linux, macOS, Android, iOS.
 
 ## Resources
 
-+ **Website:** [www.sautinsoft.com](http://www.sautinsoft.com)
++ **Website:** [www.sautinsoft.com](https://www.sautinsoft.com)
 + **Product Home:** [Document .Net](https://sautinsoft.com/products/document/)
 + [Download SautinSoft.Document](https://sautinsoft.com/products/document/download.php)
 + [Developer Guide](https://sautinsoft.com/products/document/help/net/developer-guide/create-document.php)
