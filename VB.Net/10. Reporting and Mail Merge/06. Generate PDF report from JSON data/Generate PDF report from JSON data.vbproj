@@ -20,8 +20,6 @@
 		<PackageReference Include="System.Security.Cryptography.Pkcs" Version="4.7.0" />
 		<PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
 		<PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="*" />
-
 	</ItemGroup>
   </When>
     <!-- Need to conditionally bring in references for the NuGet target -->

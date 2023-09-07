@@ -8,10 +8,10 @@
   </PropertyGroup>
  <Choose>
  <!-- Need to conditionally bring in references for the .NET 6.0 target -->
-  <When Condition="Exists('..\..\..\..\..\Bin\.NET 6.0\SautinSoft.Document.dll')">
+  <When Condition="Exists('..\..\..\..\Bin\.NET 6.0\SautinSoft.Document.dll')">
    <ItemGroup>
     <Reference Include="SautinSoft.Document">
-    <HintPath>..\..\..\..\..\Bin\.NET 6.0\SautinSoft.Document.dll</HintPath>
+    <HintPath>..\..\..\..\Bin\.NET 6.0\SautinSoft.Document.dll</HintPath>
     </Reference>
         <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.3.2" />
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
