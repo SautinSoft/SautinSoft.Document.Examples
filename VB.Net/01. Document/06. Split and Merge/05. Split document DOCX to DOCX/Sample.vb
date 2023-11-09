@@ -6,7 +6,12 @@ Module Sample
     Sub Main()
         SplitDocumentByPages()
     End Sub
-
+        ''' <summary>
+        ''' Loads a document and split it by separate pages. Saves the each page into DOCX format.
+        ''' </summary>
+        ''' <remarks>
+        ''' Details: https://sautinsoft.com/products/document/help/net/developer-guide/split-docx-document-by-pages-in-docx-format-net-csharp-vb.php
+        ''' </remarks>
      Sub SplitDocumentByPages()
         Dim filePath As String = "..\..\..\example.docx"
         Dim dc As DocumentCore = DocumentCore.Load(filePath)
