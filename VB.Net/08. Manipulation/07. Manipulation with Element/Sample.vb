@@ -7,7 +7,8 @@ Module Sample
     Sub Main()
         ElementManipulation()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Create a document and add paragraphs as content and as element.
     ''' </summary>

@@ -10,6 +10,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			MergeMultipleDocuments()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 
 		''' <summary>
 		''' This sample shows how to merge DOCX, RTF, PDF, PNG or text files into a single PDF document and add page numbers inside.

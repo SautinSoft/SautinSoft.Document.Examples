@@ -6,7 +6,8 @@ Module Sample
     Sub Main()
         LoadScannedPdf()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Load a scanned PDF document with help of Tesseract OCR (free OCR library) and save the result as DOCX document.
     ''' </summary>

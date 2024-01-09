@@ -7,7 +7,8 @@ Module Sample
         ConvertFromFile()
         ConvertFromStream()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Convert PDF to DOCX (file to file).
     ''' </summary>

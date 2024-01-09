@@ -8,7 +8,8 @@ Module Sample
     Sub Main()
         ModifyTable()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How to modify an existing table in a document.
     ''' </summary>

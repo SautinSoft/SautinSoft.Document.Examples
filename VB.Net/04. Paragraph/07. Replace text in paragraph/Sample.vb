@@ -7,7 +7,8 @@ Module Sample
     Sub Main()
         FindAndReplaceInParagraphs()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Find and replace a specific text in all paragraphs in PDF document.
     ''' </summary>

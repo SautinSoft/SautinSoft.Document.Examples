@@ -14,6 +14,8 @@ Namespace Sample
 		Shared Sub Main(ByVal args() As String)
 			FindPagesSpecifiedText()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' How to find out on which pages of the document the required word is located.
 		''' </summary>

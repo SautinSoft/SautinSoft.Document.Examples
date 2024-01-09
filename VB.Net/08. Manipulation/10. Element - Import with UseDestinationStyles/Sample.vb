@@ -8,7 +8,8 @@ Namespace Sample
         Shared Sub Main(ByVal args() As String)
             ImportUseDestinationStyles()
         End Sub
-
+        ''' Get your free 30-day key here:   
+        ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Import an Element with Styles from another document. Mode: UseDestinationStyles.
         ''' </summary>

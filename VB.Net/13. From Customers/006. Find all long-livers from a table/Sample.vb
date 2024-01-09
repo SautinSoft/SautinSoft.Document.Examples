@@ -10,7 +10,8 @@ Namespace Sample
 		Shared Sub Main(ByVal args() As String)
 			FindTextFromTable()
 		End Sub
-
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' How to remove the rows with the specified text from a table.
 		''' </summary>

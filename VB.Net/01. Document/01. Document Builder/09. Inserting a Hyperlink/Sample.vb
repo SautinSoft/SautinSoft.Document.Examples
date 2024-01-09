@@ -8,6 +8,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			InsertingHyperlink()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Insert a hyperlink into a document using DocumentBuilder.
 		''' </summary>

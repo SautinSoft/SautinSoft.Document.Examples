@@ -10,6 +10,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			InsertCheckBox()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Inserting a Check box content control.
 		''' </summary>

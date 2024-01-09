@@ -6,6 +6,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			SeparateDocumentToHtmlPages()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Load a document and save all pages as separate HTML documents.
 		''' </summary>

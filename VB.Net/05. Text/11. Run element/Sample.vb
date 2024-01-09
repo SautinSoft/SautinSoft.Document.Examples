@@ -7,7 +7,8 @@ Module Sample
     Sub Main()
         CalculateRuns()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Loads an existing DOCX document and calculates all 'Run' objects.
     ''' </summary>

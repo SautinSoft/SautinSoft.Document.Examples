@@ -1,0 +1,24 @@
+  <Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+  <PackageId>Document .Net</PackageId>
+  <Authors>Max Sautin</Authors>
+  <Company>SautinSoft</Company>
+  <OutputType>Exe</OutputType>
+  <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+   <ItemGroup>
+  <PackageReference Include="SkiaSharp" Version="2.88.6" />
+	    <PackageReference Include="Svg.Skia" Version="1.0.0.3" />
+	    <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
+		<PackageReference Include="System.IO.Packaging" Version="4.4.0" />
+		<PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
+		<PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
+		<PackageReference Include="SautinSoft.Document" Version="*" />
+   </ItemGroup>
+  </Project>

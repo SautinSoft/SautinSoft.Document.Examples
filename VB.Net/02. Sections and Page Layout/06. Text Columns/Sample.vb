@@ -6,7 +6,8 @@ Module Sample
     Sub Main()
         TextColumns()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Working with text columns. 
     ''' </summary>

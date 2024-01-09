@@ -6,7 +6,8 @@ Module Sample
     Sub Main()
         Manipulation()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Manipulation with ElementCollection. Split 1st Paragraph by separate Runs and insert each Run into a new Paragraph.
     ''' </summary>

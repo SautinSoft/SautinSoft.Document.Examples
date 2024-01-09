@@ -9,7 +9,8 @@ Namespace Sample
 		Shared Sub Main(ByVal args() As String)
 			MergeDocumentsInMem()
 		End Sub
-
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' This sample shows how to merge multiple files DOCX, PDF into single document in memory.
 		''' </summary>

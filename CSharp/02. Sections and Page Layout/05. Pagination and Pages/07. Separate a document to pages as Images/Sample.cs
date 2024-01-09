@@ -1,6 +1,6 @@
 using System.IO;
 using SautinSoft.Document;
-using System.Drawing;
+using SkiaSharp;
 
 namespace Example
 {
@@ -8,6 +8,9 @@ namespace Example
     {
         static void Main(string[] args)
         {
+            // Get your free 30-day key here:   
+            // https://sautinsoft.com/start-for-free/
+
             SeparateDocumentToImagePages();
         }
         /// <summary>
@@ -28,10 +31,13 @@ namespace Example
                 Directory.CreateDirectory(folderPath);
 
                 // Save the each page as Bitmap.
-                Bitmap bmp = page.Rasterize(300, SautinSoft.Document.Color.White);
+                ImageSaveOptions op = new ImageSaveOptions();
+                op.DpiX = 300;
+                op.DpiY = 300;
+                SKBitmap bmp = page.Rasterize(op, SautinSoft.Document.Color.White);
                 // Save the bitmap to PNG and JPEG.
-                bmp.Save(folderPath + @"\Page (PNG) - " + (i + 1).ToString() + ".png");
-                bmp.Save(folderPath + @"\Page (Jpeg) - " + (i + 1).ToString() + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                bmp.Encode(new FileStream(folderPath + @"\Page (PNG) - " + (i + 1).ToString() + ".png", FileMode.Create), SKEncodedImageFormat.Png, 100);
+                bmp.Encode(new FileStream(folderPath + @"\Page (Jpeg) - " + (i + 1).ToString() + ".jpg", FileMode.Create), SKEncodedImageFormat.Jpeg, 100);
             }
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(folderPath) { UseShellExecute = true });
         }

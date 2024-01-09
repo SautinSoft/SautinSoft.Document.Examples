@@ -10,7 +10,8 @@ Namespace Sample
 		Shared Sub Main(ByVal args() As String)
 			FindTextAndReplaceImage()
 		End Sub
-
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 
         ''' <summary>
         ''' Find Text and replace it with a Picture using ContentRange.

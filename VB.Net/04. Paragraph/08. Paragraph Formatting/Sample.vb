@@ -6,7 +6,8 @@ Module Sample
     Sub Main()
         ParagraphFormatting()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' This sample shows how to specify a paragraph formatting. 
     ''' </summary>

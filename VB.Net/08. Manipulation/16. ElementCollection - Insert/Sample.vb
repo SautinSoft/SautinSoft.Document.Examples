@@ -6,7 +6,8 @@ Module Sample
     Sub Main()
         InsertParagraphCount()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Inserts a new Run (Text element) at the start of each paragraph.
     ''' </summary>

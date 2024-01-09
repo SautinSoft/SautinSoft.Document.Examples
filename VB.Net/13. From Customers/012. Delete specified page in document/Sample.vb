@@ -6,6 +6,8 @@ Namespace Sample
 		Shared Sub Main(ByVal args() As String)
 			DeleteSpecifiedPageInDocument()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' How to delete the specified page in the document.
 		''' </summary>

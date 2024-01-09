@@ -6,7 +6,8 @@ Module Sample
     Sub Main()
         AddPageNumbering()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Add page numbering into an existing PDF document.
     ''' </summary>

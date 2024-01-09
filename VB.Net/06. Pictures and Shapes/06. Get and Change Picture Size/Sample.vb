@@ -9,7 +9,8 @@ Module Sample
     Sub Main()
         GetAndChangePictureSize()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Get a Picture size, Change it and Save the document back.
     ''' </summary>

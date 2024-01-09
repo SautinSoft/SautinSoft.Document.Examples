@@ -7,6 +7,8 @@ Namespace Example
         Shared Sub Main(ByVal args() As String)
             DifferentHeaderAndFooters()
         End Sub
+        ''' Get your free 30-day key here:   
+        ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Creates a document with different headers: on first page, default and in another section.
         ''' </summary>

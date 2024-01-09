@@ -8,7 +8,8 @@ Module Sample
     Sub Main()
         EditPageNumbering()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How to edit Page Numbering in an existing DOCX document. 
     ''' </summary>

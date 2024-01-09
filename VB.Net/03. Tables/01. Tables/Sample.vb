@@ -8,7 +8,8 @@ Namespace Example
         Shared Sub Main(ByVal args() As String)
             CreateTable()
         End Sub
-
+        ''' Get your free 30-day key here:   
+        ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Creates a new cell within a table and fills the it in staggered order.
         ''' </summary>

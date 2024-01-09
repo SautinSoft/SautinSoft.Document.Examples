@@ -1,14 +1,15 @@
 Imports System
 Imports System.IO
 Imports SautinSoft.Document
-Imports System.Drawing
+Imports SkiaSharp
 
 Namespace Example
     Friend Class Program
         Shared Sub Main(ByVal args() As String)
             RasterizePdfToPicture()
         End Sub
-
+        ''' Get your free 30-day key here:   
+        ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Rasterizing - save PDF document as PNG and JPEG images.
         ''' </summary>
@@ -29,21 +30,23 @@ Namespace Example
 
             Dim documentPaginator As DocumentPaginator = dc.GetPaginator(New PaginatorOptions() With {.UpdateFields = True})
 
-            Dim dpi As Integer = 300
-
             Dim pagesToRasterize As Integer = 2
             Dim currentPage As Integer = 1
 
             For Each page As DocumentPage In documentPaginator.Pages
                 ' Save the page into Bitmap image with specified dpi and background.
-                Dim picture As Bitmap = page.Rasterize(dpi, SautinSoft.Document.Color.White)
+                Dim dpi As ImageSaveOptions = New ImageSaveOptions
+                dpi.DpiX = 72
+                dpi.DpiY = 72
+
+                Dim picture As SKBitmap = page.Rasterize(dpi, SautinSoft.Document.Color.White)
 
                 ' Save the Bitmap to a PNG file.
                 If currentPage = 1 Then
-                    picture.Save(pngFile)
+                    picture.Encode(New FileStream(pngFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100)
                 ElseIf currentPage = 2 Then
                     ' Save the Bitmap to a JPEG file.
-                    picture.Save(jpegFile, System.Drawing.Imaging.ImageFormat.Jpeg)
+                    picture.Encode(New FileStream(jpegFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Jpeg, 100)
                 End If
 
                 currentPage += 1

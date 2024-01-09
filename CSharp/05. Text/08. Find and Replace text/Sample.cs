@@ -13,6 +13,9 @@ namespace Sample
     {
         static void Main(string[] args)
         {
+            // Get your free 30-day key here:   
+            // https://sautinsoft.com/start-for-free/
+
             FindAndReplace();
         }
         /// <summary>

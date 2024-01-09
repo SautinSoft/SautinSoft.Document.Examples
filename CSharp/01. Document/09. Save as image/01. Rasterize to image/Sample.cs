@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using SautinSoft.Document;
-using System.Drawing;
+using SkiaSharp;
 
 namespace Example
 {
@@ -9,6 +9,9 @@ namespace Example
     {
         static void Main(string[] args)
         {
+            // Get your free 30-day key here:   
+            // https://sautinsoft.com/start-for-free/
+
             RasterizeDocument();
         }
 
@@ -53,15 +56,17 @@ namespace Example
             DocumentPaginator documentPaginator = dc.GetPaginator(new PaginatorOptions() { UpdateFields = true });
 
             // To get high-quality image, lets set 300 dpi.
-            int dpi = 300;
+            var DPI = new ImageSaveOptions();
+            DPI.DpiX = 300;
+            DPI.DpiY = 300;
 
             // Get the 1st page.
             DocumentPage page = documentPaginator.Pages[0];
 
             // Rasterize/convert the page into PNG image.
-            Bitmap image = page.Rasterize(dpi, SautinSoft.Document.Color.LightGray);
+            SKBitmap image = page.Rasterize(DPI, SautinSoft.Document.Color.LightGray);
 
-            image.Save(pngFile, System.Drawing.Imaging.ImageFormat.Png);
+            image.Encode(new FileStream(pngFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100); ;
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(pngFile) { UseShellExecute = true });

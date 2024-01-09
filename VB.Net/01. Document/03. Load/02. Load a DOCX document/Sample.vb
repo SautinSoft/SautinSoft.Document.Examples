@@ -7,7 +7,8 @@ Module Sample
         LoadDocxFromFile()
         'LoadDocxFromStream();
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Loads a DOCX document into DocumentCore (dc) from a file.
     ''' </summary>

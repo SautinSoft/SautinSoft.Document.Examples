@@ -7,7 +7,8 @@ Module Sample
     Sub Main()
         DeleteContent()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Open a document and delete some content.
     ''' </summary>

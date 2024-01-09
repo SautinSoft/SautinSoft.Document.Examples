@@ -8,6 +8,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			TableRowFormatting()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Shows how to set a height for a table row, repeat a row as header on each page, shift a row by N columns to the right.
 		''' </summary>

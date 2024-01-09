@@ -7,7 +7,8 @@ Module Sample
     Sub Main()
         HeadersAndFooters()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How to add a header and footer into a document.
     ''' </summary>

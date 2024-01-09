@@ -7,7 +7,8 @@ Module Sample
     Sub Main()
         MailMergeSimpleEnvelope()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Generates 5 envelopes "Happy New Year" for Simpson family using the one template.
     ''' </summary>

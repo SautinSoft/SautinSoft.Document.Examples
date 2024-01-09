@@ -14,6 +14,8 @@ Namespace Sample
 		Shared Sub Main(ByVal args() As String)
 			MailMergeWithClearOptions()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Shows how use ClearOptions - remove specific elements if no data has been imported into them.
 		''' </summary>

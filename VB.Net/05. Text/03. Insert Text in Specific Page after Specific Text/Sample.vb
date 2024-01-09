@@ -12,6 +12,8 @@ Namespace Sample
 			FindAndReplaceSpecificTextWay1()
 			'FindAndReplaceSpecificTextWay2();
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Find and replace a certain text only on the second page of the DOCX document.
 		''' Way #1:

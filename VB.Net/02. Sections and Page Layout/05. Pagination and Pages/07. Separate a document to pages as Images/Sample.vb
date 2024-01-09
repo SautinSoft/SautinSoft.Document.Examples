@@ -1,13 +1,15 @@
 Imports System.IO
 Imports SautinSoft.Document
 Imports SautinSoft.Document.Drawing
-Imports System.Drawing
+Imports SkiaSharp
 
 Namespace Example
 	Friend Class Program
 		Shared Sub Main(ByVal args() As String)
 			SeparateDocumentToImagePages()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Load a document and save all pages as separate PNG &amp; Jpeg images.
 		''' </summary>
@@ -24,10 +26,14 @@ Namespace Example
 				Directory.CreateDirectory(folderPath)
 
 				' Save the each page as Bitmap.
-				Dim bmp As Bitmap = page.Rasterize(300, SautinSoft.Document.Color.White)
+				Dim dpi As ImageSaveOptions = New ImageSaveOptions
+				dpi.DpiX = 300
+				dpi.DpiY = 300
+
+				Dim bmp As SKBitmap = page.Rasterize(dpi, SautinSoft.Document.Color.White)
 				' Save the bitmap to PNG and JPEG.
-				bmp.Save(folderPath & "\Page (PNG) - " & (i + 1).ToString() & ".png")
-				bmp.Save(folderPath & "\Page (Jpeg) - " & (i + 1).ToString() & ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
+				bmp.Encode(New FileStream(folderPath & "\Page (PNG) - " & (i + 1).ToString() & ".png", FileMode.Create), SKEncodedImageFormat.Png, 100)
+				bmp.Encode(New FileStream(folderPath & "\Page (Jpeg) - " & (i + 1).ToString() & ".jpg", FileMode.Create), SKEncodedImageFormat.Jpeg, 100)
 			Next i
 			System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(folderPath) With {.UseShellExecute = True})
 		End Sub

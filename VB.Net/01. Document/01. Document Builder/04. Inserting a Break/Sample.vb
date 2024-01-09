@@ -8,6 +8,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			InsertingBreak()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Insert a Line Break, Column Break, Page Break using DocumentBuilder.
 		''' </summary>

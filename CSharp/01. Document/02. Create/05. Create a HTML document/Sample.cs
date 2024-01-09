@@ -7,6 +7,9 @@ namespace Example
     {
         static void Main(string[] args)
         {
+            // Get your free 30-day key here:   
+            // https://sautinsoft.com/start-for-free/
+
             // Here we'll show two ways to create HTML document from a scratch.
             // Use any of them, which is more clear to you.
 

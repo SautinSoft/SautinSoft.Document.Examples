@@ -9,6 +9,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			MovingCursor()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Moving the current cursor position in the document using DocumentBuilder.
 		''' </summary>

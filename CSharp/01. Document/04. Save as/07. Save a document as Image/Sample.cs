@@ -1,7 +1,8 @@
-using System.Drawing;
-using System.Drawing.Imaging;
+using System;
 using System.IO;
+using System.Runtime.Intrinsics.Arm;
 using SautinSoft.Document;
+using SkiaSharp;
 
 namespace Example
 {
@@ -9,6 +10,9 @@ namespace Example
     {
         static void Main(string[] args)
         {
+            // Get your free 30-day key here:   
+            // https://sautinsoft.com/start-for-free/
+
             SaveToImage();
         }
         /// <summary>
@@ -29,9 +33,18 @@ namespace Example
             {
                 DocumentPage page = dp.Pages[i];
                 // For example, set DPI: 72, Background: White.
-                Bitmap image = page.Rasterize(72, SautinSoft.Document.Color.White);
+
+                // To get high-quality image, lets set 72 dpi.
+                var DPI = new ImageSaveOptions();
+                DPI.DpiX = 72;
+                DPI.DpiY = 72;
+                
+                // Rasterize/convert the page into PNG image.
+                SKBitmap image = page.Rasterize(DPI, SautinSoft.Document.Color.White);
+
                 Directory.CreateDirectory(folderPath);
-                image.Save(folderPath+@"\Page - "+i.ToString()+".png", ImageFormat.Png);
+                image.Encode(new FileStream(folderPath + @"\Page - " + i.ToString() + ".png", FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100);
+
             }
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(folderPath) { UseShellExecute = true });
         }

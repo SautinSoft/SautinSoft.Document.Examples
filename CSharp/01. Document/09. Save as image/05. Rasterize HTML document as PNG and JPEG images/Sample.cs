@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using SautinSoft.Document;
-using System.Drawing;
+using SkiaSharp;
 
 namespace Example
 {
@@ -9,6 +9,9 @@ namespace Example
     {      
         static void Main(string[] args)
         {
+            // Get your free 30-day key here:   
+            // https://sautinsoft.com/start-for-free/
+
             RasterizeHtmlToPicture();         
         }
 
@@ -48,14 +51,18 @@ namespace Example
             foreach (DocumentPage page in documentPaginator.Pages)
             {
                 // Save the page into Bitmap image with specified dpi and background.
-                Bitmap picture = page.Rasterize(dpi, SautinSoft.Document.Color.White);
+                var DPI = new ImageSaveOptions();
+                DPI.DpiX = 300;
+                DPI.DpiY = 300;
+                // Save the 1st document page to the file in PNG format.
+                SkiaSharp.SKBitmap picture = page.Rasterize(DPI, SautinSoft.Document.Color.White);
 
                 // Save the Bitmap to a PNG file.
                 if (currentPage == 1)
-                    picture.Save(pngFile);
+                    picture.Encode(new FileStream(pngFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100);
                 else if (currentPage == 2)
-                // Save the Bitmap to a JPEG file.
-                    picture.Save(jpegFile, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    // Save the Bitmap to a JPEG file.
+                    picture.Encode(new FileStream(jpegFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Jpeg, 100);
 
                 currentPage++;
 

@@ -8,7 +8,8 @@ Namespace Sample
         Shared Sub Main(ByVal args() As String)
             MergeRowsAndCellsInTable()
         End Sub
-
+        ''' Get your free 30-day key here:   
+        ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Create a new table with rows and cells merged by vertical (rowspan) and horizontal (colspan).
         ''' </summary>

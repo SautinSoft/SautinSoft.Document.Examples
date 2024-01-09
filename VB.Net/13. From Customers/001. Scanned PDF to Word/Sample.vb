@@ -5,7 +5,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			ScannedPdfToWord()
 		End Sub
-
+        ''' Get your free 30-day key here:   
+        ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' The method converts a PDF document with scanned images to Word. But it works only if the PDF document contains a hidden text atop of the images.
         ''' </summary>

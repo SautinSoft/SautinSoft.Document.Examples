@@ -6,7 +6,8 @@ Module Sample
     Sub Main()
         FormDropDown()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Creates a document containing FormDropDown element.
     ''' </summary>

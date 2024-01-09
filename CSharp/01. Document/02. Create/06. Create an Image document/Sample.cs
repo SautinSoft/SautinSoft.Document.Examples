@@ -1,6 +1,8 @@
 using SautinSoft.Document;
 using SautinSoft.Document.Drawing;
+using SkiaSharp;
 using System.Drawing;
+using System.IO;
 
 namespace Example
 {
@@ -8,6 +10,9 @@ namespace Example
     {
         static void Main(string[] args)
         {
+            // Get your free 30-day key here:   
+            // https://sautinsoft.com/start-for-free/
+
             // Here we'll show two ways to create Image document from a scratch.
             // Use any of them, which is more clear to you.
 
@@ -72,8 +77,12 @@ namespace Example
             shape.Fill.SetSolid(SautinSoft.Document.Color.Orange);            
 
             // Save the 1st document page to the file in PNG format.
-            Bitmap page = dc.GetPaginator().Pages[0].Rasterize(300, SautinSoft.Document.Color.White);
-            page.Save(docPath);
+            ImageSaveOptions options = new ImageSaveOptions();
+            options.DpiX = 300;
+            options.DpiY = 300;
+            var a = dc.GetPaginator().Pages[0];
+            SKBitmap page = dc.GetPaginator().Pages[0].Rasterize(options, SautinSoft.Document.Color.White);
+            page.Encode(new FileStream(docPath, FileMode.Create), SKEncodedImageFormat.Png, 100);
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) { UseShellExecute = true });
@@ -137,8 +146,11 @@ namespace Example
             par2.Inlines.Add(shape);
 
             // Save the 1st document page to the file in PNG format.
-            Bitmap page = dc.GetPaginator().Pages[0].Rasterize(300, SautinSoft.Document.Color.White);
-            page.Save(docPath);
+            ImageSaveOptions options = new ImageSaveOptions();
+            options.DpiX = 300;
+            options.DpiY = 300;
+            SKBitmap page = dc.GetPaginator().Pages[0].Rasterize(options, SautinSoft.Document.Color.White);
+            page.Encode(new FileStream(docPath, FileMode.Create), SKEncodedImageFormat.Png, 100);
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) {UseShellExecute=true});

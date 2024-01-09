@@ -8,6 +8,8 @@ Namespace Example
         Shared Sub Main(ByVal args() As String)
             DeleteParagraphs()
         End Sub
+        ''' Get your free 30-day key here:   
+        ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Deletes a specific paragraphs in an existing DOCX and save it as new PDF.
         ''' </summary>

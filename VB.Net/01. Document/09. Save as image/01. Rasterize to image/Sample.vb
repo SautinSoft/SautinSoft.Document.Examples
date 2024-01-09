@@ -1,14 +1,15 @@
 Imports System
 Imports System.IO
 Imports SautinSoft.Document
-Imports System.Drawing
+Imports SkiaSharp
 
 Namespace Example
     Friend Class Program
         Shared Sub Main(ByVal args() As String)
             RasterizeDocument()
         End Sub
-
+        ''' Get your free 30-day key here:   
+        ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' How to rasterize a document - save the document pages as images.
         ''' </summary>
@@ -53,15 +54,17 @@ Namespace Example
             Dim documentPaginator As DocumentPaginator = dc.GetPaginator(New PaginatorOptions() With {.UpdateFields = True})
 
             ' To get high-quality image, lets set 300 dpi.
-            Dim dpi As Integer = 300
+            Dim dpi As ImageSaveOptions = New ImageSaveOptions()
+            dpi.DpiX = 300
+            dpi.DpiY = 300
 
             ' Get the 1st page.
             Dim page As DocumentPage = documentPaginator.Pages(0)
 
             ' Rasterize/convert the page into PNG image.
-            Dim image As Bitmap = page.Rasterize(dpi, SautinSoft.Document.Color.LightGray)
+            Dim image As SKBitmap = page.Rasterize(dpi, SautinSoft.Document.Color.LightGray)
 
-            image.Save(pngFile, System.Drawing.Imaging.ImageFormat.Png)
+            image.Encode(New FileStream(pngFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100)
 
             ' Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(pngFile) With {.UseShellExecute = True})

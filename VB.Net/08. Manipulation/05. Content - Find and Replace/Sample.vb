@@ -7,7 +7,8 @@ Module Sample
     Sub Main()
         FindAndReplace()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Find and replace a text using ContentRange.
     ''' </summary>

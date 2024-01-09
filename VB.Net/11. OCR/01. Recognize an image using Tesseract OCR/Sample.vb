@@ -1,12 +1,14 @@
 Imports System
 Imports System.IO
 Imports SautinSoft.Document
+Imports SkiaSharp
 
 Module Sample
     Sub Main()
 		RecognizeImage()
 	End Sub
-
+        ''' Get your free 30-day key here:   
+        ''' https://sautinsoft.com/start-for-free/
 	''' <summary>
 	''' Recognize an image using Tesseract (free OCR library) and save the result as DOCX document.
 	''' </summary>
@@ -90,21 +92,16 @@ Module Sample
 					Using engine As New Tesseract.TesseractEngine(tesseractData, tesseractLanguages, Tesseract.EngineMode.Default)
 						engine.DefaultPageSegMode = Tesseract.PageSegMode.Auto
 						Using msImg As New MemoryStream(image)
-							Dim imgWithText As System.Drawing.Image = System.Drawing.Image.FromStream(msImg)
-							Dim i As Integer = 0
-							Do While i < imgWithText.GetFrameCount(System.Drawing.Imaging.FrameDimension.Page)
-								imgWithText.SelectActiveFrame(System.Drawing.Imaging.FrameDimension.Page, i)
-								Using ms As New MemoryStream()
-									imgWithText.Save(ms, System.Drawing.Imaging.ImageFormat.Png)
-									Dim imgBytes() As Byte = ms.ToArray()
-									Using img As Tesseract.Pix = Tesseract.Pix.LoadFromMemory(imgBytes)
-										Using page = engine.Process(img, "Serachablepdf")
-											renderer.AddPage(page)
-										End Using
+							Dim imgWithText As SKBitmap = SKBitmap.Decode(msImg)
+							Using ms As New MemoryStream()
+								imgWithText.Encode(ms, SKEncodedImageFormat.Png, 100)
+								Dim imgBytes() As Byte = ms.ToArray()
+								Using img As Tesseract.Pix = Tesseract.Pix.LoadFromMemory(imgBytes)
+									Using page = engine.Process(img, "Serachablepdf")
+										renderer.AddPage(page)
 									End Using
 								End Using
-								i += 1
-							Loop
+							End Using
 						End Using
 					End Using
 				End Using

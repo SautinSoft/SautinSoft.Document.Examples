@@ -7,7 +7,8 @@ Module Sample
         ConvertPointsTo()
         UsingUnitConversion()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Shows what is the one point is equal in different units.
     ''' </summary>

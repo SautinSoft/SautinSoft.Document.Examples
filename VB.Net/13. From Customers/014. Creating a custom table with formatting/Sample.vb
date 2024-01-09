@@ -12,7 +12,8 @@ Namespace Example
 			TableWithDocumentCore()
 			TableWithDocumentBuilder()
 		End Sub
-
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' This sample shows how to creating a custom table with formatting using DocumentCore or DocumentBuilder classes.
 		''' </summary>

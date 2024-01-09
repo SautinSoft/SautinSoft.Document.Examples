@@ -9,7 +9,8 @@ Module Sample
     Sub Main()
         ImportingElement()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Copy a document to other document. Supported any formats (PDF, DOCX, RTF, HTML).
     ''' </summary>

@@ -6,7 +6,8 @@ Module Sample
     Sub Main()
         Sections()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Creates a document with different sections.
     ''' </summary>

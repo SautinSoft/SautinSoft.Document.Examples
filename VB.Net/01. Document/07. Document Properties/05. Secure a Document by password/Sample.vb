@@ -6,7 +6,8 @@ Module Sample
     Sub Main()
         SecureDocument()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Create and secure a PDF document by password. Also set the permissions for the document.
     ''' </summary>

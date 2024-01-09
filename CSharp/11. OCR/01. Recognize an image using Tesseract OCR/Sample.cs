@@ -1,6 +1,7 @@
 using System.IO;
 using SautinSoft.Document;
 using System;
+using SkiaSharp;
 
 namespace Example
 {
@@ -8,6 +9,9 @@ namespace Example
     {
         static void Main(string[] args)
         {
+            // Get your free 30-day key here:   
+            // https://sautinsoft.com/start-for-free/
+
             RecognizeImage();
         }
 
@@ -36,7 +40,7 @@ namespace Example
 
             // Let's start:
             string inpFile = @"..\..\..\image.png";
-            string outFile = "Result.docx";
+            string outFile = "Result1.docx";
 
             ImageLoadOptions lo = new ImageLoadOptions();
             lo.OCROptions.OCRMode = OCRMode.Enabled;
@@ -96,13 +100,10 @@ namespace Example
                             engine.DefaultPageSegMode = Tesseract.PageSegMode.Auto;
                             using (MemoryStream msImg = new MemoryStream(image))
                             {
-                                System.Drawing.Image imgWithText = System.Drawing.Image.FromStream(msImg);
-                                for (int i = 0; i < imgWithText.GetFrameCount(System.Drawing.Imaging.FrameDimension.Page); i++)
-                                {
-                                    imgWithText.SelectActiveFrame(System.Drawing.Imaging.FrameDimension.Page, i);
+                                SKBitmap imgWithText = SKBitmap.Decode(msImg);
                                     using (MemoryStream ms = new MemoryStream())
                                     {
-                                        imgWithText.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                                        imgWithText.Encode(ms, SKEncodedImageFormat.Png, 100);
                                         byte[] imgBytes = ms.ToArray();
                                         using (Tesseract.Pix img = Tesseract.Pix.LoadFromMemory(imgBytes))
                                         {
@@ -112,7 +113,6 @@ namespace Example
                                             }
                                         }
                                     }
-                                }
                             }
                         }
                     }

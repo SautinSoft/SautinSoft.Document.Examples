@@ -6,7 +6,8 @@ Module Sample
     Sub Main()
         ReplaceHeader()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Removes the old header/footer and inserts a new one into an existing PDF document.
     ''' </summary>

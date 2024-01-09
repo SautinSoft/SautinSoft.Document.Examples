@@ -8,6 +8,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			InsertingParagraph()
 		End Sub
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Create a document and insert a paragraph using DocumentBuilder.
 		''' </summary>

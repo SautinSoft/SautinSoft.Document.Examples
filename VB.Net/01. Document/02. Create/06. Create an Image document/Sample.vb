@@ -1,6 +1,7 @@
+Imports System.IO
 Imports SautinSoft.Document
 Imports SautinSoft.Document.Drawing
-Imports System.Drawing
+Imports SkiaSharp
 
 Namespace Example
     Friend Class Program
@@ -14,6 +15,8 @@ Namespace Example
             ' 2. With Document Object Model (DOM) directly.
             CreateImageUsingDOM()
         End Sub
+        ''' Get your free 30-day key here:   
+        ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Creates a new Image document using DocumentBuilder wizard.
         ''' </summary>
@@ -68,8 +71,12 @@ Namespace Example
             shape.Fill.SetSolid(SautinSoft.Document.Color.Orange)
 
             ' Save the 1st document page to the file in PNG format.
-            Dim page As Bitmap = dc.GetPaginator().Pages(0).Rasterize(300, SautinSoft.Document.Color.White)
-            page.Save(docPath)
+            Dim dpi As ImageSaveOptions = New ImageSaveOptions
+            dpi.DpiX = 300
+            dpi.DpiY = 300
+
+            Dim page As SKBitmap = dc.GetPaginator().Pages(0).Rasterize(dpi, SautinSoft.Document.Color.White)
+            page.Encode(New FileStream(docPath, FileMode.Create), SKEncodedImageFormat.Png, 100)
 
             ' Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(docPath) With {.UseShellExecute = True})
@@ -144,8 +151,12 @@ Namespace Example
             par2.Inlines.Add(shape)
 
             ' Save the 1st document page to the file in PNG format.
-            Dim page As Bitmap = dc.GetPaginator().Pages(0).Rasterize(300, SautinSoft.Document.Color.White)
-            page.Save(docPath)
+            Dim dpi As ImageSaveOptions = New ImageSaveOptions
+            dpi.DpiX = 300
+            dpi.DpiY = 300
+
+            Dim page As SKBitmap = dc.GetPaginator().Pages(0).Rasterize(dpi, SautinSoft.Document.Color.White)
+            page.Encode(New FileStream(docPath, FileMode.Create), SKEncodedImageFormat.Png, 100)
 
             ' Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(docPath) With {.UseShellExecute = True})

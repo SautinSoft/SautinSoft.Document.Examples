@@ -12,7 +12,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			ReplaceImagesInPdf()
 		End Sub
-
+                ''' Get your free 30-day key here:   
+                ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' How to replace images in PDF document.
 		''' </summary>

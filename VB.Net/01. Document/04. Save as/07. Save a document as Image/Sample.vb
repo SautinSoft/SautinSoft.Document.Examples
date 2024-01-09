@@ -1,14 +1,16 @@
 Imports System
 Imports System.IO
+Imports System.Runtime.Intrinsics.Arm
 Imports SautinSoft.Document
-Imports System.Drawing
-Imports System.Drawing.Imaging
+Imports SkiaSharp
+
 
 Module Sample
     Sub Main()
         SaveToImage()
     End Sub
-
+    ''' Get your free 30-day key here:   
+    ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Loads a document and saves all pages as images.
     ''' </summary>
@@ -25,9 +27,14 @@ Module Sample
         For i As Integer = 0 To dp.Pages.Count - 1
             Dim page As DocumentPage = dp.Pages(i)
             ' For example, set DPI: 72, Background: White.
-            Dim image As Bitmap = page.Rasterize(72, SautinSoft.Document.Color.White)
+
+            Dim dpi As ImageSaveOptions = New ImageSaveOptions()
+            dpi.DpiX = 72
+            dpi.DpiY = 72
+            Dim image As SKBitmap = page.Rasterize(DPI, SautinSoft.Document.Color.White)
             Directory.CreateDirectory(folderPath)
-            image.Save(folderPath & "\Page - " & i.ToString() & ".png", ImageFormat.Png)
+            image.Encode(New FileStream(folderPath + "\Page - " + i.ToString() + ".png", FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100)
+
         Next i
         System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(folderPath) With {.UseShellExecute = True})
     End Sub
