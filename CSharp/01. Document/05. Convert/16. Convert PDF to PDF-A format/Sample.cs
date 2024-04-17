@@ -48,6 +48,9 @@ namespace Example
             };
 
             dc.Save(outFile, pdfSO);
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });
@@ -98,7 +101,10 @@ namespace Example
                 using (MemoryStream outMs = new MemoryStream())
                 {
                     dc.Save(outMs, pdfSO);
-                    outData = outMs.ToArray();                    
+                    outData = outMs.ToArray();  
+
+				// Important for Linux: Install MS Fonts
+				// sudo apt install ttf-mscorefonts-installer -y					
                 }
                 // Show the result for demonstration purposes.
                 if (outData != null)

@@ -28,6 +28,10 @@ namespace Example
 
             // Convert non-tabular data and saves it as Xml file.
             dc.Save(outFile, new XmlSaveOptions { ConvertNonTabularDataToSpreadsheet = true });
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
+
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });

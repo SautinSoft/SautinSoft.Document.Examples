@@ -43,6 +43,9 @@ namespace Example
                 CssExportMode = CssExportMode.Inline,
                 ListExportMode = HtmlListExportMode.ByHtmlTags
             });
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the results for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(fileHtmlFixed) { UseShellExecute = true });
@@ -81,6 +84,9 @@ namespace Example
                 fileData = ms.ToArray();
 
                 File.WriteAllBytes(fileHtmlFlowing, fileData);
+				
+				// Important for Linux: Install MS Fonts
+			    // sudo apt install ttf-mscorefonts-installer -y
             }
         }
     }

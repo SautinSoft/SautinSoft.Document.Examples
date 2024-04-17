@@ -35,6 +35,9 @@ namespace Example
                 Encoding = System.Text.Encoding.UTF8,
                 ParagraphBreak = Environment.NewLine
             });
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });
@@ -63,6 +66,9 @@ namespace Example
                 fileData = ms.ToArray();
             }
             File.WriteAllBytes(filePath, fileData);
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });

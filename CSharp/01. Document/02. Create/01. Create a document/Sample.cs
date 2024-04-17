@@ -48,6 +48,9 @@ namespace Example
             // Save the document in DOCX format.
             string outFile = "DocumentBuilder.docx";
             dc.Save(outFile);
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });
@@ -84,6 +87,9 @@ namespace Example
             // Save the document in PDF format.
             string outFile = @"DOM.pdf";
             dc.Save(outFile);
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });
@@ -106,6 +112,9 @@ namespace Example
             // Save the document in HTML format.
             string outFile = @"ContentRange.html";
             dc.Save(outFile, new HtmlFixedSaveOptions() { Title = "ContentRange" });
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });

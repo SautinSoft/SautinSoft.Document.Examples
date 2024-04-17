@@ -76,6 +76,9 @@ namespace Example
             // Save the document to the file in DOCX format.
             dc.Save(docPath, new DocxSaveOptions()
             { EmbeddedJpegQuality = 90 });
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) { UseShellExecute = true });
@@ -141,6 +144,9 @@ namespace Example
             // Save the document to the file in DOCX format.
             dc.Save(docPath, new DocxSaveOptions()
             { EmbeddedJpegQuality = 90 });
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) { UseShellExecute = true });

@@ -41,6 +41,9 @@ Namespace Example
 
 			' Save the document to the file in PDF format.
 			dc.Save(resultPath, New PdfSaveOptions() With {.Compliance = PdfCompliance.PDF_A1a})
+			
+			' Important for Linux: Install MS Fonts
+			' sudo apt install ttf-mscorefonts-installer -y
 
 			' Open the result for demonstration purposes.
 			System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(resultPath) With {.UseShellExecute = True})

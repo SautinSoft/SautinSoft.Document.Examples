@@ -49,6 +49,9 @@ namespace Example
 
             // Save our document into PDF format.
             dc.Save(resultPath, new PdfSaveOptions());
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(resultPath) { UseShellExecute = true });

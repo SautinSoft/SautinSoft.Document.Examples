@@ -30,6 +30,9 @@ namespace Example
             string filePath = @"Result-file.docx";
 
             dc.Save(filePath, new DocxSaveOptions());
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });
@@ -59,6 +62,9 @@ namespace Example
                 fileData = ms.ToArray();
             }
             File.WriteAllBytes(filePath, fileData);
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });

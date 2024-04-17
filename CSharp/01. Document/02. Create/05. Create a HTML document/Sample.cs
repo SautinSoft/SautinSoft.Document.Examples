@@ -77,6 +77,9 @@ namespace Example
             dc.Save(docPath, new HtmlFixedSaveOptions()
             { EmbedImages = true,
             Title="With DocumentBuilder"});
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) { UseShellExecute = true });
@@ -144,6 +147,9 @@ namespace Example
             { EmbedImages = true,
             Title = "With DOM"
             });
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) { UseShellExecute = true });

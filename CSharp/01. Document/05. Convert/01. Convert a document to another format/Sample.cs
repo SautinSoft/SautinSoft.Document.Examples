@@ -27,6 +27,9 @@ namespace Example
 
             DocumentCore dc = DocumentCore.Load(inpFile);
             dc.Save(outFile);
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });

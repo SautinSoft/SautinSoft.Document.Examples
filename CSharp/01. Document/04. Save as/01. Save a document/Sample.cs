@@ -31,6 +31,9 @@ namespace Example
 
             // The file format will be detected automatically from the file extension: ".docx".
             dc.Save(filePath);
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });
@@ -57,6 +60,8 @@ namespace Example
             {
                 // 2nd parameter: we've explicitly set to save our document in PDF format.
                 dc.Save(ms, new PdfSaveOptions());
+				// Important for Linux: Install MS Fonts
+			    // sudo apt install ttf-mscorefonts-installer -y
 
                 fileData = ms.ToArray();
             }

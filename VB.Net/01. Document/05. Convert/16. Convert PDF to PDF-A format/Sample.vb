@@ -46,6 +46,9 @@ Namespace Example
             }
 
             dc.Save(outFile, pdfSO)
+			
+			' Important for Linux: Install MS Fonts
+			' sudo apt install ttf-mscorefonts-installer -y
 
             ' Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(outFile) With {.UseShellExecute = True})

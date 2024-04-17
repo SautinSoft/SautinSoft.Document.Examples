@@ -27,6 +27,9 @@ namespace Example
 
             DocumentCore dc = DocumentCore.Load(inpFile);
             dc.Save(outFile);
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });
@@ -58,6 +61,10 @@ namespace Example
                 using (MemoryStream outMs = new MemoryStream())
                 {
                     dc.Save(outMs, new HtmlFixedSaveOptions());
+					
+					// Important for Linux: Install MS Fonts
+					// sudo apt install ttf-mscorefonts-installer -y
+			
                     outData = outMs.ToArray();
                 }
                 // Show the result for demonstration purposes.

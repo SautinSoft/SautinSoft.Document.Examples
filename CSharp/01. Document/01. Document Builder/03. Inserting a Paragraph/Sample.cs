@@ -45,6 +45,9 @@ namespace Example
 
             // Save the document to the file in DOCX format.
             dc.Save(resultPath);
+			
+			// Important for Linux: Install MS Fonts
+			// sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(resultPath) { UseShellExecute = true });

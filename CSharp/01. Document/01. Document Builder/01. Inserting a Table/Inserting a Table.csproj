@@ -13,6 +13,8 @@
 		<PackageReference Include="System.IO.Packaging" Version="4.4.0" />
 		<PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
 		<PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
+		<PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.6" />
+		<PackageReference Include="SkiaSharp.NativeAssets.macOS" Version="2.88.6" />
 		
    </ItemGroup>
   </Project>
