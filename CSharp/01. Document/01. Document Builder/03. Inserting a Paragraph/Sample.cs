@@ -1,7 +1,4 @@
-using System;
 using SautinSoft.Document;
-using System.Text;
-
 
 namespace Example
 {
@@ -22,12 +19,13 @@ namespace Example
 
         static void InsertingParagraph()
         {
+            // Create a new document.
             DocumentCore dc = new DocumentCore();
+            // Initialize DocumentBuilder with the created document.
             DocumentBuilder db = new DocumentBuilder(dc);
 
-            string resultPath = @"Result.docx";
-
-            // Insert the formatted text into the document using DocumentBuilder.
+            // Insert a new paragraph.
+            db.Writeln("This is an example of a paragraph inserted using DocumentBuilder.");
             db.CharacterFormat.FontName = "Verdana";
             db.CharacterFormat.Size = 16.5f;
             db.CharacterFormat.AllCaps = true;
@@ -38,19 +36,14 @@ namespace Example
             db.ParagraphFormat.SpecialIndentation = 50;
             db.Writeln("This paragraph retains the Left Indentation of 30 points and is supplemented by the first-line indent of 50 points.");
 
-            // This method will clear all directly set formatting values.
-            db.ParagraphFormat.ClearFormatting();
-            db.CharacterFormat.ClearFormatting();
-            db.Write("All directly set text and paragraph formatting values were cleared using DocumentBuilder.");
+            // Save the document.
+            dc.Save("Example.docx");
 
-            // Save the document to the file in DOCX format.
-            dc.Save(resultPath);
-			
-			// Important for Linux: Install MS Fonts
-			// sudo apt install ttf-mscorefonts-installer -y
+            // Important for Linux: Install MS Fonts
+            // sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(resultPath) { UseShellExecute = true });
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("Example.docx") { UseShellExecute = true });
         }
     }
 }
