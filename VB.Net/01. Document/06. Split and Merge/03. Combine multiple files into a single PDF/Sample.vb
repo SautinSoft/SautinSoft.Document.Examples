@@ -9,7 +9,7 @@ Namespace Sample
         Shared Sub Main(ByVal args() As String)
             MergeMultipleDocuments()
         End Sub
-        ''' Get your free 30-day key here:   
+        ''' Get your free 100-day key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' This sample shows how to merge multiple DOCX, RTF, PDF and Text files.

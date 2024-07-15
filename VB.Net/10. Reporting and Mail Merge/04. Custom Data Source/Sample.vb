@@ -7,7 +7,7 @@ Namespace Sample
         Shared Sub Main(ByVal args() As String)
             CustomDataSource()
         End Sub
-        ''' Get your free 30-day key here:   
+        ''' Get your free 100-day key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Generate reports using a custom data source (collection of custom classes Actor and Order).

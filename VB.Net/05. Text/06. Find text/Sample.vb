@@ -7,7 +7,7 @@ Module Sample
     Sub Main()
         FindText()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Find a specific text in DOCX document.

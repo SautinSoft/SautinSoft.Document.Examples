@@ -8,7 +8,7 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            // Get your free 30-day key here:   
+            // Get your free 100-day key here:   
             // https://sautinsoft.com/start-for-free/
 
             CustomDataSource();

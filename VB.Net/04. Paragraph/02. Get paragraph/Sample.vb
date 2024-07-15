@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
         GetParagraphs()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Loads an existing DOCX document and renders all paragraphs to Console.

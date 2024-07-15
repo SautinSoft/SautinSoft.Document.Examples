@@ -8,7 +8,7 @@ Namespace Example
         Shared Sub Main(ByVal args() As String)
             InsertParagraph()
         End Sub
-        ''' Get your free 30-day key here:   
+        ''' Get your free 100-day key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Inserts a new paragraph into an existing PDF document.

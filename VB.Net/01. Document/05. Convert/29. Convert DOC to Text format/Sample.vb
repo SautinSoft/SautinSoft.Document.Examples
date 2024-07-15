@@ -7,7 +7,7 @@ Module Sample
         ConvertFromFile()
         ConvertFromStream()
     End Sub
-        ''' Get your free 30-day key here:   
+        ''' Get your free 100-day key here:   
         ''' https://sautinsoft.com/start-for-free/
 	''' <summary>
 	''' Convert DOC (Word 97-2003) to Text (file to file).

@@ -6,7 +6,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			Pagination()
 		End Sub
-                ''' Get your free 30-day key here:   
+                ''' Get your free 100-day key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Loads a document and applies Pagination to get separate pages.

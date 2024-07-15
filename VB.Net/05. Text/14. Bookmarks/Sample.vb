@@ -5,7 +5,7 @@ Namespace Sample
         Shared Sub Main(ByVal args() As String)
             AddBookmarks()
         End Sub
-        ''' Get your free 30-day key here:   
+        ''' Get your free 100-day key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' How add a text bounded by BookmarkStart and BookmarkEnd. 

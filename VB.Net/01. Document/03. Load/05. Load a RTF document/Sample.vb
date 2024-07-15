@@ -7,7 +7,7 @@ Module Sample
         'LoadRtfFromStream();
         LoadRtfFromFile()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Loads an RTF document into DocumentCore (dc) from a file.

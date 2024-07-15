@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
         SplitDocumentByPages()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Loads a document and split it by separate pages. Saves the each page into PDF format.

@@ -7,7 +7,7 @@ Module Sample
     Sub Main()
         AddSimpleTable()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How to create a plain table in a document. 

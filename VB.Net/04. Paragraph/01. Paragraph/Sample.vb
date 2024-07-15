@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
         Paragraphs()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Creates a new document with a paragraph.

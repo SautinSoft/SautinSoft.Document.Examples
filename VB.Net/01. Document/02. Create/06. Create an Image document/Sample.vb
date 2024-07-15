@@ -15,7 +15,7 @@ Namespace Example
             ' 2. With Document Object Model (DOM) directly.
             CreateImageUsingDOM()
         End Sub
-        ''' Get your free 30-day key here:   
+        ''' Get your free 100-day key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Creates a new Image document using DocumentBuilder wizard.

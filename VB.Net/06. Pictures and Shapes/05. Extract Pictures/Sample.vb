@@ -8,7 +8,7 @@ Module Sample
     Sub Main()
         ExtractPictures()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Extract all pictures from document (PDF, DOCX, RTF, HTML).

@@ -7,7 +7,7 @@ Module Sample
     Sub Main()
         ShapeGroups()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' This sample shows how to work with shape groups. 

@@ -7,7 +7,7 @@ Module Sample
         ConvertFromFile()
         ConvertFromStream()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Convert DOCX to RTF (file to file).

@@ -8,7 +8,7 @@ Module Sample
     Sub Main()
         CloningElement()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How to clone an element in DOCX document.

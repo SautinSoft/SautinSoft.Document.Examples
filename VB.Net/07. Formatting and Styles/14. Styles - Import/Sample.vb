@@ -8,7 +8,7 @@ Namespace Sample
         Shared Sub Main(ByVal args() As String)
             ImportStyles()
         End Sub
-        ''' Get your free 30-day key here:   
+        ''' Get your free 100-day key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' This sample shows how to import styles from a one document to another. 

@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
         GetContent()
     End Sub
-    ''' Get your free 30-day key here:   
+    ''' Get your free 100-day key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How to get a content from a document.

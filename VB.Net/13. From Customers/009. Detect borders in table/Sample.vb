@@ -9,7 +9,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			DetectBorders()
 		End Sub
-                ''' Get your free 30-day key here:   
+                ''' Get your free 100-day key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Detect cell borders with the same color.

@@ -12,7 +12,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			TableVariousBorders()
 		End Sub
-                ''' Get your free 30-day key here:   
+                ''' Get your free 100-day key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' The simple report using DocumentBuilder and saves it in a desired format.

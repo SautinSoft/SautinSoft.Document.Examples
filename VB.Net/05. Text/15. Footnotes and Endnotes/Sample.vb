@@ -7,7 +7,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			CreateFootnoteAndEndnote()
 		End Sub
-                ''' Get your free 30-day key here:   
+                ''' Get your free 100-day key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Creates a document with a footnote and endnote.

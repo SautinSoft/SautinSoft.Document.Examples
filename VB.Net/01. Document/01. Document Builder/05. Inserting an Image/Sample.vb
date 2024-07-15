@@ -8,7 +8,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			InsertingImage()
 		End Sub
-                ''' Get your free 30-day key here:   
+                ''' Get your free 100-day key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Insert an image and shape inline or in the specified position using DocumentBuilder.

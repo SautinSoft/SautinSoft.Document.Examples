@@ -11,7 +11,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			InsertTextHeaderFooter()
 		End Sub
-                ''' Get your free 30-day key here:   
+                ''' Get your free 100-day key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' How to insert the contents of a file into the header and footer of an existing HTML.

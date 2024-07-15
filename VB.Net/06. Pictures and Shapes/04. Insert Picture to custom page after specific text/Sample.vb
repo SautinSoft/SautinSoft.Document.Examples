@@ -8,7 +8,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			InsertPictureToCustomPageAndPosition()
 		End Sub
-                ''' Get your free 30-day key here:   
+                ''' Get your free 100-day key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Insert a picture to custom page and position into existing DOCX document.

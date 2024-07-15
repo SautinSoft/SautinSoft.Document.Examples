@@ -8,7 +8,7 @@ Imports SautinSoft.Document.Tables
 Namespace Example
 	Friend Class Program
 		Shared Sub Main(ByVal args() As String)
-			' Get your free 30-day key here:   
+			' Get your free 100-day key here:   
 			' https://sautinsoft.com/start-for-free/
 
 			CaptureTextZoneByXY()

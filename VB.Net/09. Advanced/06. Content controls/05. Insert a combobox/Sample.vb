@@ -10,7 +10,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			InsertCombobox()
 		End Sub
-                ''' Get your free 30-day key here:   
+                ''' Get your free 100-day key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Inserting a Combo Box content control.

@@ -3,7 +3,7 @@ using SautinSoft.Document.Drawing;
 using SautinSoft.Document.Tables;
 using System;
 
-// Get your free 30-day key here:   
+// Get your free 100-day key here:   
 // https://sautinsoft.com/start-for-free/
 DisplayTable();
 
