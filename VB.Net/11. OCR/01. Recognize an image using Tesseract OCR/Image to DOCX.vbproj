@@ -7,6 +7,9 @@
   <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
    <ItemGroup>
-   <PackageReference Include="SautinSoft.Document" Version="*" />
-   </ItemGroup>
+    <PackageReference Include="SautinSoft.Document" Version="*" />
+    <PackageReference Include="Tesseract" Version="5.2.0" />
+	<PackageReference Include="Tesseract.Data.English" Version="4.0.0" />
+	<PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
+  </ItemGroup>
   </Project>
