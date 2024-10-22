@@ -41,7 +41,7 @@ namespace Example
             };
 
             DocumentCore dc = DocumentCore.Load(inpFile, pdfLO);
-            dc.Save(outFile);
+            dc.Save(outFile, new HtmlFixedSaveOptions());
 			
 			// Important for Linux: Install MS Fonts
 			// sudo apt install ttf-mscorefonts-installer -y

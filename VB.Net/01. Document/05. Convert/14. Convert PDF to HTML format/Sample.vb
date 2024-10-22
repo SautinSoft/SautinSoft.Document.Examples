@@ -39,7 +39,7 @@ Namespace Example
             ' Set it to 'True' and the component will detect and recreate tables from graphic lines.
 
             Dim dc As DocumentCore = DocumentCore.Load(inpFile, pdfLO)
-            dc.Save(outFile)
+            dc.Save(outFile, New HtmlFixedSaveOptions())
 			
 			' Important for Linux: Install MS Fonts
 			' sudo apt install ttf-mscorefonts-installer -y
