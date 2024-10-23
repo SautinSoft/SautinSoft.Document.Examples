@@ -8,7 +8,7 @@ namespace Example
         static void Main(string[] args)
         {
             ConvertFromFile();
-            ConvertFromStream();
+           // ConvertFromStream();
         }
 
         /// <summary>
@@ -20,9 +20,9 @@ namespace Example
         /// </remarks>
         static void ConvertFromFile()
         {
-            string inpFile = @"..\..\..\Factur.rtf";
-            string outFile = @"..\..\..\Factur.pdf";
-            string xmlInfo = File.ReadAllText(@"..\..\..\Factur\Facture.xml");
+            string inpFile = @"..\..\..\Factur\Facture1.rtf";
+            string outFile = @"..\..\..\Factur\Factur1e.pdf";
+            string xmlInfo = File.ReadAllText(@"..\..\..\Factur\Facture1.xml");
 
             DocumentCore dc = DocumentCore.Load(inpFile);
 

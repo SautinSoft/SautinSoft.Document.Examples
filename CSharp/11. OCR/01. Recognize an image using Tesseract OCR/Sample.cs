@@ -147,8 +147,7 @@ namespace Example
             }
             finally
             {
-                if (File.Exists(tempFile + ".pdf"))
-                    File.Delete(tempFile + ".pdf");
+               
             }
         }
     }
