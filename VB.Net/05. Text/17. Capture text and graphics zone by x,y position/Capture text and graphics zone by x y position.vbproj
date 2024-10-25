@@ -1,8 +1,4 @@
-<<<<<<< HEAD
   <Project Sdk="Microsoft.NET.Sdk">
-=======
-<Project Sdk="Microsoft.NET.Sdk">
->>>>>>> e0580d1778f6c0b8121fc5799d6b57748f5237cd
   <PropertyGroup>
   <PackageId>Document .Net</PackageId>
   <Authors>Max Sautin</Authors>
@@ -10,40 +6,7 @@
   <OutputType>Exe</OutputType>
   <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
-<<<<<<< HEAD
    <ItemGroup>
-        <PackageReference Include="SkiaSharp" Version="2.88.6" />
-	    <PackageReference Include="Svg.Skia" Version="1.0.0.3" />
-		<PackageReference Include="SautinSoft.Document" Version="*" />
-		<PackageReference Include="System.IO.Packaging" Version="4.4.0" />
-		<PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
-		<PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
-		
+   <PackageReference Include="SautinSoft.Document" Version="*" />
    </ItemGroup>
   </Project>
-=======
- <Choose>
- <!-- Need to conditionally bring in references for the .NET 6.0 target -->
-  <When Condition="Exists('..\..\..\..\Bin\.NET 6.0\SautinSoft.Document.dll')">
-   <ItemGroup>
-    <Reference Include="SautinSoft.Document">
-    <HintPath>..\..\..\..\Bin\.NET 6.0\SautinSoft.Document.dll</HintPath>
-    </Reference>
-        <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.3.2" />
-		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
-		<PackageReference Include="System.Drawing.Common" Version="4.7.3" />
-		<PackageReference Include="System.IO.Packaging" Version="4.4.0" />
-		<PackageReference Include="System.Security.Cryptography.Pkcs" Version="4.7.0" />
-		<PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
-		<PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
-	</ItemGroup>
-  </When>
-    <!-- Need to conditionally bring in references for the NuGet target -->
-  <When Condition="'Nuget'=='Nuget'">
-   <ItemGroup>
-    <PackageReference Include="SautinSoft.Document" Version="*" />
-   </ItemGroup>
-  </When>
- </Choose>
-</Project>
->>>>>>> e0580d1778f6c0b8121fc5799d6b57748f5237cd
