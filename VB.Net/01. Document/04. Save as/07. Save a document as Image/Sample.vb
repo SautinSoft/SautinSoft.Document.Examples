@@ -1,6 +1,6 @@
 Imports System
 Imports System.IO
-Imports System.Runtime.Intrinsics.Arm
+Imports System.Runtime
 Imports SautinSoft.Document
 Imports SkiaSharp
 

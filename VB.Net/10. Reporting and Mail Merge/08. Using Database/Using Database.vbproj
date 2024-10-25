@@ -5,14 +5,12 @@
   <Company>SautinSoft</Company>
   <OutputType>Exe</OutputType>
   <TargetFramework>net6.0</TargetFramework>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
+  <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
    <ItemGroup>
-   <PackageReference Include="SautinSoft.Document" Version="*" />
+        
+	    <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
+		
+		<PackageReference Include="SautinSoft.Document" Version="*" />
    </ItemGroup>
   </Project>

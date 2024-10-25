@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using System.Runtime.Intrinsics.Arm;
+using System.Runtime;
 using SautinSoft.Document;
 using SkiaSharp;
 
