@@ -8,31 +8,31 @@ Namespace Sample
 	Friend Class Sample
 
 		Shared Sub Main(ByVal args() As String)
-			ConvertToSingleXls()
+			ConvertToSingleXlsx()
 		End Sub
-                ''' Get your free 100-day key here:   
-                ''' https://sautinsoft.com/start-for-free/
+		''' Get your free 100-day key here:   
+		''' https://sautinsoft.com/start-for-free/
 		''' <summary>
-		''' How to convert all files to a single XLS file.
+		''' How to convert all files to a single XLSX file.
 		''' </summary>
 		''' <remarks>
 		''' Details: https://sautinsoft.com/products/document/help/net/developer-guide/from-customers-convert-pdf-docx-rtf-to-single-xls-workbook-net-csharp-vb.php
 		''' </remarks>
-		Public Shared Sub ConvertToSingleXls()
+		Public Shared Sub ConvertToSingleXlsx()
 			' In this example we'll use not only Document .Net component, but also
-			' another SautinSoft 'component - PDF Focus .Net (to perform conversion from PDF to single xls workbook).
+			' another SautinSoft 'component - PDF Focus .Net (to perform conversion from PDF to single xlsx workbook).
 			' First of all, please perform "Rebuild Solution" to restore PDF Focus .Net package from NuGet.
 
 			' Our steps:
 			' 1. Convert all RTF, DOCX, PDF files into a single PDF document. (by Document .Net).
-			' 2. Convert the single PDF into a single XLS workbook. (by PDF Focus .Net).
+			' 2. Convert the single PDF into a single XLSX workbook. (by PDF Focus .Net).
 
 			Dim singlePdfBytes() As Byte = Nothing
 
 			' This file we need only to show intermediate result.
 			Dim singlePdfFile As String = "Single.pdf"
 			Dim workingDir As String = "..\..\..\"
-			Dim singleXlsFile As String = "Single.xls"
+			Dim singleXlsxFile As String = "Single.xlsx"
 
 			Dim supportedFiles As New List(Of String)()
 
@@ -91,11 +91,11 @@ Namespace Sample
 			f.OpenPdf(singlePdfBytes)
 
 			If f.PageCount > 0 Then
-				f.ToExcel(singleXlsFile)
+				f.ToExcel(singleXlsxFile)
 			End If
 
 			' Open the result for demonstration purposes.
-			System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(singleXlsFile) With {.UseShellExecute = True})
+			System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(singleXlsxFile) With {.UseShellExecute = True})
 		End Sub
 	End Class
 End Namespace

@@ -14,31 +14,31 @@ namespace Sample
             // Get your free 100-day key here:   
             // https://sautinsoft.com/start-for-free/
 
-            ConvertToSingleXls();
+            ConvertToSingleXlsx();
         }
 
         /// <summary>
-        /// How to convert all files to a single XLS file.
+        /// How to convert all files to a single XLSX file.
         /// </summary>
         /// <remarks>
         /// Details: https://sautinsoft.com/products/document/help/net/developer-guide/from-customers-convert-pdf-docx-rtf-to-single-xls-workbook-net-csharp-vb.php
         /// </remarks>
-        public static void ConvertToSingleXls()
+        public static void ConvertToSingleXlsx()
         {
             // In this example we'll use not only Document .Net component, but also
-            // another SautinSoft 'component - PDF Focus .Net (to perform conversion from PDF to single xls workbook).
+            // another SautinSoft 'component - PDF Focus .Net (to perform conversion from PDF to single xlsx workbook).
 			// First of all, please perform "Rebuild Solution" to restore PDF Focus .Net package from NuGet.
 
             // Our steps:
             // 1. Convert all RTF, DOCX, PDF files into a single PDF document. (by Document .Net).
-            // 2. Convert the single PDF into a single XLS workbook. (by PDF Focus .Net).
+            // 2. Convert the single PDF into a single XLSX workbook. (by PDF Focus .Net).
 
             byte[] singlePdfBytes = null;
 
             // This file we need only to show intermediate result.
             string singlePdfFile = "Single.pdf";
             string workingDir = @"..\..\..\";
-            string singleXlsFile = "Single.xls";
+            string singleXlsxFile = "Single.xlsx";
 
             List<string> supportedFiles = new List<string>();
 
@@ -102,10 +102,10 @@ namespace Sample
             f.OpenPdf(singlePdfBytes);
 
             if (f.PageCount > 0)
-                f.ToExcel(singleXlsFile);
+                f.ToExcel(singleXlsxFile);
 
             // Open the result for demonstration purposes.
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(singleXlsFile) { UseShellExecute = true });
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(singleXlsxFile) { UseShellExecute = true });
         }
     }
 }
