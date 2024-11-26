@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Order>
+    <Date>12/8/2020</Date>
+    <Number>1</Number>
+    <Recipient>Spencer F Clements</Recipient>
+    <Address>17 Chapel Lane</Address>
+    <City>ARGOED</City>
+    <Phone>077 7775 4600</Phone>
+    <Time>10:00</Time>
+    <OrderTotal>157</OrderTotal>
+    <Product>
+      <Name>Cherry/apple/pie</Name>
+      <Price>10</Price>
+      <Quantity>1</Quantity>
+      <TotalPrice>10</TotalPrice>
+    </Product>
+    <Product>
+      <Name>Dark/milk/white chocolate</Name>
+      <Price>3</Price>
+      <Quantity>8</Quantity>
+      <TotalPrice>24</TotalPrice>
+    </Product>
+    <Product>
+      <Name>Rice/lemon/vanilla pudding</Name>
+      <Price>8</Price>
+      <Quantity>7</Quantity>
+      <TotalPrice>56</TotalPrice>
+    </Product>
+    <Product>
+      <Name>French bread (baguette)</Name>
+      <Price>4</Price>
+      <Quantity>3</Quantity>
+      <TotalPrice>12</TotalPrice>
+    </Product>
+    <Product>
+      <Name>Hot dog bun</Name>
+      <Price>2</Price>
+      <Quantity>1</Quantity>
+      <TotalPrice>2</TotalPrice>
+    </Product>
+    <Product>
+      <Name>Doughnut</Name>
+      <Price>3</Price>
+      <Quantity>6</Quantity>
+      <TotalPrice>18</TotalPrice>
+    </Product>
+    <Product>
+      <Name>Croissant</Name>
+      <Price>4</Price>
+      <Quantity>7</Quantity>
+      <TotalPrice>28</TotalPrice>
+    </Product>
+    <Product>
+      <Name>Pancake</Name>
+      <Price>1</Price>
+      <Quantity>7</Quantity>
+      <TotalPrice>7</TotalPrice>
+    </Product>
+  </Order>
+</ArrayOfOrder>
