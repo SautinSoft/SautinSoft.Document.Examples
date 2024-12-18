@@ -27,9 +27,9 @@ namespace Example
 
             DocumentCore dc = DocumentCore.Load(inpFile);
             Paragraph p = new Paragraph(dc);
-            p.Content.Start.Insert("Alexander Pushkin was a great russian romantic poet " +
-                "and writer who is considered by a lot of people as the best russian poet and the founder " +
-                "of contemporary russian literature.",
+            p.Content.Start.Insert("William Shakespeare is an English poet " +
+                "and playwright, recognized as the greatest English-language writer, " +
+                "the national poet of England and one of the outstanding playwrights of the world.",
                 new CharacterFormat() { Size = 20, FontName = "Verdana", FontColor = new Color("#358CCB") });
             p.ParagraphFormat.Alignment = HorizontalAlignment.Justify;
 

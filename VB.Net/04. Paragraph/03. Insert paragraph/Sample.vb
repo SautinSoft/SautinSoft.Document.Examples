@@ -4,37 +4,38 @@ Imports System.Linq
 Imports SautinSoft.Document
 
 Namespace Example
-    Friend Class Program
-        Shared Sub Main(ByVal args() As String)
-            InsertParagraph()
-        End Sub
-        ''' Get your free 100-day key here:   
-        ''' https://sautinsoft.com/start-for-free/
-        ''' <summary>
-        ''' Inserts a new paragraph into an existing PDF document.
-        ''' </summary>
-        ''' <remarks>
-        ''' Details: https://sautinsoft.com/products/document/help/net/developer-guide/insert-paragraphs-to-pdf-document-net-csharp-vb.php
-        ''' </remarks>
-        Private Shared Sub InsertParagraph()
-            Dim inpFile As String = "..\..\..\example.pdf"
-            Dim outFile As String = "Result.pdf"
+	Friend Class Program
+		Shared Sub Main(ByVal args() As String)
+			' Get your free 100-day key here:   
+			' https://sautinsoft.com/start-for-free/
 
-            Dim dc As DocumentCore = DocumentCore.Load(inpFile)
-            Dim p As New Paragraph(dc)
-            p.Content.Start.Insert("Alexander Pushkin was a great russian romantic poet " & "and writer who is considered by a lot of people as the best russian poet and the founder " & "of contemporary russian literature.", New CharacterFormat() With {
-                .Size = 20,
-                .FontName = "Verdana",
-                .FontColor = New Color("#358CCB")
-            })
-            p.ParagraphFormat.Alignment = HorizontalAlignment.Justify
+			InsertParagraph()
+		End Sub
+		''' <summary>
+		''' Inserts a new paragraph into an existing PDF document.
+		''' </summary>
+		''' <remarks>
+		''' Details: https://sautinsoft.com/products/document/help/net/developer-guide/insert-paragraphs-to-pdf-document-net-csharp-vb.php
+		''' </remarks>
+		Private Shared Sub InsertParagraph()
+			Dim inpFile As String = "..\..\..\example.pdf"
+			Dim outFile As String = "Result.pdf"
 
-            ' Insert the paragraph as 1st element in the 1st section.
-            dc.Sections(0).Blocks.Insert(0, p)
+			Dim dc As DocumentCore = DocumentCore.Load(inpFile)
+			Dim p As New Paragraph(dc)
+			p.Content.Start.Insert("William Shakespeare is an English poet " & "and playwright, recognized as the greatest English-language writer, " & "the national poet of England and one of the outstanding playwrights of the world.", New CharacterFormat() With {
+				.Size = 20,
+				.FontName = "Verdana",
+				.FontColor = New Color("#358CCB")
+			})
+			p.ParagraphFormat.Alignment = HorizontalAlignment.Justify
 
-            dc.Save(outFile)
-            System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(outFile) With {.UseShellExecute = True})
+			' Insert the paragraph as 1st element in the 1st section.
+			dc.Sections(0).Blocks.Insert(0, p)
 
-        End Sub
-    End Class
+			dc.Save(outFile)
+			System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(outFile) With {.UseShellExecute = True})
+
+		End Sub
+	End Class
 End Namespace
