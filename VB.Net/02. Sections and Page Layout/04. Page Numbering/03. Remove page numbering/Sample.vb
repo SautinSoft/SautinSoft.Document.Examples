@@ -8,7 +8,7 @@ Module Sample
     Sub Main()
         DeletePageNumbering()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How to delete the page numbering in an existing DOCX document. 

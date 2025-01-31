@@ -9,7 +9,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             RasterizeDocument();
@@ -46,7 +46,7 @@ namespace Example
             section.Blocks.Add(par1);
 
             // Let's create a characterformat for text in the 1st paragraph.
-            CharacterFormat cf = new CharacterFormat() { FontName = "Verdana", Size = 86, FontColor = new SautinSoft.Document.Color("#FFFF00") };
+            CharacterFormat cf = new CharacterFormat() { FontName = "Verdana", Size = 86, FontColor = new SautinSoft.Document.Color(255, 255, 0) };
 
             Run text1 = new Run(dc, "You are welcome!");
             text1.CharacterFormat = cf;
@@ -64,9 +64,7 @@ namespace Example
             DocumentPage page = documentPaginator.Pages[0];
 
             // Rasterize/convert the page into PNG image.
-            SKBitmap image = page.Rasterize(DPI, SautinSoft.Document.Color.LightGray);
-
-            image.Encode(new FileStream(pngFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100); ;
+            page.Save(pngFile, DPI);
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(pngFile) { UseShellExecute = true });

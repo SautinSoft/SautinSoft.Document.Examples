@@ -10,7 +10,7 @@ namespace Sample
 
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             AddPictureToDocxInMemory();
@@ -62,7 +62,7 @@ namespace Sample
             // Load the picture
             using (MemoryStream msPict = new MemoryStream(pictBytes))
             {
-                pict = new Picture(dc, fl, msPict, PictureFormat.Jpeg);
+                pict = new Picture(dc, fl, msPict);
             }
 
             // Set the wrapping style.

@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
         StyleInheritance()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How the Styles Inheritance does work.

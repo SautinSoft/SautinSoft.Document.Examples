@@ -8,7 +8,7 @@ Namespace Example
         Shared Sub Main(ByVal args() As String)
             RasterizeDocxToPicture()
         End Sub
-        ''' Get your free 100-day key here:   
+        ''' Get your free trial key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Rasterizing - save DOCX document as PNG and JPEG images.
@@ -33,19 +33,16 @@ Namespace Example
             Dim currentPage As Integer = 1
 
             For Each page As DocumentPage In documentPaginator.Pages
-                ' Save the page into Bitmap image with specified dpi and background.
-                Dim dpi As ImageSaveOptions = New ImageSaveOptions
-                dpi.DpiX = 72
-                dpi.DpiY = 72
 
-                Dim picture As SKBitmap = page.Rasterize(dpi, SautinSoft.Document.Color.White)
-
-                ' Save the Bitmap to a PNG file.
+                ' Save to a PNG file.
                 If currentPage = 1 Then
-                    picture.Encode(New FileStream(pngFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100)
+                    page.Save(pngFile, New ImageSaveOptions() With {
+                        .Format = ImageSaveFormat.Png, .DpiX = 72, .DpiY = 72})
+
+                    ' Save to a JPEG file.
                 ElseIf currentPage = 2 Then
-                    ' Save the Bitmap to a JPEG file.
-                    picture.Encode(New FileStream(jpegFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Jpeg, 100)
+                    page.Save(jpegFile, New ImageSaveOptions() With {
+                        .Format = ImageSaveFormat.Jpeg, .DpiX = 72, .DpiY = 72})
                 End If
 
                 currentPage += 1

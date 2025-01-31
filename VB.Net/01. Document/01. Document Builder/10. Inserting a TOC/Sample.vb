@@ -7,7 +7,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			InsertingToc()
 		End Sub
-                ''' Get your free 100-day key here:   
+                ''' Get your free trial key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Insert a TOC (Table of Contents) field into the document using DocumentBuilder.

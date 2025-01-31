@@ -7,7 +7,7 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             CreateStyles();
@@ -43,7 +43,7 @@ namespace Sample
 
             // 3. Create TableStyle
             TableStyle tblStyle = new TableStyle("Blue Table");
-            tblStyle.CellFormat.BackgroundColor = new Color("#358CCB");            
+            tblStyle.CellFormat.BackgroundColor = new Color(53, 140, 203);            
 
             // 4. Add the styles to the style collection.
             dc.Styles.Add(charStyle);

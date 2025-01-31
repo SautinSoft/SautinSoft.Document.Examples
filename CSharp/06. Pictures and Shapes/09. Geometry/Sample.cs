@@ -10,7 +10,7 @@ namespace Sample
        
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             Geometry();
@@ -38,7 +38,7 @@ namespace Sample
                 ));
 
             // Specify outline and fill.
-            shp1.Outline.Fill.SetSolid(new Color("358CCB"));
+            shp1.Outline.Fill.SetSolid(new Color(53, 140, 203));
             shp1.Outline.Width = 3;
             shp1.Fill.SetSolid(Color.Orange);
 

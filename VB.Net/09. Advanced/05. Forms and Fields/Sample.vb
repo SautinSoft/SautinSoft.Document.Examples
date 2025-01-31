@@ -11,7 +11,7 @@ Module Sample
     Sub Main()
         FormsAndFields()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Generate document (PDF) with forms and fields.

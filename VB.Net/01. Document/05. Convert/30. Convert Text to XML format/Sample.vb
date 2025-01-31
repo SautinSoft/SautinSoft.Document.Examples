@@ -6,7 +6,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			ConvertFromFile()
 		End Sub
-                ''' Get your free 100-day key here:   
+                ''' Get your free trial key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Convert Text to XML (file to file).

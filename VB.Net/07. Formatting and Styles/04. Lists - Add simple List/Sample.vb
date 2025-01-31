@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
         SimpleLists()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How to create a simple document with ordered and unordered lists. 

@@ -8,7 +8,7 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             AddNestedTable();
@@ -81,7 +81,7 @@ namespace Sample
                     if (c % 2 == 0)
                         cell.CellFormat.BackgroundColor = Color.Orange;
                     else
-                        cell.CellFormat.BackgroundColor = new Color("#358CCB");
+                        cell.CellFormat.BackgroundColor = new Color(53, 140, 203);
 
                     cell.CellFormat.PreferredWidth = new TableWidth(twidth / 2, TableWidthUnit.Point);
 

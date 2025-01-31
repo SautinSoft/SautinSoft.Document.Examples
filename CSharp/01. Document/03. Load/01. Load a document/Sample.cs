@@ -8,12 +8,12 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             LoadFromFile();
             //LoadFromStream();
-            //LoadFromBytes()
+            //LoadFromBytes();
         }
 
         /// <summary>
@@ -85,10 +85,9 @@ namespace Example
                     // In case of 'true' the component will detect and recreate tables from graphic lines.
                     DetectTables = false,
 
-                    // 'Disabled' - Never load embedded fonts in PDF. Use the fonts with the same name installed at the system or similar by font metrics.
-					// 'Enabled' - Always load embedded fonts in PDF.
-					// 'Auto' - Load only embedded fonts missing in the system. In other case, use the system fonts.
-                    PreserveEmbeddedFonts = PropertyState.Auto,
+                    // 'false' - Never load embedded fonts in PDF. Use the fonts with the same name installed at the system or similar by font metrics.
+					// 'true' - Always load embedded fonts in PDF.
+                    PreserveEmbeddedFonts = true,
 
                     // Load only first 2 pages from the document.
                     PageIndex = 0,

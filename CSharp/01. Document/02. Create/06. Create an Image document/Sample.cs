@@ -10,7 +10,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             // Here we'll show two ways to create Image document from a scratch.
@@ -72,17 +72,15 @@ namespace Example
             db.CharacterFormat.ClearFormatting();
             Shape shape = db.InsertShape(SautinSoft.Document.Drawing.Figure.SmileyFace, new SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter));
             // Specify outline and fill.
-            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color("#358CCB"));
+            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color(53, 140, 203));
             shape.Outline.Width = 3;
-            shape.Fill.SetSolid(SautinSoft.Document.Color.Orange);            
+            shape.Fill.SetSolid(SautinSoft.Document.Color.Orange);
 
             // Save the 1st document page to the file in PNG format.
             ImageSaveOptions options = new ImageSaveOptions();
             options.DpiX = 300;
             options.DpiY = 300;
-            var a = dc.GetPaginator().Pages[0];
-            SKBitmap page = dc.GetPaginator().Pages[0].Rasterize(options, SautinSoft.Document.Color.White);
-            page.Encode(new FileStream(docPath, FileMode.Create), SKEncodedImageFormat.Png, 100);
+            dc.GetPaginator().Pages[0].Save(docPath, options);
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) { UseShellExecute = true });
@@ -139,9 +137,9 @@ namespace Example
             // Add a graphics figure into the paragraph.
             Shape shape = new Shape(dc, new InlineLayout(new SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter)));
             // Specify outline and fill.
-            shape.Outline.Fill.SetSolid(new  SautinSoft.Document.Color("#358CCB"));
+            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color(53, 140, 203));
             shape.Outline.Width = 3;
-            shape.Fill.SetSolid(SautinSoft.Document.Color.Orange);            
+            shape.Fill.SetSolid(SautinSoft.Document.Color.Orange);
             shape.Geometry.SetPreset(Figure.SmileyFace);
             par2.Inlines.Add(shape);
 
@@ -149,11 +147,10 @@ namespace Example
             ImageSaveOptions options = new ImageSaveOptions();
             options.DpiX = 300;
             options.DpiY = 300;
-            SKBitmap page = dc.GetPaginator().Pages[0].Rasterize(options, SautinSoft.Document.Color.White);
-            page.Encode(new FileStream(docPath, FileMode.Create), SKEncodedImageFormat.Png, 100);
+            dc.GetPaginator().Pages[0].Save(docPath, options);
 
             // Open the result for demonstration purposes.
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) {UseShellExecute=true});
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) { UseShellExecute = true });
         }
     }
 }

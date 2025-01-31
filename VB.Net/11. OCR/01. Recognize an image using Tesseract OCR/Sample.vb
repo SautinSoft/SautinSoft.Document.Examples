@@ -7,7 +7,7 @@ Module Sample
     Sub Main()
 		RecognizeImage()
 	End Sub
-        ''' Get your free 100-day key here:   
+        ''' Get your free trial key here:   
         ''' https://sautinsoft.com/start-for-free/
 	''' <summary>
 	''' Recognize an image using Tesseract (free OCR library) and save the result as DOCX document.

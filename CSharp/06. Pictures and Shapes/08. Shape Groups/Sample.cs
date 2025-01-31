@@ -8,7 +8,7 @@ namespace Sample
        
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             ShapeGroups();
@@ -44,7 +44,7 @@ namespace Sample
             Shape shape1 = new Shape(dc, new GroupLayout(new Point(0, 0), new Size(50, 50)));
 
             // Specify outline and fill.
-            shape1.Outline.Fill.SetSolid(new Color("#358CCB"));
+            shape1.Outline.Fill.SetSolid(new Color(53, 140, 203));
             shape1.Outline.Width = 2;
             shape1.Fill.SetSolid(Color.Orange);
 

@@ -8,7 +8,7 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             InsertTableAfterSpecificBookmark();
@@ -80,7 +80,7 @@ namespace Sample
                     cell.CellFormat.PreferredWidth = new TableWidth(width / columns, TableWidthUnit.Point);
 
                     if (counter % 2 == 1)
-                        cell.CellFormat.BackgroundColor = new Color("#358CCB");
+                        cell.CellFormat.BackgroundColor = new Color(53, 140, 203);
 
                     row.Cells.Add(cell);
 
@@ -90,7 +90,12 @@ namespace Sample
                     p.ParagraphFormat.SpaceBefore = LengthUnitConverter.Convert(3, LengthUnit.Millimeter, LengthUnit.Point);
                     p.ParagraphFormat.SpaceAfter = LengthUnitConverter.Convert(3, LengthUnit.Millimeter, LengthUnit.Point);
 
-                    p.Content.Start.Insert(String.Format("{0}", (char)(counter + 'A')), new CharacterFormat() { FontName = "Arial", FontColor = new Color("#3399FF"), Size = 12.0 });
+                    p.Content.Start.Insert(String.Format("{0}", (char)(counter + 'A')), new CharacterFormat()
+                    {
+                        FontName = "Arial",
+                        FontColor = new Color(51, 153, 255),
+                        Size = 12.0
+                    });
                     cell.Blocks.Add(p);
                     counter++;
                 }

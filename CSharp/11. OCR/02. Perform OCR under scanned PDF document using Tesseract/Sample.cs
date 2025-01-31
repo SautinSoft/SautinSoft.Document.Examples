@@ -8,7 +8,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             LoadScannedPdf();
@@ -43,10 +43,9 @@ namespace Example
 
             PdfLoadOptions lo = new PdfLoadOptions();
             lo.OCROptions.OCRMode = OCRMode.Enabled;
-            // 'Disabled' - Never load embedded fonts in PDF. Use the fonts with the same name installed at the system or similar by font metrics.
-			// 'Enabled' - Always load embedded fonts in PDF.
-			// 'Auto' - Load only embedded fonts missing in the system. In other case, use the system fonts.			
-            lo.PreserveEmbeddedFonts = PropertyState.Enabled;            
+            // 'false' - Never load embedded fonts in PDF. Use the fonts with the same name installed at the system or similar by font metrics.
+			// 'true' - Always load embedded fonts in PDF.
+            lo.PreserveEmbeddedFonts = true;            
 
             // You can specify all Tesseract parameters inside the method PerformOCR.
             lo.OCROptions.Method = PerformOCRTesseract;
@@ -71,8 +70,7 @@ namespace Example
         public static byte[] PerformOCRTesseract(byte[] image)
         {
             // Specify that Tesseract use three 3 languages: English, Russian and Vietnamese.
-            //string tesseractLanguages = "rus+eng+vie";
-            string tesseractLanguages = "eng";
+            string tesseractLanguages = "eng+rus+vie";
 
             // A path to a folder which contains languages data files and font file "pdf.ttf".
             // Language data files can be found here:
@@ -94,24 +92,13 @@ namespace Example
                         using (Tesseract.TesseractEngine engine = new Tesseract.TesseractEngine(tesseractData, tesseractLanguages, Tesseract.EngineMode.Default))
                         {
                             engine.DefaultPageSegMode = Tesseract.PageSegMode.Auto;
-                            using (MemoryStream msImg = new MemoryStream(image))
+                            
+                            byte[] imgBytes = image;
+                            using (Tesseract.Pix img = Tesseract.Pix.LoadFromMemory(imgBytes))
                             {
-                                System.Drawing.Image imgWithText = System.Drawing.Image.FromStream(msImg);
-                                for (int i = 0; i < imgWithText.GetFrameCount(System.Drawing.Imaging.FrameDimension.Page); i++)
+                                using (var page = engine.Process(img, "Serachablepdf"))
                                 {
-                                    imgWithText.SelectActiveFrame(System.Drawing.Imaging.FrameDimension.Page, i);
-                                    using (MemoryStream ms = new MemoryStream())
-                                    {
-                                        imgWithText.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                                        byte[] imgBytes = ms.ToArray();
-                                        using (Tesseract.Pix img = Tesseract.Pix.LoadFromMemory(imgBytes))
-                                        {
-                                            using (var page = engine.Process(img, "Serachablepdf"))
-                                            {
-                                                renderer.AddPage(page);
-                                            }
-                                        }
-                                    }
+                                    renderer.AddPage(page);
                                 }
                             }
                         }

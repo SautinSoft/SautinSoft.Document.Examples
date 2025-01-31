@@ -7,7 +7,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             // Here we'll show two ways to create DOCX document from a scratch.
@@ -35,7 +35,7 @@ namespace Example
             DocumentBuilder db = new DocumentBuilder(dc);
 
             // Set page size A4.
-            Section section = db.Document.Sections[0];            
+            Section section = db.Document.Sections[0];
             section.PageSetup.PaperType = PaperType.A4;
 
             // Add 1st paragraph with formatted text.
@@ -69,16 +69,15 @@ namespace Example
             db.CharacterFormat.ClearFormatting();
             Shape shape = db.InsertShape(SautinSoft.Document.Drawing.Figure.SmileyFace, new SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter));
             // Specify outline and fill.
-            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color("#358CCB"));
+            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color(53, 140, 203));
             shape.Outline.Width = 3;
             shape.Fill.SetSolid(SautinSoft.Document.Color.Orange);
 
             // Save the document to the file in DOCX format.
-            dc.Save(docPath, new DocxSaveOptions()
-            { EmbeddedJpegQuality = 90 });
-			
-			// Important for Linux: Install MS Fonts
-			// sudo apt install ttf-mscorefonts-installer -y
+            dc.Save(docPath, new DocxSaveOptions());
+
+            // Important for Linux: Install MS Fonts
+            // sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) { UseShellExecute = true });
@@ -135,18 +134,17 @@ namespace Example
             // Add a graphics figure into the paragraph.
             Shape shape = new Shape(dc, new InlineLayout(new SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter)));
             // Specify outline and fill.
-            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color("#358CCB"));
+            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color(53, 140, 203));
             shape.Outline.Width = 3;
             shape.Fill.SetSolid(SautinSoft.Document.Color.Orange);
             shape.Geometry.SetPreset(Figure.SmileyFace);
             par2.Inlines.Add(shape);
 
             // Save the document to the file in DOCX format.
-            dc.Save(docPath, new DocxSaveOptions()
-            { EmbeddedJpegQuality = 90 });
-			
-			// Important for Linux: Install MS Fonts
-			// sudo apt install ttf-mscorefonts-installer -y
+            dc.Save(docPath, new DocxSaveOptions());
+
+            // Important for Linux: Install MS Fonts
+            // sudo apt install ttf-mscorefonts-installer -y
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(docPath) { UseShellExecute = true });

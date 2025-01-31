@@ -6,13 +6,13 @@ using SkiaSharp;
 namespace Example
 {
     class Program
-    {      
+    {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
-            RasterizeHtmlToPicture();         
+            RasterizeHtmlToPicture();
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace Example
             // In this example we'll how rasterize/save 1st and 2nd pages of HTML document
             // as PNG and JPEG images.
             string inputFile = @"..\..\..\example.html";
-            string jpegFile = "Result.jpg";
+            string jpegFile = "Result.jpeg";
             string pngFile = "Result.png";
             // The file format is detected automatically from the file extension: ".html".
             // But as shown in the example below, we can specify HtmlLoadOptions as 2nd parameter
@@ -40,29 +40,20 @@ namespace Example
                 }
             });
 
-            
             DocumentPaginator documentPaginator = dc.GetPaginator(new PaginatorOptions() { UpdateFields = true });
-
-            int dpi = 300;
 
             int pagesToRasterize = 2;
             int currentPage = 1;
-            
+
             foreach (DocumentPage page in documentPaginator.Pages)
             {
-                // Save the page into Bitmap image with specified dpi and background.
-                var DPI = new ImageSaveOptions();
-                DPI.DpiX = 300;
-                DPI.DpiY = 300;
-                // Save the 1st document page to the file in PNG format.
-                SkiaSharp.SKBitmap picture = page.Rasterize(DPI, SautinSoft.Document.Color.White);
-
-                // Save the Bitmap to a PNG file.
+                // Save to a PNG file.
                 if (currentPage == 1)
-                    picture.Encode(new FileStream(pngFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100);
+                    page.Save(pngFile, new ImageSaveOptions { DpiX = 300, DpiY = 300, Format = ImageSaveFormat.Png });
+
+                // Save to a JPEG file.
                 else if (currentPage == 2)
-                    // Save the Bitmap to a JPEG file.
-                    picture.Encode(new FileStream(jpegFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Jpeg, 100);
+                    page.Save(jpegFile, new ImageSaveOptions { DpiX = 300, DpiY = 300, Format = ImageSaveFormat.Jpeg });
 
                 currentPage++;
 
@@ -73,7 +64,7 @@ namespace Example
             // Open the results for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(jpegFile) { UseShellExecute = true });
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(pngFile) { UseShellExecute = true });
-            
+
         }
     }
 }

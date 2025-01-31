@@ -13,7 +13,7 @@ Namespace Example
 			' 2. With Document Object Model (DOM) directly.
 			CreateRtfUsingDOM()
 		End Sub
-                ''' Get your free 100-day key here:   
+                ''' Get your free trial key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Creates a new RTF document using DocumentBuilder wizard.
@@ -64,12 +64,12 @@ Namespace Example
 			db.CharacterFormat.ClearFormatting()
 			Dim shape As Shape = db.InsertShape(SautinSoft.Document.Drawing.Figure.SmileyFace, New SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter))
 			' Specify outline and fill.
-			shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color("#358CCB"))
+			shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color(53, 140, 203))
 			shape.Outline.Width = 3
 			shape.Fill.SetSolid(SautinSoft.Document.Color.Orange)
 
 			' Save the document to the file in RTF format.
-			dc.Save(docPath, New RtfSaveOptions() With {.EmbeddedJpegQuality = 95})
+			dc.Save(docPath, New RtfSaveOptions())
 
 			' Open the result for demonstration purposes.
 			System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(docPath) With {.UseShellExecute = True})
@@ -137,14 +137,14 @@ Namespace Example
 			' Add a graphics figure into the paragraph.
 			Dim shape As New Shape(dc, New InlineLayout(New SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter)))
 			' Specify outline and fill.
-			shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color("#358CCB"))
+			shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color(53, 140, 203))
 			shape.Outline.Width = 3
 			shape.Fill.SetSolid(SautinSoft.Document.Color.Orange)
 			shape.Geometry.SetPreset(Figure.SmileyFace)
 			par2.Inlines.Add(shape)
 
 			' Save the document to the file in RTF format.
-			dc.Save(docPath, New RtfSaveOptions() With {.EmbeddedJpegQuality = 95})
+			dc.Save(docPath, New RtfSaveOptions())
 
 			' Open the result for demonstration purposes.
 			System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(docPath) With {.UseShellExecute = True})

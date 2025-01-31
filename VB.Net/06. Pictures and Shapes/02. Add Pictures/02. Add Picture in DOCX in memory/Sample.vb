@@ -3,13 +3,14 @@ Imports System.IO
 Imports SautinSoft.Document
 Imports SautinSoft.Document.Drawing
 
+
 Namespace Sample
 	Friend Class Sample
 
 		Shared Sub Main(ByVal args() As String)
 			AddPictureToDocxInMemory()
 		End Sub
-                ''' Get your free 100-day key here:   
+                ''' Get your free trial key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' How to add picture into an existing DOCX document using MemoryStream.
@@ -52,7 +53,7 @@ Namespace Sample
 
 			' Load the picture
 			Using msPict As New MemoryStream(pictBytes)
-				pict = New Picture(dc, fl, msPict, PictureFormat.Jpeg)
+				pict = New Picture(dc, fl, msPict)
 			End Using
 
 			' Set the wrapping style.

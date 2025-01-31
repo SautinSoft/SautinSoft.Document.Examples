@@ -5,7 +5,7 @@ Imports SautinSoft.Document
 Imports SautinSoft.Document.Drawing
 Imports SautinSoft.Document.MailMerging
 Imports Newtonsoft.Json
-''' Get your free 100-day key here:   
+''' Get your free trial key here:   
 ''' https://sautinsoft.com/start-for-free/
 ''' <summary>
 ''' Generates a report in PDF format (PDF/A) based on JSON data and .docx template.

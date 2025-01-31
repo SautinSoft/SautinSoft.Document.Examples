@@ -6,7 +6,7 @@ namespace Example
     {        
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             ScannedPdfToWord();
@@ -36,10 +36,9 @@ namespace Example
 
             PdfLoadOptions pdfLO = new PdfLoadOptions()
             {
-				// 'Disabled' - Never load embedded fonts in PDF. Use the fonts with the same name installed at the system or similar by font metrics.
-				// 'Enabled' - Always load embedded fonts in PDF.
-				// 'Auto' - Load only embedded fonts missing in the system. In other case, use the system fonts.
-                PreserveEmbeddedFonts = PropertyState.Enabled,
+				// 'false' - Never load embedded fonts in PDF. Use the fonts with the same name installed at the system or similar by font metrics.
+				// 'true' - Always load embedded fonts in PDF.
+                PreserveEmbeddedFonts = true,
                 PreserveImages = false,
                 ShowInvisibleText = true,                
             };

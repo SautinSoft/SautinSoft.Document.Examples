@@ -6,7 +6,7 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             AddHyperlink();
@@ -26,7 +26,7 @@ namespace Sample
             DocumentCore dc = new DocumentCore();
 
             Hyperlink hpl = new Hyperlink(dc, "http://www.zoo.org", "Welcome to Zoo!");
-            (hpl.DisplayInlines[0] as Run).CharacterFormat = new CharacterFormat() { Size = 16, FontColor = new Color("#358CCB"), UnderlineStyle = UnderlineType.Single };
+            (hpl.DisplayInlines[0] as Run).CharacterFormat = new CharacterFormat() { Size = 16, FontColor = new Color(53, 140, 203), UnderlineStyle = UnderlineType.Single };
             hpl.ScreenTip = "Welcome to WoodLand Zoo!";
 
             Paragraph p = new Paragraph(dc);

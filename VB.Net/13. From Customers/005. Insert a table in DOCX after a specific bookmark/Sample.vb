@@ -7,7 +7,7 @@ Namespace Sample
         Shared Sub Main(ByVal args() As String)
             InsertTableAfterSpecificBookmark()
         End Sub
-        ''' Get your free 100-day key here:   
+        ''' Get your free trial key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' How to insert a table in DOCX document after a specific bookmark.

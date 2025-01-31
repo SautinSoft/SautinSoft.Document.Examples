@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
         Manipulation()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Replace all Run elements with Bold formatting to Italic and mark them by yellow.

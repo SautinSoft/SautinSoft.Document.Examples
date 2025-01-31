@@ -9,13 +9,13 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
-            PageNumbering();            
+            PageNumbering();
         }
 
-		/// <summary>
+        /// <summary>
         /// Creates a new document with page numbering: Page N of M.
         /// </summary>
         /// <remarks>
@@ -70,10 +70,14 @@ namespace Sample
                 p.ParagraphFormat.Alignment = HorizontalAlignment.Center;
                 section.Blocks.Add(p);
 
-                string color = String.Format("#{0:X2}{1:X2}{2:X2}", r.Next(0,255),r.Next(0,255),r.Next(0,255));
-                p.Content.Start.Insert(text, new CharacterFormat() { FontName = "Arial", Size = 72.0, FontColor = new Color(color) });
-                
-                if (text!=pagesText.Last())
+                p.Content.Start.Insert(text, new CharacterFormat()
+                {
+                    FontName = "Arial",
+                    Size = 72.0,
+                    FontColor = new Color((byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255))
+                });
+
+                if (text != pagesText.Last())
                     p.Content.End.Insert(new SpecialCharacter(dc, SpecialCharacterType.PageBreak).Content);
 
             }

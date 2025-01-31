@@ -9,7 +9,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             RecognizeImage();
@@ -40,7 +40,7 @@ namespace Example
 
             // Let's start:
             string inpFile = @"..\..\..\image.png";
-            string outFile = "Result1.docx";
+            string outFile = @"..\..\..\Result1.docx";
 
             ImageLoadOptions lo = new ImageLoadOptions();
             lo.OCROptions.OCRMode = OCRMode.Enabled;
@@ -74,8 +74,8 @@ namespace Example
         }
         public static byte[] PerformOCRTesseract(byte[] image)
         {
-            // Specify that Tesseract use three 3 languages: English, Russian and Vietnamese.
-            string tesseractLanguages = "rus+eng+vie";
+            // Specify that Tesseract use three 3 languages: English, Vietnamese and Russian.
+            string tesseractLanguages = "eng+vie+rus";
 
 
             // A path to a folder which contains languages data files and font file "pdf.ttf".
@@ -120,10 +120,9 @@ namespace Example
 
                 PdfLoadOptions pl = new PdfLoadOptions();
                 pl.ShowInvisibleText = true;
-				// 'Disabled' - Never load embedded fonts in PDF. Use the fonts with the same name installed at the system or similar by font metrics.
-				// 'Enabled' - Always load embedded fonts in PDF.
-				// 'Auto' - Load only embedded fonts missing in the system. In other case, use the system fonts.
-                pl.PreserveEmbeddedFonts = PropertyState.Disabled;
+				// 'false' - Never load embedded fonts in PDF. Use the fonts with the same name installed at the system or similar by font metrics.
+				// 'true' - Always load embedded fonts in PDF.
+                pl.PreserveEmbeddedFonts = false;
                 pl.ConversionMode = PdfConversionMode.Continuous;
 
                 DocumentCore dc = DocumentCore.Load(File.OpenRead(tempFile + @".pdf"), pl);
@@ -135,6 +134,7 @@ namespace Example
                     dc.Save(ms, ps);
                     returnPdf = ms.ToArray();
                 }
+                File.WriteAllBytes(@"..\..\..\Result111.pdf", returnPdf);
                 return returnPdf;
             }
             catch (Exception e)

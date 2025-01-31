@@ -10,7 +10,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             InsertPlainText();
@@ -46,7 +46,7 @@ namespace Example
             new Run(dc, "This is a new line in the first paragraph."),
             new SpecialCharacter(dc, SpecialCharacterType.LineBreak),
             new Run(dc, "Insert the \"Wingdings\" font family with formatting."),
-            new Run(dc, "\xFC" + "\xF0" + "\x32") { CharacterFormat = { FontName = "Wingdings", FontColor = new Color("#000000"), Size = 48 }}));
+            new Run(dc, "\xFC" + "\xF0" + "\x32") { CharacterFormat = { FontName = "Wingdings", FontColor = Color.Black, Size = 48 }}));
 
             // Save our document into DOCX format.
             string resultPath = @"result.docx";

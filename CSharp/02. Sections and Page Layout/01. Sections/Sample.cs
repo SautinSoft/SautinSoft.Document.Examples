@@ -7,7 +7,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             Sections();
@@ -42,7 +42,7 @@ namespace Example
             dc.Sections.Add(s2);
 
             // Add some text into section 2.
-            s2.Content.Start.Insert("Text in section 2", new CharacterFormat() { FontName = "Arial", Size = 72.0, FontColor = new Color("DD55AA") });
+            s2.Content.Start.Insert("Text in section 2", new CharacterFormat() { FontName = "Arial", Size = 72.0, FontColor = new Color(221, 85, 170) });
 
             // Save our document into DOCX format.
             dc.Save(documentPath);

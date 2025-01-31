@@ -7,7 +7,7 @@ Module Sample
         SaveToHtmlFile()
         SaveToHtmlStream()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Open an existing document and saves it as HTML files (in the Fixed and Flowing modes).

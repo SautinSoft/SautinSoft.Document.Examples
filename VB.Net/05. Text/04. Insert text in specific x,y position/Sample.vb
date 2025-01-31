@@ -8,7 +8,7 @@ Module Sample
     Sub Main()
         InsertTextByCoordinates()
     End Sub
-        ''' Get your free 100-day key here:   
+        ''' Get your free trial key here:   
         ''' https://sautinsoft.com/start-for-free/
 	''' <summary>
 	''' How to insert a text in the existing PDF, DOCX, any document by specific (x,y) coordinates

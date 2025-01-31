@@ -9,7 +9,7 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             ModifyTable();
@@ -39,7 +39,7 @@ namespace Sample
                 {
                     TableCell cell = table.Rows[r].Cells[c];
                     cell.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Dashed, Color.Black, 1);
-                    cell.CellFormat.BackgroundColor = new Color("#FFCC00");
+                    cell.CellFormat.BackgroundColor = new Color(255, 204, 0);
                 }
             }
 

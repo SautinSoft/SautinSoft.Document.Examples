@@ -11,7 +11,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             ConvertRtfBytesToPdfFile();
@@ -20,12 +20,12 @@ namespace Example
         {
             // Get document bytes.
             byte[] fileBytes = File.ReadAllBytes(@"..\..\..\example.rtf");
-            
+
             string PdfPath = @"result.pdf";
-            
+
             DocumentCore dc = null;
             Regex regex = new Regex(@"formatting", RegexOptions.IgnoreCase);
-            
+
             // Create a MemoryStream.
             using (MemoryStream ms = new MemoryStream(fileBytes))
             {
@@ -65,7 +65,7 @@ namespace Example
                     cell.CellFormat.PreferredWidth = new TableWidth(width / columns, TableWidthUnit.Point);
 
                     if (counter % 2 == 1)
-                        cell.CellFormat.BackgroundColor = new Color("#FF0000");
+                        cell.CellFormat.BackgroundColor = Color.Red;
 
                     row.Cells.Add(cell);
 
@@ -75,47 +75,52 @@ namespace Example
                     pa.ParagraphFormat.SpaceBefore = LengthUnitConverter.Convert(3, LengthUnit.Millimeter, LengthUnit.Point);
                     pa.ParagraphFormat.SpaceAfter = LengthUnitConverter.Convert(3, LengthUnit.Millimeter, LengthUnit.Point);
 
-                    pa.Content.Start.Insert(String.Format("{0}", (char)(counter + 'A')), new CharacterFormat() { FontName = "Arial", FontColor = new Color("#000000"), Size = 12.0 });
+                    pa.Content.Start.Insert(String.Format("{0}", (char)(counter + 'A')), new CharacterFormat()
+                    {
+                        FontName = "Arial",
+                        FontColor = Color.Black,
+                        Size = 12.0
+                    });
                     cell.Blocks.Add(pa);
                     counter++;
                 }
                 table.Rows.Add(row);
 
             }
-                // Create a new header with formatted text.
-                HeaderFooter header = new HeaderFooter(dc, HeaderFooterType.HeaderDefault);
-                header.Content.Start.Insert(table.Content);
-                foreach (Section s1 in dc.Sections)
-                {
-                    s1.HeadersFooters.Add(header.Clone(true));
-                }
+            // Create a new header with formatted text.
+            HeaderFooter header = new HeaderFooter(dc, HeaderFooterType.HeaderDefault);
+            header.Content.Start.Insert(table.Content);
+            foreach (Section s1 in dc.Sections)
+            {
+                s1.HeadersFooters.Add(header.Clone(true));
+            }
 
-                // Add the header into HeadersFooters collection of the 1st section.
-                //s1.HeadersFooters.Add(header);
+            // Add the header into HeadersFooters collection of the 1st section.
+            //s1.HeadersFooters.Add(header);
 
-                // Create a new footer with formatted text.
-                HeaderFooter footer = new HeaderFooter(dc, HeaderFooterType.FooterDefault);
-                footer.Content.Start.Insert(table.Content);
-                foreach (Section s1 in dc.Sections)
-                {
-                    s1.HeadersFooters.Add(footer.Clone(true));
-                }
+            // Create a new footer with formatted text.
+            HeaderFooter footer = new HeaderFooter(dc, HeaderFooterType.FooterDefault);
+            footer.Content.Start.Insert(table.Content);
+            foreach (Section s1 in dc.Sections)
+            {
+                s1.HeadersFooters.Add(footer.Clone(true));
+            }
 
-                // Add the footer into HeadersFooters collection of the 1st section.
-                //s1.HeadersFooters.Add(footer);
+            // Add the footer into HeadersFooters collection of the 1st section.
+            //s1.HeadersFooters.Add(footer);
 
-                foreach (ContentRange item in dc.Content.Find(regex).Reverse())
-                {
+            foreach (ContentRange item in dc.Content.Find(regex).Reverse())
+            {
                 // Replace all text "formatting" on "FORMATTING!!!".
                 item.Replace("FORMATTING!!!", new CharacterFormat() { BackgroundColor = Color.Yellow, FontName = "Arial", Size = 16.0 });
-                }
+            }
 
-                // Save our result as a PDF file.
+            // Save our result as a PDF file.
             dc.Save(PdfPath);
 
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(PdfPath) { UseShellExecute = true });
         }
     }
-}  
+}
 

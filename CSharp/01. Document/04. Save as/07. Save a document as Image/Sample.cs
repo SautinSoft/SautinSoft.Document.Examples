@@ -10,7 +10,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             SaveToImage();
@@ -39,11 +39,9 @@ namespace Example
                 DPI.DpiX = 72;
                 DPI.DpiY = 72;
                 
-                // Rasterize/convert the page into PNG image.
-                SKBitmap image = page.Rasterize(DPI, SautinSoft.Document.Color.White);
-
+                // Convert the page into PNG image.
                 Directory.CreateDirectory(folderPath);
-                image.Encode(new FileStream(folderPath + @"\Page - " + i.ToString() + ".png", FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100);
+                page.Save(folderPath + @"\Page - " + i.ToString() + ".png", DPI);
 
             }
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(folderPath) { UseShellExecute = true });

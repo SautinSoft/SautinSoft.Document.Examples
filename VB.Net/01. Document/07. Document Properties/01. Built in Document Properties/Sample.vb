@@ -10,7 +10,7 @@ Module Sample
         CreateDocumentProperties()
         ReadDocumentProperties()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Create a new document (DOCX) with some built-in properties.

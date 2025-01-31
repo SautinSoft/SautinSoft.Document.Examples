@@ -11,7 +11,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             InsertCheckBox();
@@ -41,8 +41,8 @@ namespace Example
             checkbox.Properties.UncheckedSymbol.FontName = "Courier New";
             checkbox.Properties.UncheckedSymbol.Character = 'O';
 
-            dc.Sections.Add(new Section(dc, new Paragraph(dc, new Run(dc, "Click me => ", 
-                new CharacterFormat() {Size=24, FontColor=new Color("#3399FF") }), checkbox)));
+            dc.Sections.Add(new Section(dc, new Paragraph(dc, new Run(dc, "Click me => ",
+                new CharacterFormat() { Size = 24, FontColor = new Color(51, 153, 255) }), checkbox)));
 
             // Save our document into DOCX format.
             string resultPath = @"result.docx";

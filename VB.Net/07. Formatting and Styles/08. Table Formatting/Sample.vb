@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
         TableFormat()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How to create a table and apply formatting in a document. 

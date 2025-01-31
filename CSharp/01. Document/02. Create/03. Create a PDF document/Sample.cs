@@ -7,7 +7,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             // Here we'll show two ways to create PDF document from a scratch.
@@ -69,7 +69,7 @@ namespace Example
             db.CharacterFormat.ClearFormatting();
             Shape shape = db.InsertShape(SautinSoft.Document.Drawing.Figure.SmileyFace, new SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter));
             // Specify outline and fill.
-            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color("#358CCB"));
+            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color(53, 140, 203));
             shape.Outline.Width = 3;
             shape.Fill.SetSolid(SautinSoft.Document.Color.Orange);
 
@@ -135,7 +135,7 @@ namespace Example
             // Add a graphics figure into the paragraph.
             Shape shape = new Shape(dc, new InlineLayout(new SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter)));
             // Specify outline and fill.
-            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color("#358CCB"));
+            shape.Outline.Fill.SetSolid(new SautinSoft.Document.Color(53, 140, 203));
             shape.Outline.Width = 3;
             shape.Fill.SetSolid(SautinSoft.Document.Color.Orange);
             shape.Geometry.SetPreset(Figure.SmileyFace);

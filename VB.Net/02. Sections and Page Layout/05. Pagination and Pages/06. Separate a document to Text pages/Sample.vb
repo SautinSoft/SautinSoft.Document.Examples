@@ -6,7 +6,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			SeparateDocumentToTextPages()
 		End Sub
-                ''' Get your free 100-day key here:   
+                ''' Get your free trial key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Load a document and save all pages as separate Text documents.

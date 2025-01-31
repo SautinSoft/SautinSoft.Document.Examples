@@ -9,7 +9,7 @@ class Sample
 {
     static void Main(string[] args)
     {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
         FormsAndFields();

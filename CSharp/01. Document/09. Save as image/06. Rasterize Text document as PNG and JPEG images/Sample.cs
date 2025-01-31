@@ -6,13 +6,13 @@ using SkiaSharp;
 namespace Example
 {
     class Program
-    {      
+    {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
-            RasterizeTxtToPicture();         
+            RasterizeTxtToPicture();
         }
 
         /// <summary>
@@ -26,35 +26,27 @@ namespace Example
             // In this example we'll how rasterize/save 1st and 2nd pages of Text document
             // as PNG and JPEG images.
             string inputFile = @"..\..\..\example.txt";
-            string jpegFile = "Result.jpg";
+            string jpegFile = "Result.jpeg";
             string pngFile = "Result.png";
             // The file format is detected automatically from the file extension: ".txt".
             // But as shown in the example below, we can specify TxtLoadOptions as 2nd parameter
             // to explicitly set that a loadable document has Text format.
             DocumentCore dc = DocumentCore.Load(inputFile, new TxtLoadOptions() { Encoding = System.Text.Encoding.UTF8 });
-            
-            DocumentPaginator documentPaginator = dc.GetPaginator(new PaginatorOptions() { UpdateFields = true });
 
-            int dpi = 300;
+            DocumentPaginator documentPaginator = dc.GetPaginator(new PaginatorOptions() { UpdateFields = true });
 
             int pagesToRasterize = 2;
             int currentPage = 1;
-            
+
             foreach (DocumentPage page in documentPaginator.Pages)
             {
-                // Save the page into Bitmap image with specified dpi and background.
-                var DPI = new ImageSaveOptions();
-                DPI.DpiX = 300;
-                DPI.DpiY = 300;
-                // Save the 1st document page to the file in PNG format.
-                SkiaSharp.SKBitmap picture = page.Rasterize(DPI, SautinSoft.Document.Color.White);
-
-                // Save the Bitmap to a PNG file.
+                // Save to a PNG file.
                 if (currentPage == 1)
-                    picture.Encode(new FileStream(pngFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100);
+                    page.Save(pngFile, new ImageSaveOptions { DpiX = 300, DpiY = 300, Format = ImageSaveFormat.Png});
+
+                // Save to a JPEG file.
                 else if (currentPage == 2)
-                    // Save the Bitmap to a JPEG file.
-                    picture.Encode(new FileStream(jpegFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Jpeg, 100);
+                    page.Save(jpegFile, new ImageSaveOptions { DpiX = 300, DpiY = 300, Format = ImageSaveFormat.Jpeg });
 
                 currentPage++;
 

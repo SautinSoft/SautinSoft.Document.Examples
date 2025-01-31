@@ -8,7 +8,7 @@ Namespace Example
         Shared Sub Main(ByVal args() As String)
             TableCellFormatting()
         End Sub
-        ''' Get your free 100-day key here:   
+        ''' Get your free trial key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' How apply formatting for table cells.

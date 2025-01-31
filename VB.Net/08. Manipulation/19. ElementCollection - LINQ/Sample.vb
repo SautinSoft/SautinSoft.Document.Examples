@@ -5,7 +5,7 @@ Module Sample
     Sub Main()
         ShowLists()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Find all paragraphs in a document marked as list (ordered or unordered).

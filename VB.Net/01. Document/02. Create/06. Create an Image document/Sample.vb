@@ -15,7 +15,7 @@ Namespace Example
             ' 2. With Document Object Model (DOM) directly.
             CreateImageUsingDOM()
         End Sub
-        ''' Get your free 100-day key here:   
+        ''' Get your free trial key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Creates a new Image document using DocumentBuilder wizard.
@@ -66,7 +66,7 @@ Namespace Example
             db.CharacterFormat.ClearFormatting()
             Dim shape As Shape = db.InsertShape(SautinSoft.Document.Drawing.Figure.SmileyFace, New SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter))
             ' Specify outline and fill.
-            shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color("#358CCB"))
+            shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color(53, 140, 203))
             shape.Outline.Width = 3
             shape.Fill.SetSolid(SautinSoft.Document.Color.Orange)
 
@@ -75,8 +75,7 @@ Namespace Example
             dpi.DpiX = 300
             dpi.DpiY = 300
 
-            Dim page As SKBitmap = dc.GetPaginator().Pages(0).Rasterize(dpi, SautinSoft.Document.Color.White)
-            page.Encode(New FileStream(docPath, FileMode.Create), SKEncodedImageFormat.Png, 100)
+            dc.GetPaginator().Pages(0).Save(docPath, dpi)
 
             ' Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(docPath) With {.UseShellExecute = True})
@@ -144,7 +143,7 @@ Namespace Example
             ' Add a graphics figure into the paragraph.
             Dim shape As New Shape(dc, New InlineLayout(New SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter)))
             ' Specify outline and fill.
-            shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color("#358CCB"))
+            shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color(53, 140, 203))
             shape.Outline.Width = 3
             shape.Fill.SetSolid(SautinSoft.Document.Color.Orange)
             shape.Geometry.SetPreset(Figure.SmileyFace)
@@ -155,8 +154,7 @@ Namespace Example
             dpi.DpiX = 300
             dpi.DpiY = 300
 
-            Dim page As SKBitmap = dc.GetPaginator().Pages(0).Rasterize(dpi, SautinSoft.Document.Color.White)
-            page.Encode(New FileStream(docPath, FileMode.Create), SKEncodedImageFormat.Png, 100)
+            dc.GetPaginator().Pages(0).Save(docPath, dpi)
 
             ' Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(docPath) With {.UseShellExecute = True})

@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
         GetText()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Get all Text (Run objects) from DOCX document and show it on Console.

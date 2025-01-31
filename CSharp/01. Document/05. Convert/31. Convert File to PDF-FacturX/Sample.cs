@@ -73,10 +73,9 @@ namespace Example
                     // The PDF format doesn't have real tables, in fact it's a set of orthogonal graphic lines.
                     // In case of 'true' the component will detect and recreate tables from graphic lines.
                     DetectTables = false,
-                    // 'Disabled' - Never load embedded fonts in PDF. Use the fonts with the same name installed at the system or similar by font metrics.
-                    // 'Enabled' - Always load embedded fonts in PDF.
-                    // 'Auto' - Load only embedded fonts missing in the system. In other case, use the system fonts.					
-                    PreserveEmbeddedFonts = PropertyState.Auto
+                    // 'false' - Never load embedded fonts in PDF. Use the fonts with the same name installed at the system or similar by font metrics.
+                    // 'true' - Always load embedded fonts in PDF.
+                    PreserveEmbeddedFonts = true
                 };
 
                 // Load a document.

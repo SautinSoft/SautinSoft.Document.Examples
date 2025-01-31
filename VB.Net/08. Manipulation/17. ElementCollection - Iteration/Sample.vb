@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
         ShowInlines()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Iterates through a document and count the amount of Paragraphs and Runs.

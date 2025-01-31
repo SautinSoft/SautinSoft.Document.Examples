@@ -8,7 +8,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             ExtendedTOC();
@@ -30,16 +30,16 @@ namespace Example
             ParagraphStyle Heading1Style = (ParagraphStyle)Style.CreateStyle(StyleTemplateType.Heading1, dc);
             Heading1Style.ParagraphFormat.LineSpacing = 3;
             Heading1Style.CharacterFormat.Size = 18;
-            // #358CCB - blue
-            Heading1Style.CharacterFormat.FontColor = new Color("#358CCB");
+            // 53, 140, 203 - blue
+            Heading1Style.CharacterFormat.FontColor = new Color(53, 140, 203);
             dc.Styles.Add(Heading1Style);
 
             // Create and add Heading2 style. For "SupChapter 1-1" and "SubChapter 2-1".
             ParagraphStyle Heading2Style = (ParagraphStyle)Style.CreateStyle(StyleTemplateType.Heading2, dc);
             Heading2Style.ParagraphFormat.LineSpacing = 2;
             Heading2Style.CharacterFormat.Size = 14;
-            // #FF9900 - orange
-            Heading2Style.CharacterFormat.FontColor = new Color("#FF9900");
+            // 255, 153, 0 - orange
+            Heading2Style.CharacterFormat.FontColor = new Color(255, 153, 0);
             dc.Styles.Add(Heading2Style);
 
             // Create and add TOC style.
@@ -47,8 +47,8 @@ namespace Example
             TOCStyle.ParagraphFormat.OutlineLevel = OutlineLevel.BodyText;
             TOCStyle.ParagraphFormat.Alignment = HorizontalAlignment.Center;
             TOCStyle.CharacterFormat.Bold = true;
-            // #358CCB - blue
-            TOCStyle.CharacterFormat.FontColor = new Color("#358CCB");
+            // 53, 140, 203 - blue
+            TOCStyle.CharacterFormat.FontColor = new Color(53, 140, 203);
             dc.Styles.Add(TOCStyle);
 
             // Add new section.

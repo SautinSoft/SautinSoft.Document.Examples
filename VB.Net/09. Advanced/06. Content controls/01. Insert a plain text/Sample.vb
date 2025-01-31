@@ -9,7 +9,7 @@ Namespace Example
         Shared Sub Main(ByVal args() As String)
             InsertPlainText()
         End Sub
-        ''' Get your free 100-day key here:   
+        ''' Get your free trial key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Inserting a plain text content control.

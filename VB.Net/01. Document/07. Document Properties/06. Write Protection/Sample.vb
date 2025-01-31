@@ -9,7 +9,7 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			WriteProtection()
 		End Sub
-                ''' Get your free 100-day key here:   
+                ''' Get your free trial key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Create a write protected DOCX document.

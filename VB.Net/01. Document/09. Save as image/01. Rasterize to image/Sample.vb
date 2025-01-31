@@ -8,7 +8,7 @@ Namespace Example
         Shared Sub Main(ByVal args() As String)
             RasterizeDocument()
         End Sub
-        ''' Get your free 100-day key here:   
+        ''' Get your free trial key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' How to rasterize a document - save the document pages as images.
@@ -43,7 +43,7 @@ Namespace Example
             Dim cf As New CharacterFormat() With {
                 .FontName = "Verdana",
                 .Size = 86,
-                .FontColor = New SautinSoft.Document.Color("#FFFF00")
+                .FontColor = SautinSoft.Document.Color.Yellow
             }
 
             Dim text1 As New Run(dc, "You are welcome!")
@@ -62,9 +62,7 @@ Namespace Example
             Dim page As DocumentPage = documentPaginator.Pages(0)
 
             ' Rasterize/convert the page into PNG image.
-            Dim image As SKBitmap = page.Rasterize(dpi, SautinSoft.Document.Color.LightGray)
-
-            image.Encode(New FileStream(pngFile, FileMode.Create), SkiaSharp.SKEncodedImageFormat.Png, 100)
+            page.Save(pngFile, dpi)
 
             ' Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(pngFile) With {.UseShellExecute = True})

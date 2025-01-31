@@ -7,7 +7,7 @@ Module Sample
     Sub Main()
         Shapes()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' This sample shows how to work with shapes. 

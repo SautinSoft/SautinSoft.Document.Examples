@@ -7,7 +7,7 @@ namespace Sample
        
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             CharacterFormatting();
@@ -40,7 +40,7 @@ namespace Sample
             run1.CharacterFormat.BackgroundColor = Color.Pink;
             run1.CharacterFormat.FontName = "Verdana";
             run1.CharacterFormat.Size = 26f;
-            run1.CharacterFormat.FontColor = new Color("#FFFFFF");
+            run1.CharacterFormat.FontColor = Color.White;
 
             p.Inlines.Add(run1);
 

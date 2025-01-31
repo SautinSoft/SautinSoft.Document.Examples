@@ -7,7 +7,7 @@ Module Sample
     Sub Main()
         DeleteText()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Delete a specific text from DOCX document.

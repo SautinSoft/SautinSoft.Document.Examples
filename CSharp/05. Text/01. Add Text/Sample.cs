@@ -6,7 +6,7 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             AddText();
@@ -38,7 +38,7 @@ namespace Sample
             run1.CharacterFormat = new CharacterFormat() { FontName = "Times New Roman", Size = 18.0, FontColor = new Color(112, 173, 71) };
 
             Run run2 = new Run(dc, " formatted text");
-            run2.CharacterFormat = new CharacterFormat() { FontName = "Arial", Size = 10.0, FontColor = new Color("#0070C0") };
+            run2.CharacterFormat = new CharacterFormat() { FontName = "Arial", Size = 10.0, FontColor = new Color(0, 112, 192) };
 
             SpecialCharacter spch3 = new SpecialCharacter(dc, SpecialCharacterType.LineBreak);
 

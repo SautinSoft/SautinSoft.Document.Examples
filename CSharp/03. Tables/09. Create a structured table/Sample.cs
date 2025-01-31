@@ -13,11 +13,11 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
-				StructuredTable();
-		}
+            StructuredTable();
+        }
         /// <summary>
         /// Creating a structured table with data of different formats.
         /// </summary>
@@ -25,9 +25,9 @@ namespace Example
         /// Details: https://sautinsoft.com/products/document/help/net/developer-guide/create-structured-table.php
         /// </remarks>
         static void StructuredTable()
-        {		
+        {
             DocumentCore documentCore = new DocumentCore();
-            byte[] imageData = File.ReadAllBytes(@"../../../image/smile.jpg");
+            byte[] imageData = File.ReadAllBytes(@"../../../image/smile.jpeg");
             ParagraphStyle TableHeaderStyle = (ParagraphStyle)Style.CreateStyle(StyleTemplateType.Normal, documentCore);
             TableHeaderStyle.Name = "TableHeaderStyle";
             TableHeaderStyle.ParagraphFormat.Alignment = HorizontalAlignment.Left;
@@ -60,7 +60,7 @@ namespace Example
             {
                 TableCell cell1 = new TableCell(documentCore);
                 cell1.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1.5);
-                cell1.CellFormat.BackgroundColor = new SautinSoft.Document.Color("#0054A6");
+                cell1.CellFormat.BackgroundColor = new SautinSoft.Document.Color(0, 84, 166);
                 cell1.CellFormat.Padding = new Padding(0, 3, 0, 0);
                 Paragraph pHeader = new Paragraph(documentCore, "HeaderName");
                 pHeader.ParagraphFormat.Style = TableHeaderStyle;
@@ -70,7 +70,7 @@ namespace Example
             {
                 TableCell cell2 = new TableCell(documentCore);
                 cell2.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1.5);
-                cell2.CellFormat.BackgroundColor = new SautinSoft.Document.Color("#0054A6");
+                cell2.CellFormat.BackgroundColor = new SautinSoft.Document.Color(0, 84, 166);
                 cell2.CellFormat.Padding = new Padding(0, 3, 0, 0);
                 Paragraph pHeaderContent = new Paragraph(documentCore, "HeaderContent");
                 pHeaderContent.ParagraphFormat.Style = TableHeaderStyle;
@@ -95,7 +95,7 @@ namespace Example
             {
                 TableCell cell1 = new TableCell(documentCore);
                 cell1.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1);
-                cell1.CellFormat.BackgroundColor = new SautinSoft.Document.Color("#E6E6E6");
+                cell1.CellFormat.BackgroundColor = new SautinSoft.Document.Color(230, 230, 230);
                 cell1.CellFormat.Padding = new Padding(0, 3, 0, 0);
 
                 Paragraph p1 = new Paragraph(documentCore, "Content Name");
@@ -106,10 +106,10 @@ namespace Example
             {
                 TableCell cell2 = new TableCell(documentCore);
                 cell2.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1);
-                cell2.CellFormat.BackgroundColor = new SautinSoft.Document.Color("#E6E6E6");
+                cell2.CellFormat.BackgroundColor = new SautinSoft.Document.Color(230, 230, 230);
                 cell2.CellFormat.Padding = new Padding(0, 3, 0, 0);
                 var y = x.ToString().Replace("\r\n", "");
-                (cell2 as TableCell).Blocks.Content.Replace(y, SautinSoft.Document.LoadOptions.HtmlDefault); 
+                (cell2 as TableCell).Blocks.Content.Replace(y, SautinSoft.Document.LoadOptions.HtmlDefault);
                 row1.Cells.Add(cell2);
             }
             row1.RowFormat.Height = new TableRowHeight(15, HeightRule.Auto);
@@ -118,7 +118,7 @@ namespace Example
             {
                 TableCell cell1 = new TableCell(documentCore);
                 cell1.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1);
-                cell1.CellFormat.BackgroundColor = new SautinSoft.Document.Color("#E6E6E6");
+                cell1.CellFormat.BackgroundColor = new SautinSoft.Document.Color(230, 230, 230);
                 cell1.CellFormat.Padding = new Padding(0, 3, 0, 0);
                 Paragraph p2 = new Paragraph(documentCore, "Image");
                 p2.ParagraphFormat.Style = TableContentStyle_1;
@@ -128,7 +128,7 @@ namespace Example
             {
                 TableCell cell2 = new TableCell(documentCore);
                 cell2.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1);
-                cell2.CellFormat.BackgroundColor = new SautinSoft.Document.Color("#E6E6E6");
+                cell2.CellFormat.BackgroundColor = new SautinSoft.Document.Color(230, 230, 230);
                 cell2.CellFormat.Padding = new Padding(0, 3, 0, 0);
                 Paragraph p3 = new Paragraph(documentCore, new Picture(documentCore, new MemoryStream(imageData)));
                 p3.ParagraphFormat.Style = TableContentStyle_1;
@@ -138,7 +138,7 @@ namespace Example
             row2.RowFormat.Height = new TableRowHeight(15, HeightRule.Auto);
             table.Rows.Add(row2);
             Section section = new Section(documentCore);
-            section.PageSetup.PageColor.SetSolid(new SautinSoft.Document.Color("#f8f8fa"));
+            section.PageSetup.PageColor.SetSolid(new SautinSoft.Document.Color(248, 248, 250));
             section.PageSetup.PaperType = PaperType.A4;
             section.PageSetup.Orientation = Orientation.Portrait;
             section.PageSetup.PageMargins = new PageMargins()

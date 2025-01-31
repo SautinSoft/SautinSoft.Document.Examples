@@ -9,7 +9,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             InsertParagraph();
@@ -30,7 +30,7 @@ namespace Example
             p.Content.Start.Insert("William Shakespeare is an English poet " +
                 "and playwright, recognized as the greatest English-language writer, " +
                 "the national poet of England and one of the outstanding playwrights of the world.",
-                new CharacterFormat() { Size = 20, FontName = "Verdana", FontColor = new Color("#358CCB") });
+                new CharacterFormat() { Size = 20, FontName = "Verdana", FontColor = new Color(53, 140, 203) });
             p.ParagraphFormat.Alignment = HorizontalAlignment.Justify;
 
             // Insert the paragraph as 1st element in the 1st section.

@@ -8,7 +8,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             SeparateDocumentToImagePages();
@@ -30,14 +30,9 @@ namespace Example
                 DocumentPage page = dp.Pages[i];
                 Directory.CreateDirectory(folderPath);
 
-                // Save the each page as Bitmap.
-                ImageSaveOptions op = new ImageSaveOptions();
-                op.DpiX = 300;
-                op.DpiY = 300;
-                SKBitmap bmp = page.Rasterize(op, SautinSoft.Document.Color.White);
                 // Save the bitmap to PNG and JPEG.
-                bmp.Encode(new FileStream(folderPath + @"\Page (PNG) - " + (i + 1).ToString() + ".png", FileMode.Create), SKEncodedImageFormat.Png, 100);
-                bmp.Encode(new FileStream(folderPath + @"\Page (Jpeg) - " + (i + 1).ToString() + ".jpg", FileMode.Create), SKEncodedImageFormat.Jpeg, 100);
+                page.Save(folderPath + @"\Page (PNG) - " + (i + 1).ToString() + ".png", new ImageSaveOptions { DpiX = 300, DpiY = 300, Format = ImageSaveFormat.Png});
+                page.Save(folderPath + @"\Page (Jpeg) - " + (i + 1).ToString() + ".jpeg", new ImageSaveOptions { DpiX = 300, DpiY = 300, Format = ImageSaveFormat.Jpeg});
             }
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(folderPath) { UseShellExecute = true });
         }

@@ -7,7 +7,7 @@ Module Sample
     Sub Main()
         PictureAndShape()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Creates a new document with shape containing a text and picture.

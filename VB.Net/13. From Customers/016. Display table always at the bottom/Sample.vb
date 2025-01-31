@@ -6,7 +6,7 @@ Imports SautinSoft.Document.Tables
 Namespace Example
 	Friend Class Program
 		Shared Sub Main(ByVal args() As String)
-			' Get your free 100-day key here:   
+			' Get your free trial key here:   
 			' https://sautinsoft.com/start-for-free/
 			DisplayTable()
 		End Sub
@@ -78,7 +78,7 @@ Namespace Example
 					cell.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Single, Color.Black, 0.5F)
 					cell.CellFormat.BackgroundColor = Color.White
 					cell.CellFormat.PreferredWidth = New TableWidth(100.0F / 3.0F, TableWidthUnit.Percentage)
-					p = New Paragraph(dc, $"{rand.Next(100)}")
+					p = New Paragraph(dc, rand.Next(100).ToString())
 					p.ParagraphFormat.Alignment = HorizontalAlignment.Center
 					cell.Blocks.Add(p)
 					row.Cells.Add(cell)

@@ -11,7 +11,7 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            // Get your free 100-day key here:   
+            // Get your free trial key here:   
             // https://sautinsoft.com/start-for-free/
 
             PieChart();
@@ -69,18 +69,18 @@ namespace Sample
             // Assume that our chart can have 10 pies maximally.
             // And we'll use these colors order by order.
             // You may change the colors and their quantity.
-            List<string> colors = new List<string>()
+            List<(byte, byte, byte)> colors = new List<(byte, byte, byte)>()
             {
-                "#70AD47", // light green
-                "#4472C4", // blue
-                "#FFC000", // yellow
-                "#A5A5A5", // grey
-                "#ED7D31", // orange
-                "#5B9BD5", // light blue
-                "#44546A", // blue and grey
-                "#C00000", // red
-                "#00B050", // green
-                "#9933FF"  // purple
+                (112, 173, 71), // light green
+                (68, 114, 196), // blue
+                (255, 192, 0), // yellow
+                (165, 165, 165), // grey
+                (237, 125, 49), // orange
+                (91, 155, 213), // light blue
+                (68, 84, 106), // blue and grey
+                (192, 0, 0), // red
+                (0,176,80), // green
+                (153, 51, 255)  // purple
 
             };
             // 1. To create a circle chart, assume that the sum of all values are 100%
@@ -118,7 +118,8 @@ namespace Sample
                 Shape shpPie = originalShape.Clone(true);
                 shpPie.Outline.Fill.SetSolid(Color.White);
                 shpPie.Outline.Width = 0.5;
-                shpPie.Fill.SetSolid(new Color(colors[i]));
+                (byte r, byte g, byte b) = colors[i];
+                shpPie.Fill.SetSolid(new Color(r, g, b));
 
                 shpPie.Geometry.SetPreset(Figure.Pie);
                 shpPie.Geometry.AdjustValues["adj1"] = 45000 * pieMeasure[i];
@@ -166,7 +167,7 @@ namespace Sample
                             FontName = "Arial",
                             Size = 10,
                             //FontColor = new Color("#333333")
-                            FontColor = new Color("#FFFFFF")
+                            FontColor = Color.White
                         });
                     (shpLabel.Text.Blocks[0] as Paragraph).ParagraphFormat.Alignment = HorizontalAlignment.Center;
                     dc.Content.End.Insert(shpLabel.Content);
@@ -193,12 +194,14 @@ namespace Sample
                     {
                         string legendItem = data.Keys.ElementAt(i);
 
+                        (byte r, byte g, byte b) = colors[i];
+
                         // 183 - circle, "Symbol"
                         // 167 - square, "Wingdings"
 
                         Run marker = new Run(dc, (char)167, new CharacterFormat()
                         {
-                            FontColor = new Color(colors[i]),
+                            FontColor = new Color(r,g,b),
                             FontName = "Wingdings"
                         });
                         pLegend.Content.End.Insert(marker.Content);

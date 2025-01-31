@@ -13,7 +13,7 @@ Namespace Example
 			' 2. With Document Object Model (DOM) directly.
 			CreatePdfUsingDOM()
 		End Sub
-                ''' Get your free 100-day key here:   
+                ''' Get your free trial key here:   
                 ''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Creates a new PDF document using DocumentBuilder wizard.

@@ -7,7 +7,7 @@ Module Sample
     Sub Main()
         AddNestedTable()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' How to create a nested table in a document. 

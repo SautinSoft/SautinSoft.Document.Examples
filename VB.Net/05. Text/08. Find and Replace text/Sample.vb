@@ -12,7 +12,7 @@ Namespace Sample
         Shared Sub Main(ByVal args() As String)
             FindAndReplace()
         End Sub
-        ''' Get your free 100-day key here:   
+        ''' Get your free trial key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Find and replace a specific text in an existing DOCX document.

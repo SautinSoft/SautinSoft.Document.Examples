@@ -8,7 +8,7 @@ Namespace Example
         Shared Sub Main(ByVal args() As String)
             MergeParagraphs()
         End Sub
-        ''' Get your free 100-day key here:   
+        ''' Get your free trial key here:   
         ''' https://sautinsoft.com/start-for-free/
         ''' <summary>
         ''' Merge all paragraphs into a single in an existing PDF document.

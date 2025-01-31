@@ -7,7 +7,7 @@ Module Sample
         SaveToPdfFile()
         SaveToPdfStream()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Creates a new document and saves it as PDF file.

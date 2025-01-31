@@ -8,7 +8,7 @@ Module Sample
     Sub Main()
         TOC()
     End Sub
-    ''' Get your free 100-day key here:   
+    ''' Get your free trial key here:   
     ''' https://sautinsoft.com/start-for-free/
     ''' <summary>
     ''' Create a document with table of content.
