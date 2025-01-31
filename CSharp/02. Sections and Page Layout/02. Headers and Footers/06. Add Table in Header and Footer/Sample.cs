@@ -18,7 +18,7 @@ namespace Sample
         /// How to add a table in header or footer into a document.
         /// </summary>
         /// <remarks>
-        /// Details: https://sautinsoft.com/products/document/help/net/developer-guide/headersfooters.php
+        /// Details: https://sautinsoft.com/products/document/help/net/developer-guide/add-table-in-footer-and-header-in-pdf-net-csharp-vb.php
         /// </remarks>
         public static void TableInHeader()
         {
