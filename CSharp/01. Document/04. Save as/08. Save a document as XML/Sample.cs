@@ -1,6 +1,8 @@
 using System;
 using System.IO;
+using System.Xml;
 using SautinSoft.Document;
+using SautinSoft.Document.Drawing;
 using SautinSoft.Document.Tables;
 
 namespace Example
@@ -23,65 +25,125 @@ namespace Example
         /// </remarks>
         static void SaveToXmlFile()
         {
-            DocumentCore dc = new DocumentCore();
-            DocumentBuilder db = new DocumentBuilder(dc);
+            string inpFile = @"..\..\..\example.docx"; 
+            string outFile = Path.ChangeExtension(inpFile, ".xml");
 
-            // Create a new table with preferred width.
-            Table table = db.StartTable();
-            db.TableFormat.PreferredWidth = new TableWidth(LengthUnitConverter.Convert(5, LengthUnit.Inch, LengthUnit.Point), TableWidthUnit.Point);
+            var dc = DocumentCore.Load(inpFile);
+            var xml = GetXml(dc);
+            xml.Save(outFile);
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(outFile) { UseShellExecute = true });
+        }
 
-            // Specify formatting of cells and alignment.
-            db.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Single, Color.Green, 1);
-            db.CellFormat.VerticalAlignment = VerticalAlignment.Top;
-            db.ParagraphFormat.Alignment = HorizontalAlignment.Center;
+        private static XmlDocument GetXml(DocumentCore dc)
+        {
+            var xml = new XmlDocument();
+            var body = NewXmlNode(xml, xml, XmlNodeType.Element, "Document");
 
-            // Specify height of rows and write text.
-            db.RowFormat.Height = new TableRowHeight(105f, HeightRule.Exact);
-            db.InsertCell();
-            db.Write("This is Row 1 Cell 1");
-            db.InsertCell();
-            db.Write("This is Row 1 Cell 2");
-            db.InsertCell();
-            db.Write("This is Row 1 Cell 3");
-            db.EndRow();
+            foreach (Section section in dc.Sections)
+            {
+                var sec = NewXmlNode(xml, body, XmlNodeType.Element, "Section");
+                WriteBlock(xml, sec, section.Blocks);
+            }
+            return xml;
+        }
 
-            // Specify formatting of cells and alignment.
-            db.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Single, Color.Black, 1);
-            db.CellFormat.VerticalAlignment = VerticalAlignment.Center;
-            db.ParagraphFormat.Alignment = HorizontalAlignment.Left;
+        private static void WriteBlock(XmlDocument xml, XmlNode parent, BlockCollection blocks)
+        {
+            foreach (var block in blocks)
+            {
+                switch (block)
+                {
+                    case Paragraph paragraph:
+                        if (paragraph.Inlines.Count > 0)
+                        {
+                            var par = NewXmlNode(xml, parent, XmlNodeType.Element, "Paragraph");
+                            foreach (var line in paragraph.Inlines)
+                            {
+                                switch (line)
+                                {
+                                    case Run run:
+                                        var runNode = NewXmlNode(xml, par, XmlNodeType.Element, "Run");
+                                        runNode.InnerText = run.Text;
+                                        break;
 
-            // Specify height of rows and write text.
-            db.RowFormat.Height = new TableRowHeight(150f, HeightRule.Exact);
-            db.InsertCell();
-            db.Write("This is Row 2 Cell 1");
-            db.InsertCell();
-            db.Write("This is Row 2 Cell 2");
-            db.InsertCell();
-            db.Write("This is Row 2 Cell 3");
-            db.EndRow();
+                                    case ShapeBase shape:
+                                        WriteDrawing(xml, par, shape);
+                                        break;
+                                }
+                            }
+                        }
+                        break;
+                    case Table table:
+                        WriteTable(xml, parent, table);
+                        break;
+                }
+            }
+        }
 
-            // Specify formatting of cells and alignment.
-            db.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Single, Color.Orange, 1);
-            db.CellFormat.VerticalAlignment = VerticalAlignment.Bottom;
-            db.ParagraphFormat.Alignment = HorizontalAlignment.Right;
+        private static void WriteDrawing(XmlDocument xml, XmlNode parent, Element item)
+        {
+            if (item is ShapeGroup)
+            {
+                var shape = NewXmlNode(xml, parent, XmlNodeType.Element, "ShapeGroup");
+                foreach (var sh in (item as ShapeGroup).ChildShapes)
+                {
+                    WriteDrawing(xml, shape, sh);
+                }
+            }
+            else if (item is Picture)
+            {
+                var picture = NewXmlNode(xml, parent, XmlNodeType.Element, "Picture");
+                var attr = xml.CreateAttribute("name");
+                attr.Value = (item as Picture).Description;
+                picture.Attributes.Append(attr);
+            }
+            else
+            {
+                var shape = NewXmlNode(xml, parent, XmlNodeType.Element, "Shape");
+                var attr = xml.CreateAttribute("Figure");
+                attr.Value = (item as Shape).Geometry.IsPreset ? ((item as Shape).Geometry as PresetGeometry).Figure.ToString() : "Custom";
+                shape.Attributes.Append(attr);
+                WriteBlock(xml, shape, (item as Shape).Text.Blocks);
+            }
+        }
 
-            // Specify height of rows and write text
-            db.RowFormat.Height = new TableRowHeight(125f, HeightRule.Exact);
-            db.InsertCell();
-            db.Write("This is Row 3 Cell 1");
-            db.InsertCell();
-            db.Write("This is Row 3 Cell 2");
-            db.InsertCell();
-            db.Write("This is Row 3 Cell 3");
-            db.EndRow();
-            db.EndTable();
+        private static void WriteTable(XmlDocument xml, XmlNode parent, Table table)
+        {
+            var tab = NewXmlNode(xml, parent, XmlNodeType.Element, "Table");
+            XmlAttribute attr = xml.CreateAttribute("rows");
+            attr.Value = table.Rows.Count.ToString();
+            tab.Attributes.Append(attr);
+            attr = xml.CreateAttribute("cols");
+            attr.Value = table.Columns.Count.ToString();
+            tab.Attributes.Append(attr);
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                var row = NewXmlNode(xml, tab, XmlNodeType.Element, "Row");
+                for (int j = 0; j < table.Rows[i].Cells.Count; j++)
+                {
+                    var cell = NewXmlNode(xml, row, XmlNodeType.Element, "Cell");
+                    if (table.Rows[i].Cells[j].RowSpan > 1)
+                    {
+                        attr = xml.CreateAttribute("rowspan");
+                        attr.Value = table.Rows[i].Cells[j].RowSpan.ToString();
+                        cell.Attributes.Append(attr);
+                    }
+                    if (table.Rows[i].Cells[j].ColumnSpan > 1)
+                    {
+                        attr = xml.CreateAttribute("colspan");
+                        attr.Value = table.Rows[i].Cells[j].ColumnSpan.ToString();
+                        cell.Attributes.Append(attr);
+                    }
+                    WriteBlock(xml, cell, table.Rows[i].Cells[j].Blocks);
+                }
+            }
+        }
 
-            // Save our document into XML format.
-            string filePath = "Result.xml";
-            dc.Save(filePath);
-
-            // Open the result for demonstration purposes.
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });
+        private static XmlNode NewXmlNode(XmlDocument xml, XmlNode parent, XmlNodeType type, string name)
+        {
+            XmlNode node = xml.CreateNode(type, name, null);
+            parent.AppendChild(node);
+            return node;
         }
     }
 }
