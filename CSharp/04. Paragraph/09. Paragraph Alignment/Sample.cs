@@ -2,7 +2,6 @@ using System;
 using SautinSoft.Document;
 using System.Text;
 using SautinSoft.Document.Drawing;
-using System.Reflection.Metadata;
 
 namespace Example
 {
