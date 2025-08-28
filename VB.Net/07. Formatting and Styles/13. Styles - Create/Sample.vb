@@ -37,7 +37,7 @@ Namespace Sample
 
             ' 3. Create TableStyle
             Dim tblStyle As New TableStyle("Blue Table")
-            tblStyle.CellFormat.BackgroundColor = New Color("#358CCB")
+            tblStyle.CellFormat.BackgroundColor = New Color(53, 140, 203)
 
             ' 4. Add the styles to the style collection.
             dc.Styles.Add(charStyle)

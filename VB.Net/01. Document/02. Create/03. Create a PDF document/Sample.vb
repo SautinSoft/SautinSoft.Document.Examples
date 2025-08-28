@@ -64,7 +64,7 @@ Namespace Example
 			db.CharacterFormat.ClearFormatting()
 			Dim shape As Shape = db.InsertShape(SautinSoft.Document.Drawing.Figure.SmileyFace, New SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter))
 			' Specify outline and fill.
-			shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color("#358CCB"))
+			shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color(53, 140, 203))
 			shape.Outline.Width = 3
 			shape.Fill.SetSolid(SautinSoft.Document.Color.Orange)
 
@@ -137,7 +137,7 @@ Namespace Example
 			' Add a graphics figure into the paragraph.
 			Dim shape As New Shape(dc, New InlineLayout(New SautinSoft.Document.Drawing.Size(50, 50, LengthUnit.Millimeter)))
 			' Specify outline and fill.
-			shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color("#358CCB"))
+			shape.Outline.Fill.SetSolid(New SautinSoft.Document.Color(53, 140, 203))
 			shape.Outline.Width = 3
 			shape.Fill.SetSolid(SautinSoft.Document.Color.Orange)
 			shape.Geometry.SetPreset(Figure.SmileyFace)

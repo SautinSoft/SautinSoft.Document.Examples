@@ -26,7 +26,7 @@ Namespace Example
 			p.Content.Start.Insert("William Shakespeare is an English poet " & "and playwright, recognized as the greatest English-language writer, " & "the national poet of England and one of the outstanding playwrights of the world.", New CharacterFormat() With {
 				.Size = 20,
 				.FontName = "Verdana",
-				.FontColor = New Color("#358CCB")
+				.FontColor = New Color(53, 140, 203)
 			})
 			p.ParagraphFormat.Alignment = HorizontalAlignment.Justify
 

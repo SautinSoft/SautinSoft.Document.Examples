@@ -38,7 +38,7 @@ Namespace Example
 
 			dc.Sections.Add(New Section(dc, New Paragraph(dc, New Run(dc, "Click me => ", New CharacterFormat() With {
 				.Size = 24,
-				.FontColor = New Color("#3399FF")
+				.FontColor = New Color(51, 153, 255)
 			}), checkbox)))
 
 			' Save our document into DOCX format.

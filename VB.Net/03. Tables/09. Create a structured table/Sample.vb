@@ -58,7 +58,7 @@ Namespace Example
 			If True Then
 				Dim cell1 As New TableCell(documentCore)
 				cell1.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1.5)
-				cell1.CellFormat.BackgroundColor = New SautinSoft.Document.Color("#0054A6")
+				cell1.CellFormat.BackgroundColor = New SautinSoft.Document.Color(0, 84, 166)
 				cell1.CellFormat.Padding = New Padding(0, 3, 0, 0)
 				Dim pHeader As New Paragraph(documentCore, "HeaderName")
 				pHeader.ParagraphFormat.Style = TableHeaderStyle
@@ -68,7 +68,7 @@ Namespace Example
 			If True Then
 				Dim cell2 As New TableCell(documentCore)
 				cell2.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1.5)
-				cell2.CellFormat.BackgroundColor = New SautinSoft.Document.Color("#0054A6")
+				cell2.CellFormat.BackgroundColor = New SautinSoft.Document.Color(0, 84, 166)
 				cell2.CellFormat.Padding = New Padding(0, 3, 0, 0)
 				Dim pHeaderContent As New Paragraph(documentCore, "HeaderContent")
 				pHeaderContent.ParagraphFormat.Style = TableHeaderStyle
@@ -94,7 +94,7 @@ Namespace Example
 			If True Then
 				Dim cell1 As New TableCell(documentCore)
 				cell1.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1)
-				cell1.CellFormat.BackgroundColor = New SautinSoft.Document.Color("#E6E6E6")
+				cell1.CellFormat.BackgroundColor = New SautinSoft.Document.Color(230, 230, 230)
 				cell1.CellFormat.Padding = New Padding(0, 3, 0, 0)
 
 				Dim p1 As New Paragraph(documentCore, "Content Name")
@@ -105,7 +105,7 @@ Namespace Example
 			If True Then
 				Dim cell2 As New TableCell(documentCore)
 				cell2.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1)
-				cell2.CellFormat.BackgroundColor = New SautinSoft.Document.Color("#E6E6E6")
+				cell2.CellFormat.BackgroundColor = New SautinSoft.Document.Color(230, 230, 230)
 				cell2.CellFormat.Padding = New Padding(0, 3, 0, 0)
 				Dim y = x.ToString().Replace(vbCrLf, "")
 				TryCast(cell2, TableCell).Blocks.Content.Replace(y, SautinSoft.Document.LoadOptions.HtmlDefault)
@@ -117,7 +117,7 @@ Namespace Example
 			If True Then
 				Dim cell1 As New TableCell(documentCore)
 				cell1.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1)
-				cell1.CellFormat.BackgroundColor = New SautinSoft.Document.Color("#E6E6E6")
+				cell1.CellFormat.BackgroundColor = New SautinSoft.Document.Color(230, 230, 230)
 				cell1.CellFormat.Padding = New Padding(0, 3, 0, 0)
 				Dim p2 As New Paragraph(documentCore, "Image")
 				p2.ParagraphFormat.Style = TableContentStyle_1
@@ -127,7 +127,7 @@ Namespace Example
 			If True Then
 				Dim cell2 As New TableCell(documentCore)
 				cell2.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Thick, SautinSoft.Document.Color.White, 1)
-				cell2.CellFormat.BackgroundColor = New SautinSoft.Document.Color("#E6E6E6")
+				cell2.CellFormat.BackgroundColor = New SautinSoft.Document.Color(230, 230, 230)
 				cell2.CellFormat.Padding = New Padding(0, 3, 0, 0)
 				Dim p3 As New Paragraph(documentCore, New Picture(documentCore, New MemoryStream(imageData)))
 				p3.ParagraphFormat.Style = TableContentStyle_1
@@ -137,7 +137,7 @@ Namespace Example
 			row2.RowFormat.Height = New TableRowHeight(15, HeightRule.Auto)
 			table.Rows.Add(row2)
 			Dim section As New Section(documentCore)
-			section.PageSetup.PageColor.SetSolid(New SautinSoft.Document.Color("#f8f8fa"))
+			section.PageSetup.PageColor.SetSolid(New SautinSoft.Document.Color(248, 248, 250))
 			section.PageSetup.PaperType = PaperType.A4
 			section.PageSetup.Orientation = Orientation.Portrait
 			section.PageSetup.PageMargins = New PageMargins() With {

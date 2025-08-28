@@ -65,12 +65,14 @@ Module Sample
             p.ParagraphFormat.Alignment = HorizontalAlignment.Center
             section.Blocks.Add(p)
 
-            Dim color As String = String.Format("#{0:X2}{1:X2}{2:X2}", r.Next(0, 255), r.Next(0, 255), r.Next(0, 255))
+            Dim Red = r.Next(0, 255)
+            Dim Green = r.Next(0, 255)
+            Dim Blue = r.Next(0, 255)
 
             p.Content.Start.Insert(text, New CharacterFormat() With {
                     .FontName = "Arial",
                     .Size = 72.0,
-                    .FontColor = New Color(color)
+                    .FontColor = New Color(Red, Green, Blue)
                 })
             If (text <> pagesText.Last()) Then
                 p.Content.End.Insert((New SpecialCharacter(dc, SpecialCharacterType.PageBreak)).Content)

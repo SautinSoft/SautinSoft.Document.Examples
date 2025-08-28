@@ -88,7 +88,7 @@ namespace Example
             };
             dc.Sections[0].Blocks.Add(p4);
 
-            Paragraph p5 = new Paragraph(dc, "«Company__Also_Known_As_»   (“Association”),")
+            Paragraph p5 = new Paragraph(dc, "\"Company__Also_Known_As_\"   (\"Association\"),")
             {
                 ParagraphFormat = new ParagraphFormat
                 {
@@ -97,7 +97,7 @@ namespace Example
             };
             dc.Sections[0].Blocks.Add(p5);
 
-            Paragraph p6 = new Paragraph(dc, "by and through its Board of Directors, retains the law firm of TruckCom & Sautin, P.A. (hereinafter referred to as “Firm” or “Becker”), to represent it as legal counsel in the matters described in this Agreement and its Exhibits. This retainer and representation is solely and exclusively for the benefit of the Association, as a corporate entity, and not for any other party or third parties.  There are no intended third party beneficiaries, including, but not limited to members of the Association; residents living in the community operated by the Association or guests of such residents; officers, directors, employees, or agents of the Association.")
+            Paragraph p6 = new Paragraph(dc, "by and through its Board of Directors, retains the law firm of TruckCom & Sautin, P.A. (hereinafter referred to as \"Firm\" or \"Becker\"), to represent it as legal counsel in the matters described in this Agreement and its Exhibits. This retainer and representation is solely and exclusively for the benefit of the Association, as a corporate entity, and not for any other party or third parties.  There are no intended third party beneficiaries, including, but not limited to members of the Association; residents living in the community operated by the Association or guests of such residents; officers, directors, employees, or agents of the Association.")
             {
                 ParagraphFormat = new ParagraphFormat
                 {
@@ -106,7 +106,7 @@ namespace Example
             };
             dc.Sections[0].Blocks.Add(p6);
 
-            Paragraph p7 = new Paragraph(dc, "Paying the Annual Retainer Fee sum of Three Hundred Dollars ($300.00)  entitles the Association to the services listed in Exhibit “A” at no extra charge.")
+            Paragraph p7 = new Paragraph(dc, "Paying the Annual Retainer Fee sum of Three Hundred Dollars ($300.00)  entitles the Association to the services listed in Exhibit \"A\" at no extra charge.")
             {
                 ParagraphFormat = new ParagraphFormat
                 {
@@ -116,7 +116,7 @@ namespace Example
             };
             dc.Sections[0].Blocks.Add(p7);
 
-            Paragraph p8 = new Paragraph(dc, "The Firm will provide general legal services upon the request of the Association or as authorized by this Agreement concerning the day-to-day operation of the Association, including certain litigation, arbitration and mediation matters, on the reduced hourly fees stated in Exhibit “B” to this Agreement, subject to the terms and conditions in Exhibit “A”.")
+            Paragraph p8 = new Paragraph(dc, "The Firm will provide general legal services upon the request of the Association or as authorized by this Agreement concerning the day-to-day operation of the Association, including certain litigation, arbitration and mediation matters, on the reduced hourly fees stated in Exhibit \"B\" to this Agreement, subject to the terms and conditions in Exhibit \"A\".")
             {
                 ParagraphFormat = new ParagraphFormat
                 {

@@ -25,16 +25,16 @@ Module Sample
         Dim Heading1Style As ParagraphStyle = CType(Style.CreateStyle(StyleTemplateType.Heading1, dc), ParagraphStyle)
         Heading1Style.ParagraphFormat.LineSpacing = 3
         Heading1Style.CharacterFormat.Size = 18
-        ' #358CCB - blue
-        Heading1Style.CharacterFormat.FontColor = New Color("#358CCB")
+        ' 53, 140, 203 - blue
+        Heading1Style.CharacterFormat.FontColor = New Color(53, 140, 203)
         dc.Styles.Add(Heading1Style)
 
         ' Create and add Heading2 style. For "SupChapter 1-1" and "SubChapter 2-1".
         Dim Heading2Style As ParagraphStyle = CType(Style.CreateStyle(StyleTemplateType.Heading2, dc), ParagraphStyle)
         Heading2Style.ParagraphFormat.LineSpacing = 2
         Heading2Style.CharacterFormat.Size = 14
-        ' #FF9900 - orange
-        Heading2Style.CharacterFormat.FontColor = New Color("#FF9900")
+        ' 255, 153, 0 - orange
+        Heading2Style.CharacterFormat.FontColor = New Color(255, 153, 0)
         dc.Styles.Add(Heading2Style)
 
         ' Create and add TOC style.
@@ -42,8 +42,8 @@ Module Sample
         TOCStyle.ParagraphFormat.OutlineLevel = OutlineLevel.BodyText
         TOCStyle.ParagraphFormat.Alignment = HorizontalAlignment.Center
         TOCStyle.CharacterFormat.Bold = True
-        ' #358CCB - blue
-        TOCStyle.CharacterFormat.FontColor = New Color("#358CCB")
+        ' 53, 140, 203 - blue
+        TOCStyle.CharacterFormat.FontColor = New Color(53, 140, 203)
         dc.Styles.Add(TOCStyle)
 
         ' Add new section.

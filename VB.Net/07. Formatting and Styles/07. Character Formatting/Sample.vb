@@ -34,7 +34,7 @@ Module Sample
         run1.CharacterFormat.BackgroundColor = Color.Pink
         run1.CharacterFormat.FontName = "Verdana"
         run1.CharacterFormat.Size = 26.0F
-        run1.CharacterFormat.FontColor = New Color("#FFFFFF")
+        run1.CharacterFormat.FontColor = New Color(255, 255, 255)
 
         p.Inlines.Add(run1)
 

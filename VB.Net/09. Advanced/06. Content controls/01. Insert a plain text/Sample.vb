@@ -44,7 +44,7 @@ Namespace Example
             New CharacterFormat() With
                  {
                     .FontName = "Wingdings",
-                    .FontColor = New Color("#000000"),
+                    .FontColor = New Color(0, 0, 0),
                     .Size = 48
                 })))
 

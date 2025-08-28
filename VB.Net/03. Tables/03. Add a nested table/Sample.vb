@@ -71,7 +71,7 @@ Module Sample
                 If c Mod 2 = 0 Then
                     cell.CellFormat.BackgroundColor = Color.Orange
                 Else
-                    cell.CellFormat.BackgroundColor = New Color("#358CCB")
+                    cell.CellFormat.BackgroundColor = New Color(53, 140, 203)
                 End If
 
                 cell.CellFormat.PreferredWidth = New TableWidth(twidth / 2, TableWidthUnit.Point)

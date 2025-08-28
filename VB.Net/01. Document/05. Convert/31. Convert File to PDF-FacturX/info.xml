@@ -9,7 +9,7 @@
         </ram:GuidelineSpecifiedDocumentContextParameter>
     </rsm:ExchangedDocumentContext>
     <rsm:ExchangedDocument>
-        <ram:ID>2</ram:ID>
+        <ram:ID>1</ram:ID>
         <ram:TypeCode>380</ram:TypeCode>
         <ram:IssueDateTime>
             <udt:DateTimeString format="102">20230914</udt:DateTimeString>
@@ -31,7 +31,7 @@
                 </ram:SpecifiedTaxRegistration>
             </ram:SellerTradeParty>
             <ram:BuyerTradeParty>
-                <ram:Name>BENZEM MOURAD</ram:Name>
+                <ram:Name>LE MARCHE GUY</ram:Name>
                 <ram:SpecifiedLegalOrganization>
                     <ram:ID schemeID="0002"></ram:ID>
                 </ram:SpecifiedLegalOrganization>

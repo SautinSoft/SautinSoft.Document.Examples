@@ -23,7 +23,7 @@ Module Sample
         Dim hpl As New Hyperlink(dc, "http://www.zoo.org", "Welcome to Zoo!")
         TryCast(hpl.DisplayInlines(0), Run).CharacterFormat = New CharacterFormat() With {
             .Size = 16,
-            .FontColor = New Color("#358CCB"),
+            .FontColor = New Color(53, 140, 203),
             .UnderlineStyle = UnderlineType.Single
         }
         hpl.ScreenTip = "Welcome to WoodLand Zoo!"

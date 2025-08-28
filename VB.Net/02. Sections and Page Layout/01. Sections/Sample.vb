@@ -42,7 +42,7 @@ Module Sample
         s2.Content.Start.Insert("Text in section 2", New CharacterFormat() With {
                 .FontName = "Arial",
                 .Size = 72.0,
-                .FontColor = New Color("DD55AA")
+                .FontColor = New Color(221, 85, 170)
             })
 
         ' Save our document into DOCX format.

@@ -60,7 +60,7 @@ Module Sample
         ' Assume that our chart can have 10 pies maximally.
         ' And we'll use these colors order by order.
         ' You may change the colors and their quantity.
-        Dim colors As New List(Of String)() From {"#70AD47", "#4472C4", "#FFC000", "#A5A5A5", "#ED7D31", "#5B9BD5", "#44546A", "#C00000", "#00B050", "#9933FF"}
+        Dim colors As New List(Of (Byte, Byte, Byte))() From {(112, 173, 71), (68, 114, 196), (255, 192, 0), (165, 165, 165), (237, 125, 49), (91, 155, 213), (68, 84, 106), (192, 0, 0), (0, 176, 80), (153, 51, 255)}
         ' 1. To create a circle chart, assume that the sum of all values are 100%
         ' and calculate the percent for the each value.
         ' Translate all data to perce
@@ -96,7 +96,10 @@ Module Sample
             Dim shpPie As Shape = originalShape.Clone(True)
             shpPie.Outline.Fill.SetSolid(Color.White)
             shpPie.Outline.Width = 0.5
-            shpPie.Fill.SetSolid(New Color(colors(i)))
+            Dim R As Byte = colors(i).Item1
+            Dim G As Byte = colors(i).Item2
+            Dim B As Byte = colors(i).Item3
+            shpPie.Fill.SetSolid(New Color(R, G, B))
 
             shpPie.Geometry.SetPreset(Figure.Pie)
             shpPie.Geometry.AdjustValues("adj1") = 45000 * pieMeasure(i)
@@ -139,7 +142,7 @@ Module Sample
                 shpLabel.Text.Blocks.Content.Start.Insert($"{data.Values.ElementAt(i)}{labelSign}", New CharacterFormat() With {
                         .FontName = "Arial",
                         .Size = 10,
-                        .FontColor = New Color("#FFFFFF")
+                        .FontColor = New Color(255, 255, 255)
                     })
                 TryCast(shpLabel.Text.Blocks(0), Paragraph).ParagraphFormat.Alignment = HorizontalAlignment.Center
                 dc.Content.End.Insert(shpLabel.Content)
@@ -166,9 +169,12 @@ Module Sample
 
                     ' 183 - circle, "Symbol"
                     ' 167 - square, "Wingdings"
+                    Dim R As Byte = colors(i).Item1
+                    Dim G As Byte = colors(i).Item2
+                    Dim B As Byte = colors(i).Item3
 
                     Dim marker As Run = New Run(dc, ChrW(167), New CharacterFormat() With {
-                            .FontColor = New Color(colors(i)),
+                            .FontColor = New Color(R, G, B),
                             .FontName = "Wingdings"
                         })
                     pLegend.Content.End.Insert(marker.Content)

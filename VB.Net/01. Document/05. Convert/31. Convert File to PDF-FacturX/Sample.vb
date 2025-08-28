@@ -16,9 +16,10 @@ Namespace Example
 		''' Details: https://www.sautinsoft.com/products/document/help/net/developer-guide/convert-file-to-pdf-factur-x-in-csharp-vb.php
 		''' </remarks>
 		Private Shared Sub ConvertFromFile()
-			Dim inpFile As String = "..\..\..\Factur.rtf"
-			Dim outFile As String = "..\..\..\Factur.pdf"
-			Dim xmlInfo As String = File.ReadAllText("..\..\..\Factur\Facture.xml")
+			Dim inpFile As String = "..\..\..\example.rtf"
+			Dim xmlInfo As String = File.ReadAllText("..\..\..\info.xml")
+
+			Dim outFile As String = "..\..\..\FacturXFromRtf.pdf"
 
 			Dim dc As DocumentCore = DocumentCore.Load(inpFile)
 
@@ -44,9 +45,11 @@ Namespace Example
 
 			' We need files only for demonstration purposes.
 			' The conversion process will be done completely in memory.
-			Dim inpFile As String = "..\..\..\Sample.pdf"
-			Dim outFile As String = "..\..\..\Factur.pdf"
-			Dim xmlInfo As String = File.ReadAllText("..\..\..\Factur\Facture.xml")
+			Dim inpFile As String = "..\..\..\example.pdf"
+			Dim xmlInfo As String = File.ReadAllText("..\..\..\info.xml")
+
+			Dim outFile As String = "..\..\..\FacturXFromPdf.pdf"
+
 			Dim inpData() As Byte = File.ReadAllBytes(inpFile)
 			Dim outData() As Byte = Nothing
 

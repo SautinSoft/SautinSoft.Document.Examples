@@ -26,7 +26,7 @@ Module Sample
         Dim shp1 As New Shape(dc, Layout.Floating(New HorizontalPosition(20.0F, LengthUnit.Millimeter, HorizontalPositionAnchor.LeftMargin), New VerticalPosition(80.0F, LengthUnit.Millimeter, VerticalPositionAnchor.TopMargin), New Size(100, 100)))
 
         ' Specify outline and fill.
-        shp1.Outline.Fill.SetSolid(New Color("358CCB"))
+        shp1.Outline.Fill.SetSolid(New Color(53, 140, 203))
         shp1.Outline.Width = 3
         shp1.Fill.SetSolid(Color.Orange)
 

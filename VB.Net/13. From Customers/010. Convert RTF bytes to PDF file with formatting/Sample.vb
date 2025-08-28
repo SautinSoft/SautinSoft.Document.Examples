@@ -10,8 +10,8 @@ Namespace Example
 		Shared Sub Main(ByVal args() As String)
 			ConvertRtfBytesToPdfFile()
 		End Sub
-                ''' Get your free trial key here:   
-                ''' https://sautinsoft.com/start-for-free/
+		''' Get your free trial key here:   
+		''' https://sautinsoft.com/start-for-free/
 		''' <summary>
 		''' Convert RTF bytes to PDF file with formatting.
 		''' </summary>
@@ -63,7 +63,7 @@ Namespace Example
 					cell.CellFormat.PreferredWidth = New TableWidth(width / columns, TableWidthUnit.Point)
 
 					If counter Mod 2 = 1 Then
-						cell.CellFormat.BackgroundColor = New Color("#FF0000")
+						cell.CellFormat.BackgroundColor = New Color(255, 0, 0)
 					End If
 
 					row.Cells.Add(cell)
@@ -76,7 +76,7 @@ Namespace Example
 
 					pa.Content.Start.Insert(String.Format("{0}", ChrW(counter + AscW("A"c))), New CharacterFormat() With {
 						.FontName = "Arial",
-						.FontColor = New Color("#000000"),
+						.FontColor = New Color(0, 0, 0),
 						.Size = 12.0
 					})
 					cell.Blocks.Add(pa)

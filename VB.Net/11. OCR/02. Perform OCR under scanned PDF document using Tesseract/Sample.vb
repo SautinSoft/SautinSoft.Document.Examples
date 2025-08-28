@@ -60,9 +60,7 @@ Namespace Example
             dc.Save(outFile)
 
             ' Open the result for demonstration purposes.
-            Process.Start(New ProcessStartInfo(outFile) With {
-                .UseShellExecute = True
-            })
+			System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(outFile) With {.UseShellExecute = True})
         End Sub
         Public Shared Function PerformOCRTesseract(image As Byte()) As Byte()
             ' Specify that Tesseract use three 3 languages: English, Russian and Vietnamese.

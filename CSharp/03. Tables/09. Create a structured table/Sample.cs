@@ -27,7 +27,7 @@ namespace Example
         static void StructuredTable()
         {
             DocumentCore documentCore = new DocumentCore();
-            byte[] imageData = File.ReadAllBytes(@"../../../image/smile.jpeg");
+            byte[] imageData = File.ReadAllBytes(@"../../../image/smile.jpg");
             ParagraphStyle TableHeaderStyle = (ParagraphStyle)Style.CreateStyle(StyleTemplateType.Normal, documentCore);
             TableHeaderStyle.Name = "TableHeaderStyle";
             TableHeaderStyle.ParagraphFormat.Alignment = HorizontalAlignment.Left;

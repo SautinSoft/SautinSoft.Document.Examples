@@ -28,7 +28,7 @@ namespace CatBreedReportApp
     {
         static void Main(string[] args)
         {
-            // Get your free 30-day key here:   
+            // Get your free key here:   
             // https://sautinsoft.com/start-for-free/
 
             // 1. Get json data

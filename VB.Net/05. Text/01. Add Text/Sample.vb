@@ -40,7 +40,7 @@ Module Sample
         run2.CharacterFormat = New CharacterFormat() With {
             .FontName = "Arial",
             .Size = 10.0,
-            .FontColor = New Color("#0070C0")
+            .FontColor = New Color(0, 112, 192)
         }
 
         Dim spch3 As New SpecialCharacter(dc, SpecialCharacterType.LineBreak)

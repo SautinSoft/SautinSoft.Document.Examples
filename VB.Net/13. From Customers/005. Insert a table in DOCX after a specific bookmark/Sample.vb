@@ -70,7 +70,7 @@ Namespace Sample
                     cell.CellFormat.PreferredWidth = New TableWidth(width / columns, TableWidthUnit.Point)
 
                     If counter Mod 2 = 1 Then
-                        cell.CellFormat.BackgroundColor = New Color("#358CCB")
+                        cell.CellFormat.BackgroundColor = New Color(53, 140, 203)
                     End If
 
                     row.Cells.Add(cell)
@@ -83,7 +83,7 @@ Namespace Sample
 
                     p.Content.Start.Insert(String.Format("{0}", ChrW(counter + AscW("A"c))), New CharacterFormat() With {
                         .FontName = "Arial",
-                        .FontColor = New Color("#3399FF"),
+                        .FontColor = New Color(51, 153, 255),
                         .Size = 12.0
                     })
                     cell.Blocks.Add(p)

@@ -20,9 +20,10 @@ namespace Example
         /// </remarks>
         static void ConvertFromFile()
         {
-            string inpFile = @"..\..\..\Factur\Facture1.rtf";
-            string outFile = @"..\..\..\Factur\Factur1e.pdf";
-            string xmlInfo = File.ReadAllText(@"..\..\..\Factur\Facture1.xml");
+            string inpFile = @"..\..\..\example.rtf";
+			string xmlInfo = File.ReadAllText(@"..\..\..\info.xml");
+			
+            string outFile = @"..\..\..\FacturXFromRtf.pdf";
 
             DocumentCore dc = DocumentCore.Load(inpFile);
 
@@ -56,10 +57,12 @@ namespace Example
 
             // We need files only for demonstration purposes.
             // The conversion process will be done completely in memory.
-            string inpFile = @"..\..\..\Sample.pdf";
-            string outFile = @"..\..\..\Factur.pdf";
-            string xmlInfo = File.ReadAllText(@"..\..\..\Factur\Facture.xml");
-            byte[] inpData = File.ReadAllBytes(inpFile);
+            string inpFile = @"..\..\..\example.pdf";
+            string xmlInfo = File.ReadAllText(@"..\..\..\info.xml");
+            
+            string outFile = @"..\..\..\FacturXFromPdf.pdf";
+			
+			byte[] inpData = File.ReadAllBytes(inpFile);
             byte[] outData = null;
 
             using (MemoryStream msInp = new MemoryStream(inpData))

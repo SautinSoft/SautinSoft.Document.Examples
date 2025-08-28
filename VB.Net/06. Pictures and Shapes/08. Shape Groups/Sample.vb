@@ -38,7 +38,7 @@ Module Sample
         Dim shape1 As New Shape(dc, New GroupLayout(New Point(0, 0), New Size(50, 50)))
 
         ' Specify outline and fill.
-        shape1.Outline.Fill.SetSolid(New Color("#358CCB"))
+        shape1.Outline.Fill.SetSolid(New Color(53, 140, 203))
         shape1.Outline.Width = 2
         shape1.Fill.SetSolid(Color.Orange)
 

@@ -52,7 +52,7 @@ Namespace Sample
                 Do While c < table.Rows(r).Cells.Count
                     Dim cell As TableCell = table.Rows(r).Cells(c)
                     cell.CellFormat.Borders.SetBorders(MultipleBorderTypes.Outside, BorderStyle.Dashed, Color.Black, 1)
-                    cell.CellFormat.BackgroundColor = New Color("#FFCC00")
+                    cell.CellFormat.BackgroundColor = New Color(255, 204, 0)
                     c += 1
                 Loop
             Next r
