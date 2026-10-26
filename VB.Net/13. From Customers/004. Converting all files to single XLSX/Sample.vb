@@ -16,7 +16,7 @@ Namespace Sample
 		''' How to convert all files to a single XLSX file.
 		''' </summary>
 		''' <remarks>
-		''' Details: https://sautinsoft.com/products/document/help/net/developer-guide/from-customers-convert-pdf-docx-rtf-to-single-xls-workbook-net-csharp-vb.php
+		''' Details: https://sautinsoft.com/products/document/help/net/developer-guide/from-customers-convert-pdf-docx-rtf-to-single-xlsx-workbook-net-csharp-vb.php
 		''' </remarks>
 		Public Shared Sub ConvertToSingleXlsx()
 			' In this example we'll use not only Document .Net component, but also
